@@ -1,0 +1,14 @@
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\bin\Debug\net8.0-windows\trabajo_Practico3.exe
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\bin\Debug\net8.0-windows\trabajo_Practico3.deps.json
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\bin\Debug\net8.0-windows\trabajo_Practico3.runtimeconfig.json
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\bin\Debug\net8.0-windows\trabajo_Practico3.dll
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\bin\Debug\net8.0-windows\trabajo_Practico3.pdb
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\obj\Debug\net8.0-windows\trabajo_Practico3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\obj\Debug\net8.0-windows\trabajo_Practico3.AssemblyInfoInputs.cache
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\obj\Debug\net8.0-windows\trabajo_Practico3.AssemblyInfo.vb
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\obj\Debug\net8.0-windows\trabajo_Practico3.vbproj.CoreCompileInputs.cache
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\obj\Debug\net8.0-windows\trabajo_Practico3.dll
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\obj\Debug\net8.0-windows\refint\trabajo_Practico3.dll
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\obj\Debug\net8.0-windows\trabajo_Practico3.pdb
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\obj\Debug\net8.0-windows\trabajo_Practico3.genruntimeconfig.cache
+C:\Users\alina\source\repos\Practico2\trabajo_Practico3\obj\Debug\net8.0-windows\ref\trabajo_Practico3.dll
