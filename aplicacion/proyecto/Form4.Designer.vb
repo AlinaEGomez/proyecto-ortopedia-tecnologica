@@ -29,14 +29,18 @@ Partial Class Form4
         ClientesToolStripMenuItem = New ToolStripMenuItem()
         ProveedoresToolStripMenuItem = New ToolStripMenuItem()
         ReportesToolStripMenuItem = New ToolStripMenuItem()
-        BtnCerrarSesion = New Button()
         ProductosToolStripMenuItem = New ToolStripMenuItem()
         CategoriaToolStripMenuItem = New ToolStripMenuItem()
         InsumosToolStripMenuItem = New ToolStripMenuItem()
         ProtesisToolStripMenuItem = New ToolStripMenuItem()
         CounicacionToolStripMenuItem = New ToolStripMenuItem()
         FiltrarToolStripMenuItem = New ToolStripMenuItem()
+        LBienvenido = New ToolStrip()
+        TSalir = New ToolStripButton()
+        ToolStripLabel1 = New ToolStripLabel()
+        LblBienvenido = New ToolStripLabel()
         MenuStrip2.SuspendLayout()
+        LBienvenido.SuspendLayout()
         SuspendLayout()
         ' 
         ' ToolStripMenuItem1
@@ -87,15 +91,6 @@ Partial Class Form4
         ReportesToolStripMenuItem.Size = New Size(81, 20)
         ReportesToolStripMenuItem.Text = "Reportes"
         ' 
-        ' BtnCerrarSesion
-        ' 
-        BtnCerrarSesion.Location = New Point(607, 100)
-        BtnCerrarSesion.Name = "BtnCerrarSesion"
-        BtnCerrarSesion.Size = New Size(75, 23)
-        BtnCerrarSesion.TabIndex = 1
-        BtnCerrarSesion.Text = "Cerrar sesión"
-        BtnCerrarSesion.UseVisualStyleBackColor = True
-        ' 
         ' ProductosToolStripMenuItem
         ' 
         ProductosToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CategoriaToolStripMenuItem, FiltrarToolStripMenuItem})
@@ -107,7 +102,7 @@ Partial Class Form4
         ' 
         CategoriaToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {InsumosToolStripMenuItem, ProtesisToolStripMenuItem, CounicacionToolStripMenuItem})
         CategoriaToolStripMenuItem.Name = "CategoriaToolStripMenuItem"
-        CategoriaToolStripMenuItem.Size = New Size(180, 22)
+        CategoriaToolStripMenuItem.Size = New Size(123, 22)
         CategoriaToolStripMenuItem.Text = "categoria"
         ' 
         ' InsumosToolStripMenuItem
@@ -131,8 +126,39 @@ Partial Class Form4
         ' FiltrarToolStripMenuItem
         ' 
         FiltrarToolStripMenuItem.Name = "FiltrarToolStripMenuItem"
-        FiltrarToolStripMenuItem.Size = New Size(180, 22)
+        FiltrarToolStripMenuItem.Size = New Size(123, 22)
         FiltrarToolStripMenuItem.Text = "Ver Todo"
+        ' 
+        ' LBienvenido
+        ' 
+        LBienvenido.Font = New Font("Segoe UI Emoji", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LBienvenido.Items.AddRange(New ToolStripItem() {TSalir, ToolStripLabel1, LblBienvenido})
+        LBienvenido.Location = New Point(0, 24)
+        LBienvenido.Name = "LBienvenido"
+        LBienvenido.Size = New Size(800, 25)
+        LBienvenido.TabIndex = 2
+        ' 
+        ' TSalir
+        ' 
+        TSalir.Alignment = ToolStripItemAlignment.Right
+        TSalir.DisplayStyle = ToolStripItemDisplayStyle.Image
+        TSalir.Font = New Font("Segoe UI Emoji", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TSalir.ForeColor = Color.Red
+        TSalir.Image = My.Resources.Resources.borrar
+        TSalir.ImageTransparentColor = Color.Magenta
+        TSalir.Name = "TSalir"
+        TSalir.Size = New Size(23, 22)
+        ' 
+        ' ToolStripLabel1
+        ' 
+        ToolStripLabel1.Name = "ToolStripLabel1"
+        ToolStripLabel1.Size = New Size(0, 22)
+        ' 
+        ' LblBienvenido
+        ' 
+        LblBienvenido.ForeColor = Color.Red
+        LblBienvenido.Name = "LblBienvenido"
+        LblBienvenido.Size = New Size(0, 22)
         ' 
         ' Form4
         ' 
@@ -141,7 +167,7 @@ Partial Class Form4
         BackgroundImage = My.Resources.Resources.inicio_sesion1
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(800, 450)
-        Controls.Add(BtnCerrarSesion)
+        Controls.Add(LBienvenido)
         Controls.Add(MenuStrip2)
         MainMenuStrip = MenuStrip2
         MdiChildrenMinimizedAnchorBottom = False
@@ -149,6 +175,8 @@ Partial Class Form4
         Text = "Perfil  Gerente"
         MenuStrip2.ResumeLayout(False)
         MenuStrip2.PerformLayout()
+        LBienvenido.ResumeLayout(False)
+        LBienvenido.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -164,11 +192,16 @@ Partial Class Form4
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BtnCerrarSesion As Button
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CategoriaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InsumosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProtesisToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CounicacionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FiltrarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents TSalir As ToolStripButton
+    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents LBienvenido As ToolStrip
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents LblBienvenido As ToolStripLabel
 End Class

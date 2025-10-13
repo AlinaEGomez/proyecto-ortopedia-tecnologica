@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alina\\source\\repos\\AlinaEGomez\\taller2\\aplicacion\\proyecto\\proyecto.vbproj": {}
+    "C:\\Users\\Alina\\Source\\Repos\\taller2\\aplicacion\\proyecto\\proyecto.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\Alina\\source\\repos\\AlinaEGomez\\taller2\\aplicacion\\proyecto\\proyecto.vbproj": {
+    "C:\\Users\\Alina\\Source\\Repos\\taller2\\aplicacion\\proyecto\\proyecto.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alina\\source\\repos\\AlinaEGomez\\taller2\\aplicacion\\proyecto\\proyecto.vbproj",
+        "projectUniqueName": "C:\\Users\\Alina\\Source\\Repos\\taller2\\aplicacion\\proyecto\\proyecto.vbproj",
         "projectName": "proyecto",
-        "projectPath": "C:\\Users\\Alina\\source\\repos\\AlinaEGomez\\taller2\\aplicacion\\proyecto\\proyecto.vbproj",
+        "projectPath": "C:\\Users\\Alina\\Source\\Repos\\taller2\\aplicacion\\proyecto\\proyecto.vbproj",
         "packagesPath": "C:\\Users\\Alina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alina\\source\\repos\\AlinaEGomez\\taller2\\aplicacion\\proyecto\\obj\\",
+        "outputPath": "C:\\Users\\Alina\\Source\\Repos\\taller2\\aplicacion\\proyecto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

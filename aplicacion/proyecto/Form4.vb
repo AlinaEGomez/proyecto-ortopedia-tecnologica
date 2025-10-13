@@ -3,14 +3,32 @@
 
     End Sub
 
-    Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click
 
+
+    Private Sub LblBienvenido_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        ' Supongamos que después del login obtenés el rol
+
+
+        ' Mostrar saludo en el ToolStripLabel
+        TSalir.Text = "¡Bienvenido " & "perfil" & "!"
+        TSalir.ForeColor = Color.DarkViolet
+
+    End Sub
+
+    Private Sub LblBienvenido_Click_1(sender As Object, e As EventArgs) Handles LblBienvenido.Click
+
+    End Sub
+
+    Private Sub TSalir_Click(sender As Object, e As EventArgs) Handles TSalir.Click
         ' Cierra el formulario de login actual
         Me.Close()
 
         ' Muestra el formulario de inicio
         Dim formInicio As New Form1()
         Form1.Show()
-
     End Sub
 End Class

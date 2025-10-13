@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form7
+Partial Class FormUsuarios
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,53 +22,30 @@ Partial Class Form7
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        DataGridView1 = New DataGridView()
-        Column3 = New DataGridViewTextBoxColumn()
-        Column1 = New DataGridViewTextBoxColumn()
-        Column2 = New DataGridViewTextBoxColumn()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        DgvUsuarios = New DataGridView()
+        CType(DgvUsuarios, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' DataGridView1
+        ' DgvUsuarios
         ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {Column3, Column1, Column2})
-        DataGridView1.Location = New Point(267, 246)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(335, 150)
-        DataGridView1.TabIndex = 0
+        DgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DgvUsuarios.Location = New Point(54, 87)
+        DgvUsuarios.Name = "DgvUsuarios"
+        DgvUsuarios.Size = New Size(678, 291)
+        DgvUsuarios.TabIndex = 0
         ' 
-        ' Column3
-        ' 
-        Column3.HeaderText = "Column3"
-        Column3.Name = "Column3"
-        ' 
-        ' Column1
-        ' 
-        Column1.HeaderText = "Column1"
-        Column1.Name = "Column1"
-        ' 
-        ' Column2
-        ' 
-        Column2.HeaderText = "Column2"
-        Column2.Name = "Column2"
-        ' 
-        ' Form7
+        ' FormUsuarios
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackgroundImage = My.Resources.Resources.silla
-        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(800, 450)
-        Controls.Add(DataGridView1)
-        Name = "Form7"
+        Controls.Add(DgvUsuarios)
+        Name = "FormUsuarios"
         Text = "Form7"
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(DgvUsuarios, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+
+    Friend WithEvents DgvUsuarios As DataGridView
 End Class

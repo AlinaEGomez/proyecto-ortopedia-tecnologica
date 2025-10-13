@@ -1,64 +1,88 @@
-﻿
+﻿Imports System.Data.SqlClient
+Imports Microsoft.Data.SqlClient
 'Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
 Public Class Form1
+    Public Shared perfilUsuario As String
 
+    ' Diccionario para simular una base de datos de usuarios (Email, Contraseña, Perfil)
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
-        ' Diccionario para simular una base de datos de usuarios (Email, Contraseña, Perfil)
-        Dim usuarios As New Dictionary(Of String, Tuple(Of String, String))
-        usuarios.Add("admin@gmail.com", New Tuple(Of String, String)("1234", "administrador"))
-        usuarios.Add("vendedor@gmail.com", New Tuple(Of String, String)("5678", "vendedor"))
-        usuarios.Add("gerente@gmail.com", New Tuple(Of String, String)("9012", "gerente"))
+        Dim correoIngresado As String = TxtEmail.Text.Trim()
+        Dim contraseñaIngresada As String = TxtContraseña.Text.Trim()
 
-        ' Obtiene el email y contraseña del formulario
-        Dim emailIngresado As String = TxtEmail.Text
-        Dim contrasenaIngresada As String = TxtContraseña.Text
-
-        ' Comprueba si el email existe en el "diccionario"
-        If usuarios.ContainsKey(emailIngresado) Then
-            Dim datosUsuario = usuarios(emailIngresado)
-            Dim contrasenaCorrecta As String = datosUsuario.Item1
-            Dim perfil As String = datosUsuario.Item2
-
-            ' Comprueba si la contraseña es correcta
-            If contrasenaIngresada = contrasenaCorrecta Then
-                MessageBox.Show($"¡Bienvenido {perfil}!", "Acceso Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Me.Hide() ' Oculta el formulario de login
-
-                ' Redirige según el perfil
-                Select Case perfil
-                    Case "administrador"
-                        Dim formAdmin As New Form2()
-                        Form2.Show()
-                    Case "vendedor"
-                        Dim formVendedor As New Form3()
-                        Form3.Show()
-                    Case "gerente"
-                        Dim formGerente As New Form4()
-                        Form4.Show()
-                End Select
-            Else
-                ' Contraseña incorrecta
-                MessageBox.Show("Email o contraseña incorrectos.", "Error de Acceso", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                TxtContraseña.Clear()
-                TxtContraseña.Focus()
-            End If
-        Else
-            ' Email no encontrado
-            MessageBox.Show("Email o contraseña incorrectos.", "Error de Acceso", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            TxtEmail.Clear()
-            TxtContraseña.Clear()
-            TxtEmail.Focus()
+        If correoIngresado = "" Or contraseñaIngresada = "" Then
+            MessageBox.Show("Debe ingresar el correo y la contraseña.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
         End If
-    End Sub
-    ' Función para validar el formato de un email (simple)
-    Private Function EsEmailValido(email As String) As Boolean
+
+        Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedia_taller;Trusted_Connection=True;Encrypt=False;")
+        Dim consulta As String = "SELECT Email,Contrasena,Perfil, Nombre,Apellido , Activo FROM Usuarios WHERE Email = @Email"
+        Dim comando As New SqlCommand(consulta, conexion)
+        comando.Parameters.AddWithValue("@Email", correoIngresado)
+
         Try
-            Dim addr As New System.Net.Mail.MailAddress(email)
-            Return True
-        Catch
-            Return False
+            conexion.Open()
+            Dim lector As SqlDataReader = comando.ExecuteReader()
+
+            If lector.Read() Then
+                Dim contraseñaCorrecta As String = lector("Contrasena").ToString()
+                Dim perfil As String = lector("perfil").ToString().ToLower()
+                Dim activo As Boolean = Convert.ToBoolean(lector("Activo"))
+
+                If Not activo Then
+                    MessageBox.Show("El usuario está inactivo.", "Acceso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    Exit Sub
+                End If
+
+                If contraseñaIngresada = contraseñaCorrecta Then
+                    If perfil = "administrador" Or perfil = "vendedor" Or perfil = "gerente" Then
+                        ' **Asignamos el perfil a la variable pública**
+                        perfilUsuario = perfil
+
+                        MessageBox.Show($"¡Bienvenido, {perfil}!", "Acceso Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Me.Hide()
+                        Select Case perfil
+                            Case "administrador"
+                                Dim formAdmin As New Form2()
+                                formAdmin.LblBienvenido.Text = $"¡Bienvenido {perfil}!"
+                                formAdmin.LblBienvenido.ForeColor = Color.DarkBlue
+                                formAdmin.Show()
+                            Case "vendedor"
+                                Dim formVendedor As New Form3()
+                                formVendedor.LblBienvenido.Text = $"¡Bienvenido {perfil}!"
+                                formVendedor.LblBienvenido.ForeColor = Color.DarkGreen
+                                formVendedor.Show()
+                            Case "gerente"
+                                Dim formGerente As New Form4()
+                                formGerente.LblBienvenido.Text = $"¡Bienvenido {perfil}!"
+                                formGerente.LblBienvenido.ForeColor = Color.DarkRed
+                                formGerente.Show()
+                        End Select
+
+                    Else
+                        MessageBox.Show("Este usuario no tiene permisos para acceder al sistema.", "Acceso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    End If
+                Else
+                    MessageBox.Show("Contraseña incorrecta.", "Error de Acceso", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TxtContraseña.Clear()
+                End If
+            Else
+                MessageBox.Show("Correo no encontrado.", "Error de Acceso", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                TxtEmail.Clear()
+                TxtContraseña.Clear()
+            End If
+
+            lector.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error al conectar con la base de datos: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conexion.Close()
         End Try
-    End Function
+
+
+    End Sub
+
+
+
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
 
         Close() ' Cierra la aplicación
@@ -72,3 +96,4 @@ Public Class Form1
 
     End Sub
 End Class
+

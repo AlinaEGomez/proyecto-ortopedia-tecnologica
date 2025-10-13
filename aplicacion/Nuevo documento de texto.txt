@@ -1,0 +1,12 @@
+# Archivos de la solución y proyecto
+[Bb]in/
+[Oo]bj/
+*.user
+*.pdb
+*.suo
+
+# Directorio de Visual Studio (¡Esto soluciona tu error!)
+.vs/
+
+# Caché de IntelliSense
+*.ncb
