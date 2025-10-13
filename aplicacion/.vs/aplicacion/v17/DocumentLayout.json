@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\form14.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\form14.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\form14.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\form14.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\form14.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\form14.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\gestorbd.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\gestorbd.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,71 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form14.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\Form14.Designer.vb",
-              "RelativeDocumentMoniker": "proyecto\\Form14.Designer.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\Form14.Designer.vb",
-              "RelativeToolTip": "proyecto\\Form14.Designer.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-10-13T20:15:35.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form14.resx",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\Form14.resx",
-              "RelativeDocumentMoniker": "proyecto\\Form14.resx",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\Form14.resx",
-              "RelativeToolTip": "proyecto\\Form14.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-10-13T20:15:25.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form14.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\Form14.vb",
-              "RelativeDocumentMoniker": "proyecto\\Form14.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\Form14.vb [Dise\u00F1o]",
-              "RelativeToolTip": "proyecto\\Form14.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-10-13T18:54:28.863Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GestorBD.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\GestorBD.vb",
-              "RelativeDocumentMoniker": "proyecto\\GestorBD.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\GestorBD.vb",
-              "RelativeToolTip": "proyecto\\GestorBD.vb",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAAAHIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-10-13T18:53:22.605Z"
             }
           ]
         }
