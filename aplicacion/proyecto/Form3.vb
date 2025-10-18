@@ -21,4 +21,12 @@
         LblBienvenido.Text = "¡Bienvenido " & "perfil" & "!"
         LblBienvenido.ForeColor = Color.DarkGreen
     End Sub
+
+    Private Sub RgistrarVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RgistrarVentasToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
+        FormVentas.Show()
+    End Sub
 End Class

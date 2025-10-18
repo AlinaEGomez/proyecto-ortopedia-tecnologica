@@ -63,13 +63,13 @@ Partial Class Form3
         ' RgistrarVentasToolStripMenuItem
         ' 
         RgistrarVentasToolStripMenuItem.Name = "RgistrarVentasToolStripMenuItem"
-        RgistrarVentasToolStripMenuItem.Size = New Size(151, 22)
-        RgistrarVentasToolStripMenuItem.Text = "Rgistrar ventas"
+        RgistrarVentasToolStripMenuItem.Size = New Size(180, 22)
+        RgistrarVentasToolStripMenuItem.Text = "Registrar ventas"
         ' 
         ' VerVentasToolStripMenuItem
         ' 
         VerVentasToolStripMenuItem.Name = "VerVentasToolStripMenuItem"
-        VerVentasToolStripMenuItem.Size = New Size(151, 22)
+        VerVentasToolStripMenuItem.Size = New Size(180, 22)
         VerVentasToolStripMenuItem.Text = "Ver ventas"
         ' 
         ' ClientesToolStripMenuItem
