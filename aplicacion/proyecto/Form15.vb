@@ -1,9 +1,14 @@
-﻿Imports Microsoft.Data.SqlClient
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Drawing.Printing
+Imports System.IO ' Aunque solo es texto, es buena práctica
 Imports System.Text
+Imports Microsoft.Data.SqlClient
 
 Public Class FormVentas
+
+    ' Variable global para el ID del usuario logueado
+    Public Shared VendedorID_Actual As Integer = 0
+    Public Shared NombreVendedor_Actual As String = "Vendedor"
 
     ' 🔗 Cambia estos datos según tu configuración local
     Private conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedia_taller;Trusted_Connection=True;TrustServerCertificate=True;")
@@ -100,82 +105,66 @@ Public Class FormVentas
     ' 💾 Confirmar venta (guardar en SQL)
     ' 💾 Confirmar venta (guardar en SQL)
     Private Sub btnConfirmarVenta_Click(sender As Object, e As EventArgs) Handles btnConfirmarVenta.Click
-        If DgvDetalle.Rows.Count = 0 Then
-            MessageBox.Show("Debe agregar al menos un producto.")
-            Return
-        End If
+        ' ... (validaciones iniciales) ...
 
-        Dim idVentaRegistrada As Integer ' Variable para guardar el ID de la venta
+        Dim idVentaRegistrada As Integer
+        ' 1. 🔑 DECLARACIÓN FUERA DEL TRY
+        Dim transaccion As SqlTransaction = Nothing
 
         Try
             conexion.Open()
-            Dim transaccion As SqlTransaction = conexion.BeginTransaction()
+            ' 2. 🔑 ASIGNACIÓN DENTRO DEL TRY
+            transaccion = conexion.BeginTransaction()
 
-            ' Insertar venta y obtener ID
-            Dim cmdVenta As New SqlCommand("INSERT INTO Ventas (Fecha, Usuario, Total) OUTPUT INSERTED.VentaID VALUES (GETDATE(), @usuario, @total)", conexion, transaccion)
-            cmdVenta.Parameters.AddWithValue("@usuario", Environment.UserName)
-            cmdVenta.Parameters.AddWithValue("@total", totalVenta)
-            idVentaRegistrada = CInt(cmdVenta.ExecuteScalar()) ' <-- Aquí obtenemos el ID
+            ' 3. Insertar venta y obtener ID
+            ' Insertar venta
+            ' ⚠️ Revisa que el nombre del campo en tu BD sea IdUsuario
+            Using cmdVenta As New SqlCommand("INSERT INTO Ventas (Fecha, IdUsuario, Total) OUTPUT INSERTED.VentaID VALUES (GETDATE(), @usuarioId, @total)", conexion, transaccion)
+                cmdVenta.Parameters.AddWithValue("@usuarioId", VendedorID_Actual)
+                cmdVenta.Parameters.AddWithValue("@total", totalVenta)
+                idVentaRegistrada = CInt(cmdVenta.ExecuteScalar())
+            End Using
 
-            ' ... (El resto del código de DetalleVenta y Stock sigue igual) ...
-            For Each fila As DataGridViewRow In DgvDetalle.Rows
-                Dim idProducto As Integer = CInt(fila.Cells("ProductoID").Value)
-                Dim cantidad As Integer = CInt(fila.Cells("Cantidad").Value)
-                Dim precioUnitario As Decimal = CDec(fila.Cells("PrecioUnitario").Value)
-
-                ' Insertar detalle
-                Dim cmdDetalle As New SqlCommand("INSERT INTO DetalleVenta (VentaID, ProductoID, Cantidad, PrecioUnitario) VALUES (@venta, @prod, @cant, @precio)", conexion, transaccion)
-                cmdDetalle.Parameters.AddWithValue("@venta", idVentaRegistrada) ' Usamos el ID de la venta
-                cmdDetalle.Parameters.AddWithValue("@prod", idProducto)
-                cmdDetalle.Parameters.AddWithValue("@cant", cantidad)
-                cmdDetalle.Parameters.AddWithValue("@precio", precioUnitario)
-                cmdDetalle.ExecuteNonQuery()
-
-                ' Actualizar stock
-                Dim cmdStock As New SqlCommand("UPDATE Productos SET Stock = Stock - @cant WHERE ProductoID = @id", conexion, transaccion)
-                cmdStock.Parameters.AddWithValue("@cant", cantidad)
-                cmdStock.Parameters.AddWithValue("@id", idProducto)
-                cmdStock.ExecuteNonQuery()
-            Next
+            ' 4. Bucle For Each para Detalle y Stock (USANDO transaccion)
+            ' ... (tu código de detalle y stock con Using) ...
 
             transaccion.Commit()
-
-            ' ----------------------------------------------------
-            ' 🚀 NUEVO PASO: IMPRIMIR TICKET
-            ImprimirTicket(idVentaRegistrada, DgvDetalle)
-            ' ----------------------------------------------------
-
+            GenerarComprobante(idVentaRegistrada, DgvDetalle)
             MessageBox.Show("✅ Venta registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            ' Limpiar la interfaz después de la impresión
-            DgvDetalle.Rows.Clear()
-            lblTotal.Text = "0.00"
-            totalVenta = 0
-            CargarProductos() ' Recargar productos para actualizar stock
-
         Catch ex As Exception
-            ' Manejo de errores de la Transacción o SQL
             MessageBox.Show("Error al guardar la venta: " & ex.Message)
+
+            ' 5. ⚠️ ROLLBACK SEGURO
+            If transaccion IsNot Nothing Then
+                Try
+                    ' Intentar hacer Rollback si la transacción existe y la conexión está abierta
+                    transaccion.Rollback()
+                Catch rollEx As Exception
+                    ' Si el Rollback falla, solo notificar (la conexión puede haber fallado antes)
+                    MessageBox.Show("Error al intentar revertir la transacción: " & rollEx.Message, "Error Crítico")
+                End Try
+            End If
+
         Finally
             conexion.Close()
         End Try
     End Sub
 
-    Private Sub ImprimirTicket(ByVal idVenta As Integer, ByVal detalleVenta As DataGridView)
+    Private Sub GenerarComprobante(ByVal idVenta As Integer, ByVal detalleVenta As DataGridView)
 
-        ' 📝 Construir el contenido del Ticket
+        ' 1. CONSTRUIR EL CONTENIDO DEL TEXTO
         Dim sb As New StringBuilder()
 
         ' --- ENCABEZADO ---
-        sb.AppendLine(String.Empty.PadRight(32, "="))
-        sb.AppendLine("    ORTOPEDIA EL TALLER") ' Centrado manual para 32 caracteres
-        sb.AppendLine("   ¡Gracias por su compra!")
-        sb.AppendLine(String.Empty.PadRight(32, "="))
+        sb.AppendLine("    ORTOPEDIA EL TALLER")
+        sb.AppendLine("    COMPROBANTE DE VENTA")
+        sb.AppendLine("==================================")
         sb.AppendLine($"TICKET NO: {idVenta}")
         sb.AppendLine($"FECHA: {DateTime.Now.ToString("dd/MM/yyyy HH:mm")}")
-        sb.AppendLine(String.Empty.PadRight(32, "-"))
-        sb.AppendLine("CANT | PRODUCTO        | IMPORTE")
-        sb.AppendLine(String.Empty.PadRight(32, "-"))
+        sb.AppendLine("----------------------------------")
+        sb.AppendLine("CANT | PRODUCTO             | IMPORTE")
+        sb.AppendLine("----------------------------------")
 
         ' --- DETALLE DE PRODUCTOS ---
         For Each fila As DataGridViewRow In detalleVenta.Rows
@@ -183,48 +172,54 @@ Public Class FormVentas
             Dim cantidad As Integer = CInt(fila.Cells("Cantidad").Value)
             Dim subtotal As Decimal = CDec(fila.Cells("Subtotal").Value)
 
-            ' Formateo de la línea: Cantidad | Nombre (acortado) | Subtotal
-            Dim nombreRecortado As String = If(nombreProd.Length > 16, nombreProd.Substring(0, 16), nombreProd)
+            ' Formato de texto con alineación para simular tabla
+            Dim nombreRecortado As String = If(nombreProd.Length > 20, nombreProd.Substring(0, 20), nombreProd)
 
             sb.Append(String.Format("{0,-4}", cantidad.ToString()))
-            sb.Append(String.Format("| {0,-16}", nombreRecortado))
+            sb.Append(String.Format("| {0,-21}", nombreRecortado))
             sb.AppendLine(String.Format("| {0,7:N2}", subtotal))
         Next
 
         ' --- TOTAL Y PIE DE PÁGINA ---
-        sb.AppendLine(String.Empty.PadRight(32, "="))
-        sb.AppendLine(String.Format("TOTAL A PAGAR: {0,17:N2}", totalVenta))
-        sb.AppendLine(String.Empty.PadRight(32, "="))
-
-        ' Agregar saltos de línea extra para que el papel salga del cortador
+        sb.AppendLine("----------------------------------")
+        sb.AppendLine(String.Format("TOTAL A PAGAR: {0,21:N2}", totalVenta))
+        sb.AppendLine("==================================")
         sb.AppendLine(vbCrLf)
-        sb.AppendLine(vbCrLf)
+        sb.AppendLine("       GRACIAS POR SU COMPRA")
 
-        Dim textoCompleto As String = sb.ToString()
+        Dim TextoCompleto As String = sb.ToString()
 
-
-        ' 🖨️ Enviar a la impresora
+        ' 2. ENVIAR EL TEXTO A IMPRESIÓN
         Try
             Dim pd As New PrintDocument()
 
-            ' ⚠️ IMPORTANTE: Reemplaza "Nombre de tu Impresora" con el nombre EXACTO
-            ' que tiene tu impresora de tickets instalada en Windows.
-            pd.PrinterSettings.PrinterName = "hp"
-
-            ' Si usas una impresora térmica, usa una fuente monoespaciada como "Courier New"
+            ' Asignar la fuente, generalmente monoespaciada para alineación
             Dim printFont As New Font("Courier New", 10)
 
-            AddHandler pd.PrintPage, Sub(s, ev)
-                                         ev.Graphics.DrawString(textoCompleto, printFont, Brushes.Black, 0, 0)
-                                         ' ev.Graphics.DrawString(textoCompleto, printFont, Brushes.Black, New PointF(0, 0)) ' Alternativa para PointF
-                                     End Sub
+            ' Abrir el diálogo de impresión para que el usuario elija la impresora
+            Using pDialog As New PrintDialog()
+                pDialog.Document = pd
 
-            pd.Print()
+                If pDialog.ShowDialog() = DialogResult.OK Then
+                    ' El usuario seleccionará "Microsoft Print to PDF" o similar
+
+                    AddHandler pd.PrintPage, Sub(s, ev)
+                                                 ev.Graphics.DrawString(TextoCompleto, printFont, Brushes.Black, 0, 0)
+                                                 ev.HasMorePages = False ' Solo una página
+                                             End Sub
+
+                    pd.Print()
+                Else
+                    MessageBox.Show("Impresión cancelada por el usuario.", "Aviso")
+                End If
+            End Using
 
         Catch ex As Exception
-            MessageBox.Show("Error de impresión: " & ex.Message, "Impresora", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al generar el PDF/Imprimir: " & ex.Message, "Error")
         End Try
 
     End Sub
+
+
 
 End Class

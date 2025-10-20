@@ -90,11 +90,12 @@ Partial Class FormVentas
         ' 
         ' DgvDetalle
         ' 
+        DgvDetalle.AllowUserToOrderColumns = True
         DgvDetalle.BackgroundColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
         DgvDetalle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DgvDetalle.Location = New Point(12, 232)
+        DgvDetalle.Location = New Point(111, 232)
         DgvDetalle.Name = "DgvDetalle"
-        DgvDetalle.Size = New Size(726, 166)
+        DgvDetalle.Size = New Size(560, 166)
         DgvDetalle.TabIndex = 5
         ' 
         ' btnConfirmarVenta

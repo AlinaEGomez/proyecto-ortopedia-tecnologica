@@ -123,3 +123,4 @@ C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormUsuarios.resources
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormInventario.resources
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormVentas.resources
+C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormReporteVentas.resources

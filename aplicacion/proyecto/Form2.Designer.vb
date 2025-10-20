@@ -110,7 +110,7 @@ Partial Class Form2
         ' 
         ProductosToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AltaToolStripMenuItem1, ProductosActivosToolStripMenuItem, ProductosSinStockToolStripMenuItem})
         ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        ProductosToolStripMenuItem.Size = New Size(180, 22)
+        ProductosToolStripMenuItem.Size = New Size(128, 22)
         ProductosToolStripMenuItem.Text = "Productos"
         ' 
         ' AltaToolStripMenuItem1

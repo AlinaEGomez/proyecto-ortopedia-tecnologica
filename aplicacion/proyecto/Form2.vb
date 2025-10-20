@@ -91,4 +91,8 @@
     Private Sub UsuariosToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles UsuariosToolStripMenuItem.Click
         FormUsuarios.Show()
     End Sub
+
+    Private Sub ReportesDeVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportesDeVentasToolStripMenuItem.Click
+        FormReporteVentas.Show()
+    End Sub
 End Class
