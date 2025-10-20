@@ -1,2 +1,2 @@
 # taller2
-trabajos prácticos resueltos con visual basic. Para la asignatura Taller 2
+Aplicación de escritorio con visual basic, y sql server. Para la asignatura Taller 2
