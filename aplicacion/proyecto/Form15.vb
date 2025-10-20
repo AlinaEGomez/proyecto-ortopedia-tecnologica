@@ -119,8 +119,8 @@ Public Class FormVentas
             ' 3. Insertar venta y obtener ID
             ' Insertar venta
             ' ⚠️ Revisa que el nombre del campo en tu BD sea IdUsuario
-            Using cmdVenta As New SqlCommand("INSERT INTO Ventas (Fecha, IdUsuario, Total) OUTPUT INSERTED.VentaID VALUES (GETDATE(), @usuarioId, @total)", conexion, transaccion)
-                cmdVenta.Parameters.AddWithValue("@usuarioId", VendedorID_Actual)
+            Using cmdVenta As New SqlCommand("INSERT INTO Ventas (Fecha, Usuario, Total) OUTPUT INSERTED.VentaID VALUES (GETDATE(), @usuario, @total)", conexion, transaccion)
+                cmdVenta.Parameters.AddWithValue("@usuario", VendedorID_Actual)
                 cmdVenta.Parameters.AddWithValue("@total", totalVenta)
                 idVentaRegistrada = CInt(cmdVenta.ExecuteScalar())
             End Using
