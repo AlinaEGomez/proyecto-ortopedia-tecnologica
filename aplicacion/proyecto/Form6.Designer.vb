@@ -26,8 +26,6 @@ Partial Class Form6
         Panel1 = New Panel()
         TxtContrasena = New TextBox()
         Contraseña = New Label()
-        TxtApellido = New TextBox()
-        Label7 = New Label()
         CmbPuesto = New ComboBox()
         BtnModificar = New Button()
         BtnAlta = New Button()
@@ -42,6 +40,7 @@ Partial Class Form6
         Label2 = New Label()
         Label1 = New Label()
         TxtNombre = New TextBox()
+        BtnBuscar = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         SuspendLayout()
@@ -58,10 +57,9 @@ Partial Class Form6
         ' 
         ' Panel1
         ' 
+        Panel1.Controls.Add(BtnBuscar)
         Panel1.Controls.Add(TxtContrasena)
         Panel1.Controls.Add(Contraseña)
-        Panel1.Controls.Add(TxtApellido)
-        Panel1.Controls.Add(Label7)
         Panel1.Controls.Add(CmbPuesto)
         Panel1.Controls.Add(BtnModificar)
         Panel1.Controls.Add(BtnAlta)
@@ -84,7 +82,7 @@ Partial Class Form6
         ' 
         ' TxtContrasena
         ' 
-        TxtContrasena.Location = New Point(227, 194)
+        TxtContrasena.Location = New Point(226, 159)
         TxtContrasena.Name = "TxtContrasena"
         TxtContrasena.Size = New Size(158, 29)
         TxtContrasena.TabIndex = 18
@@ -93,33 +91,16 @@ Partial Class Form6
         ' 
         Contraseña.AutoSize = True
         Contraseña.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Contraseña.Location = New Point(32, 195)
+        Contraseña.Location = New Point(26, 160)
         Contraseña.Name = "Contraseña"
         Contraseña.Size = New Size(125, 28)
         Contraseña.TabIndex = 17
         Contraseña.Text = "contraseña :"
         ' 
-        ' TxtApellido
-        ' 
-        TxtApellido.Location = New Point(226, 92)
-        TxtApellido.Name = "TxtApellido"
-        TxtApellido.Size = New Size(159, 29)
-        TxtApellido.TabIndex = 16
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(26, 100)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(91, 26)
-        Label7.TabIndex = 15
-        Label7.Text = "Apellido :"
-        ' 
         ' CmbPuesto
         ' 
         CmbPuesto.FormattingEnabled = True
-        CmbPuesto.Items.AddRange(New Object() {"Vendedor", "Gerente", "Cliente"})
+        CmbPuesto.Items.AddRange(New Object() {"Vendedor", "Gerente", "Administrador"})
         CmbPuesto.Location = New Point(227, 323)
         CmbPuesto.Name = "CmbPuesto"
         CmbPuesto.Size = New Size(158, 29)
@@ -129,7 +110,7 @@ Partial Class Form6
         ' 
         BtnModificar.Image = My.Resources.Resources.modificacion
         BtnModificar.ImageAlign = ContentAlignment.MiddleLeft
-        BtnModificar.Location = New Point(241, 369)
+        BtnModificar.Location = New Point(161, 369)
         BtnModificar.Name = "BtnModificar"
         BtnModificar.Size = New Size(125, 44)
         BtnModificar.TabIndex = 13
@@ -202,7 +183,7 @@ Partial Class Form6
         ' 
         ' TxtDni
         ' 
-        TxtDni.Location = New Point(226, 228)
+        TxtDni.Location = New Point(225, 216)
         TxtDni.Name = "TxtDni"
         TxtDni.Size = New Size(159, 29)
         TxtDni.TabIndex = 5
@@ -211,7 +192,7 @@ Partial Class Form6
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(26, 231)
+        Label3.Location = New Point(32, 219)
         Label3.Name = "Label3"
         Label3.Size = New Size(61, 26)
         Label3.TabIndex = 4
@@ -219,7 +200,7 @@ Partial Class Form6
         ' 
         ' TxtEmail
         ' 
-        TxtEmail.Location = New Point(226, 151)
+        TxtEmail.Location = New Point(226, 103)
         TxtEmail.Name = "TxtEmail"
         TxtEmail.Size = New Size(159, 29)
         TxtEmail.TabIndex = 3
@@ -228,7 +209,7 @@ Partial Class Form6
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(23, 154)
+        Label2.Location = New Point(16, 103)
         Label2.Name = "Label2"
         Label2.Size = New Size(173, 26)
         Label2.TabIndex = 2
@@ -240,9 +221,9 @@ Partial Class Form6
         Label1.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(16, 52)
         Label1.Name = "Label1"
-        Label1.Size = New Size(90, 26)
+        Label1.Size = New Size(170, 26)
         Label1.TabIndex = 1
-        Label1.Text = "Nombre :"
+        Label1.Text = "Nombre y Apellido"
         ' 
         ' TxtNombre
         ' 
@@ -250,6 +231,20 @@ Partial Class Form6
         TxtNombre.Name = "TxtNombre"
         TxtNombre.Size = New Size(159, 29)
         TxtNombre.TabIndex = 0
+        ' 
+        ' BtnBuscar
+        ' 
+        BtnBuscar.BackgroundImageLayout = ImageLayout.Stretch
+        BtnBuscar.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BtnBuscar.Image = My.Resources.Resources.buscarUsuario1
+        BtnBuscar.ImageAlign = ContentAlignment.MiddleLeft
+        BtnBuscar.Location = New Point(315, 369)
+        BtnBuscar.Name = "BtnBuscar"
+        BtnBuscar.Size = New Size(118, 45)
+        BtnBuscar.TabIndex = 19
+        BtnBuscar.Text = "Buscar"
+        BtnBuscar.TextAlign = ContentAlignment.MiddleRight
+        BtnBuscar.UseVisualStyleBackColor = True
         ' 
         ' Form6
         ' 
@@ -290,4 +285,5 @@ Partial Class Form6
     Friend WithEvents TxtContrasena As TextBox
     Friend WithEvents R As RadioButton
     Friend WithEvents rbtnHombre As RadioButton
+    Friend WithEvents BtnBuscar As Button
 End Class

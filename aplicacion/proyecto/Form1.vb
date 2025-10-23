@@ -14,8 +14,8 @@ Public Class Form1
             Exit Sub
         End If
 
-        Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedia_taller;Trusted_Connection=True;Encrypt=False;")
-        Dim consulta As String = "SELECT Email,Contrasena,Perfil, Nombre,Apellido , Activo FROM Usuarios WHERE Email = @Email"
+        Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;Encrypt=False;")
+        Dim consulta As String = "SELECT Email,Contrasena,Perfil, Nombre_Apellido , Activo FROM Usuarios WHERE Email = @Email"
         Dim comando As New SqlCommand(consulta, conexion)
         comando.Parameters.AddWithValue("@Email", correoIngresado)
 

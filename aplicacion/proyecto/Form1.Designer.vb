@@ -79,7 +79,7 @@ Partial Class Form1
         TxtEmail.Location = New Point(475, 103)
         TxtEmail.Multiline = True
         TxtEmail.Name = "TxtEmail"
-        TxtEmail.Size = New Size(268, 42)
+        TxtEmail.Size = New Size(290, 35)
         TxtEmail.TabIndex = 3
         ' 
         ' LContraseña
@@ -97,13 +97,14 @@ Partial Class Form1
         ' 
         ' TxtContraseña
         ' 
-        TxtContraseña.Font = New Font("MV Boli", 15.75F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        TxtContraseña.Font = New Font("Segoe UI Emoji", 21.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TxtContraseña.Location = New Point(475, 234)
         TxtContraseña.Multiline = True
         TxtContraseña.Name = "TxtContraseña"
-        TxtContraseña.PasswordChar = "*"c
-        TxtContraseña.Size = New Size(268, 38)
+        TxtContraseña.PasswordChar = "."c
+        TxtContraseña.Size = New Size(290, 35)
         TxtContraseña.TabIndex = 5
+        TxtContraseña.TextAlign = HorizontalAlignment.Center
         ' 
         ' PictureBox1
         ' 
