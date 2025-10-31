@@ -21,7 +21,7 @@ Public Class FormGestionProductos
 
     Private Sub ActualizarDataGrid()
         ' 1. Carga los datos desde la BD y los asigna al DataGridView
-        dgvProductos.DataSource = gestor.CargarProductos()
+        dgvProductos.DataSource = gestor.CargarProductosActivos()
 
         ' 2. Llama a la nueva función de configuración después de que los datos se cargaron
         ConfigurarDataGridColumns()
@@ -161,7 +161,8 @@ Public Class FormGestionProductos
 
         If MessageBox.Show("¿Está seguro de eliminar (Baja Lógica) el producto seleccionado?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
             Try
-                gestor.EliminarProducto(ProductoID_Actual)
+                ' ✅ CÓDIGO CORREGIDO (En el BtnEliminar_Click)
+                gestor.GestionarEstadoLogicoProducto(ProductoID_Actual, 0)
                 MessageBox.Show("Producto eliminado (Baja Lógica) con éxito.", "Eliminado")
                 ActualizarDataGrid()
             Catch ex As Exception
@@ -363,7 +364,7 @@ Public Class FormGestionProductos
         If MessageBox.Show("¿Está seguro de reactivar este producto y volver a darlo de ALTA?", "Confirmar Alta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             Try
                 ' 🔑 Llama a la función del gestor
-                gestor.DarAltaLogicaProducto(idProducto)
+                gestor.GestionarEstadoLogicoProducto(ProductoID_Actual, 1)
                 MessageBox.Show("Producto reactivado con éxito.", "Éxito")
 
                 ' Refrescar la lista de productos dados de baja (el DGV actual)
@@ -448,5 +449,7 @@ Public Class FormGestionProductos
         End Try
 
     End Sub
+    ' ✅ CÓDIGO CORREGIDO (En el BtnEliminar_Click)
+
 
 End Class

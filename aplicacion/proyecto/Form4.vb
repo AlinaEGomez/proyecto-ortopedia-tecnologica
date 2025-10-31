@@ -28,7 +28,7 @@
         Me.Close()
 
         ' Muestra el formulario de inicio
-        Dim formInicio As New Form1()
-        Form1.Show()
+        Dim formInicio As New FormLogin()
+        FormLogin.Show()
     End Sub
 End Class

@@ -128,3 +128,5 @@ C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormGestionProductos.resources
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormClientes.resources
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormClientesInactivos.resources
+C:\Users\Alina\source\repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormLogin.resources
+C:\Users\Alina\source\repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormInventario.resources
