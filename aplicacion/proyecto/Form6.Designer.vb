@@ -74,7 +74,7 @@ Partial Class Form6
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(TxtNombre)
-        Panel1.Font = New Font("Segoe UI Emoji", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Panel1.Font = New Font("Segoe UI Emoji", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Panel1.Location = New Point(421, 22)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(449, 430)
@@ -90,7 +90,7 @@ Partial Class Form6
         ' Contraseña
         ' 
         Contraseña.AutoSize = True
-        Contraseña.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Contraseña.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Contraseña.Location = New Point(26, 160)
         Contraseña.Name = "Contraseña"
         Contraseña.Size = New Size(125, 28)
@@ -133,7 +133,7 @@ Partial Class Form6
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label6.Location = New Point(23, 322)
         Label6.Name = "Label6"
         Label6.Size = New Size(86, 28)
@@ -165,7 +165,7 @@ Partial Class Form6
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label5.Location = New Point(26, 273)
         Label5.Name = "Label5"
         Label5.Size = New Size(67, 28)
@@ -175,7 +175,7 @@ Partial Class Form6
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label4.Location = New Point(39, 245)
         Label4.Name = "Label4"
         Label4.Size = New Size(0, 28)
@@ -191,7 +191,7 @@ Partial Class Form6
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label3.Location = New Point(32, 219)
         Label3.Name = "Label3"
         Label3.Size = New Size(61, 26)
@@ -208,7 +208,7 @@ Partial Class Form6
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label2.Location = New Point(16, 103)
         Label2.Name = "Label2"
         Label2.Size = New Size(173, 26)
@@ -218,7 +218,7 @@ Partial Class Form6
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label1.Location = New Point(16, 52)
         Label1.Name = "Label1"
         Label1.Size = New Size(170, 26)
@@ -235,7 +235,7 @@ Partial Class Form6
         ' BtnBuscar
         ' 
         BtnBuscar.BackgroundImageLayout = ImageLayout.Stretch
-        BtnBuscar.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BtnBuscar.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
         BtnBuscar.Image = My.Resources.Resources.buscarUsuario1
         BtnBuscar.ImageAlign = ContentAlignment.MiddleLeft
         BtnBuscar.Location = New Point(315, 369)
@@ -250,7 +250,7 @@ Partial Class Form6
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(128), CByte(128), CByte(255))
+        BackColor = Color.FromArgb(128, 128, 255)
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(882, 450)
         Controls.Add(Panel1)

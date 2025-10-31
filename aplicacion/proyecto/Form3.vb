@@ -29,4 +29,8 @@
     Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
         FormVentas.Show()
     End Sub
+
+    Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
+        FormClientes.Show()
+    End Sub
 End Class

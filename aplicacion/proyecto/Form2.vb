@@ -47,7 +47,7 @@
     End Sub
 
     Private Sub AltaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AltaToolStripMenuItem1.Click
-        FormInventario.Show()
+        FormGestionProductos.Show()
 
 
     End Sub
@@ -94,5 +94,9 @@
 
     Private Sub ReportesDeVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportesDeVentasToolStripMenuItem.Click
         FormReporteVentas.Show()
+    End Sub
+
+    Private Sub ProductosActivosToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        FormProducActiv.Show()
     End Sub
 End Class

@@ -27,8 +27,6 @@ Partial Class Form3
         RgistrarVentasToolStripMenuItem = New ToolStripMenuItem()
         VerVentasToolStripMenuItem = New ToolStripMenuItem()
         ClientesToolStripMenuItem = New ToolStripMenuItem()
-        AltaToolStripMenuItem = New ToolStripMenuItem()
-        EditarToolStripMenuItem = New ToolStripMenuItem()
         ProductosToolStripMenuItem = New ToolStripMenuItem()
         CategoriaToolStripMenuItem = New ToolStripMenuItem()
         SensorialToolStripMenuItem = New ToolStripMenuItem()
@@ -63,35 +61,22 @@ Partial Class Form3
         ' RgistrarVentasToolStripMenuItem
         ' 
         RgistrarVentasToolStripMenuItem.Name = "RgistrarVentasToolStripMenuItem"
-        RgistrarVentasToolStripMenuItem.Size = New Size(180, 22)
+        RgistrarVentasToolStripMenuItem.Size = New Size(157, 22)
         RgistrarVentasToolStripMenuItem.Text = "Registrar ventas"
         ' 
         ' VerVentasToolStripMenuItem
         ' 
         VerVentasToolStripMenuItem.Name = "VerVentasToolStripMenuItem"
-        VerVentasToolStripMenuItem.Size = New Size(180, 22)
+        VerVentasToolStripMenuItem.Size = New Size(157, 22)
         VerVentasToolStripMenuItem.Text = "Ver ventas"
         ' 
         ' ClientesToolStripMenuItem
         ' 
-        ClientesToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AltaToolStripMenuItem, EditarToolStripMenuItem})
         ClientesToolStripMenuItem.Image = My.Resources.Resources.mercado1
         ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
         ClientesToolStripMenuItem.Size = New Size(61, 35)
         ClientesToolStripMenuItem.Text = "Clientes"
         ClientesToolStripMenuItem.TextImageRelation = TextImageRelation.ImageAboveText
-        ' 
-        ' AltaToolStripMenuItem
-        ' 
-        AltaToolStripMenuItem.Name = "AltaToolStripMenuItem"
-        AltaToolStripMenuItem.Size = New Size(104, 22)
-        AltaToolStripMenuItem.Text = "Alta"
-        ' 
-        ' EditarToolStripMenuItem
-        ' 
-        EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        EditarToolStripMenuItem.Size = New Size(104, 22)
-        EditarToolStripMenuItem.Text = "Editar"
         ' 
         ' ProductosToolStripMenuItem
         ' 
@@ -182,8 +167,6 @@ Partial Class Form3
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RgistrarVentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VerVentasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AltaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CategoriaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SensorialToolStripMenuItem As ToolStripMenuItem

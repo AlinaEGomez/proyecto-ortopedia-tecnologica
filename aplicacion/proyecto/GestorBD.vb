@@ -1,114 +1,188 @@
-﻿Imports Microsoft.Data.SqlClient
+﻿
+Imports Microsoft.Data.SqlClient
+Imports System.Data
+Imports System.Data.SqlClient
+Imports System.Windows.Forms ' Necesario para Throw New Exception
 
 Public Class GestorBD
+    ' ⚠️ ASUME que CadenaConexion está definida aquí o en un módulo global
+    Private Const CadenaConexion As String = "Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;"
 
-    ' **IMPORTANTE:** Cambia esta cadena de conexión con tus propios datos de servidor.
-    Private Shared ReadOnly ConnectionString As String =
-        "Server=localhost\SQLEXPRESS01;Database=ortopedia_taller;Trusted_Connection=True;Encrypt=False;"
-    ' O usa User ID=TU_USUARIO;Password=TU_PASSWORD si no usas autenticación de Windows
+    ' ----------------------------------------------------------------------
+    ' LEER (Cargar todo el inventario ACTIVO - FUNCIÓN PRINCIPAL)
+    ' ----------------------------------------------------------------------
+    Public Function CargarProductosActivos() As DataTable
+        Dim dt As New DataTable()
+        Dim consulta As String = "SELECT ProductoID, Codigo, Descripcion, Stock, Precio, RutaImagen, EstadoLogico FROM Productos WHERE EstadoLogico = 1 ORDER BY ProductoID DESC"
 
-    ' =========================================================================
-    ' 1. CONEXIÓN
-    ' =========================================================================
-
-    Private Function ObtenerConexion() As SqlConnection
-        Return New SqlConnection(ConnectionString)
+        Using conexion As New SqlConnection(CadenaConexion), cmd As New SqlCommand(consulta, conexion)
+            Using adapter As New SqlDataAdapter(cmd)
+                Try
+                    adapter.Fill(dt)
+                Catch ex As Exception
+                    Throw New Exception("Fallo al cargar productos activos desde BD: " & ex.Message, ex)
+                End Try
+            End Using
+        End Using
+        Return dt
     End Function
 
-    ' =========================================================================
-    ' 2. CRUD: CREAR (INSERTAR)
-    ' =========================================================================
+    ' ----------------------------------------------------------------------
+    ' CREAR (Alta de nuevo producto)
+    ' ----------------------------------------------------------------------
+    Public Sub InsertarProducto(ByVal codigo As String, ByVal descripcion As String, ByVal stock As Integer, ByVal precio As Decimal, ByVal rutaImagen As String)
+        Dim consulta As String = "INSERT INTO Productos (Codigo, Descripcion, Stock, Precio, RutaImagen, EstadoLogico) VALUES (@cod, @desc, @stock, @precio, @ruta, 1)"
 
-    Public Sub InsertarProducto(nombre As String, stock As Integer, precio As Decimal, rutaImagen As String)
-        Dim sql As String = "INSERT INTO Productos (Nombre, Stock, Precio, RutaImagen) " &
-                            "VALUES (@nom, @stk, @pre, @ruta)"
-
-        Using con As SqlConnection = ObtenerConexion()
-            Using cmd As New SqlCommand(sql, con)
-                cmd.Parameters.AddWithValue("@nom", nombre)
-                cmd.Parameters.AddWithValue("@stk", stock)
-                cmd.Parameters.AddWithValue("@pre", precio)
-
-                ' Maneja si la ruta es nula o vacía (guarda NULL en la BD)
-                cmd.Parameters.AddWithValue("@ruta", If(String.IsNullOrEmpty(rutaImagen), CType(DBNull.Value, Object), rutaImagen))
-
-                con.Open()
+        Using conexion As New SqlConnection(CadenaConexion), cmd As New SqlCommand(consulta, conexion)
+            cmd.Parameters.AddWithValue("@cod", codigo)
+            cmd.Parameters.AddWithValue("@desc", descripcion)
+            cmd.Parameters.AddWithValue("@stock", stock)
+            cmd.Parameters.AddWithValue("@precio", precio)
+            cmd.Parameters.AddWithValue("@ruta", rutaImagen)
+            Try
+                conexion.Open()
                 cmd.ExecuteNonQuery()
-            End Using
+            Catch ex As Exception
+                Throw New Exception("Fallo al insertar producto: " & ex.Message, ex)
+            End Try
         End Using
     End Sub
 
-    ' =========================================================================
-    ' 3. CRUD: LEER (OBTENER TODOS LOS PRODUCTOS)
-    ' =========================================================================
+    ' ----------------------------------------------------------------------
+    ' MODIFICAR (Actualizar producto existente)
+    ' ----------------------------------------------------------------------
+    Public Sub ModificarProducto(ByVal id As Integer, ByVal codigo As String, ByVal descripcion As String, ByVal stock As Integer, ByVal precio As Decimal, ByVal rutaImagen As String)
+        Dim consulta As String = "UPDATE Productos SET Codigo = @cod, Descripcion = @desc, Stock = @stock, Precio = @precio, RutaImagen = @ruta WHERE ProductoID = @id"
 
-    Public Function CargarProductos() As DataTable
-        Dim tabla As New DataTable()
-        Dim sql As String = "SELECT ProductoID, Nombre, Stock, Precio, RutaImagen FROM Productos ORDER BY Nombre"
-
-        Using con As SqlConnection = ObtenerConexion()
-            Using da As New SqlDataAdapter(sql, con)
-                da.Fill(tabla)
-            End Using
+        Using conexion As New SqlConnection(CadenaConexion), cmd As New SqlCommand(consulta, conexion)
+            cmd.Parameters.AddWithValue("@id", id)
+            cmd.Parameters.AddWithValue("@cod", codigo)
+            cmd.Parameters.AddWithValue("@desc", descripcion)
+            cmd.Parameters.AddWithValue("@stock", stock)
+            cmd.Parameters.AddWithValue("@precio", precio)
+            cmd.Parameters.AddWithValue("@ruta", rutaImagen)
+            Try
+                conexion.Open()
+                cmd.ExecuteNonQuery()
+            Catch ex As Exception
+                Throw New Exception("Fallo al modificar el producto: " & ex.Message, ex)
+            End Try
         End Using
+    End Sub
 
-        Return tabla
+    ' ----------------------------------------------------------------------
+    ' BAJA LÓGICA / REACTIVACIÓN (Gestión de Estado)
+    ' ----------------------------------------------------------------------
+    Public Sub GestionarEstadoLogicoProducto(id As Integer, nuevoEstado As Integer)
+        Dim consulta As String = "UPDATE Productos SET EstadoLogico = @NuevoEstado WHERE ProductoID = @ID"
+
+        Using conexion As New SqlConnection(CadenaConexion), cmd As New SqlCommand(consulta, conexion)
+            cmd.Parameters.AddWithValue("@ID", id)
+            cmd.Parameters.AddWithValue("@NuevoEstado", nuevoEstado) ' 0 o 1
+
+            Try
+                conexion.Open()
+                cmd.ExecuteNonQuery()
+            Catch ex As Exception
+                Throw New Exception("Fallo al cambiar estado lógico del producto: " & ex.Message, ex)
+            End Try
+        End Using
+    End Sub
+
+    ' ----------------------------------------------------------------------
+    ' OTRAS FUNCIONES (Ej. Agregar Stock)
+    ' ----------------------------------------------------------------------
+    Public Sub AgregarStock(productoID As Integer, cantidadAAgregar As Integer)
+        Dim consulta As String = "UPDATE Productos SET Stock = Stock + @Cantidad WHERE ProductoID = @ID"
+
+        Using conexion As New SqlConnection(CadenaConexion), cmd As New SqlCommand(consulta, conexion)
+            cmd.Parameters.AddWithValue("@Cantidad", cantidadAAgregar)
+            cmd.Parameters.AddWithValue("@ID", productoID)
+
+            Try
+                conexion.Open()
+                cmd.ExecuteNonQuery()
+            Catch ex As Exception
+                Throw New Exception("Fallo al agregar stock: " & ex.Message, ex)
+            End Try
+        End Using
+    End Sub
+
+    ' --- En tu CLASE GestorBD.vb ---
+    '---------------------------------------------------------------------------------
+    '                              GESTION DE CLIENTES
+    '---------------------------------------------------------------------------------
+    ' --- En GestorBD.vb ---
+
+    ' LECTURA: Clientes Activos
+    Public Function CargarClientes() As DataTable
+        Dim dt As New DataTable()
+        Dim consulta As String = "SELECT ClienteID, RazonSocial, CUIT, Telefono, Email FROM Clientes WHERE EstadoLogico = 1 ORDER BY RazonSocial ASC"
+
+        Using conexion As New SqlConnection(CadenaConexion), adaptador As New SqlDataAdapter(consulta, conexion)
+            Try
+                adaptador.Fill(dt)
+            Catch ex As Exception
+                Throw New Exception("Fallo al cargar clientes activos.", ex)
+            End Try
+        End Using
+        Return dt
     End Function
 
-    ' Puedes agregar aquí las funciones para Actualizar (UPDATE) y Eliminar (DELETE)
-    ' =========================================================================
-    ' 4. CRUD: ACTUALIZAR (MODIFICAR)
-    ' =========================================================================
+    ' ESCRITURA: Insertar Cliente
+    Public Sub InsertarCliente(razonSocial As String, cuit As String, telefono As String, email As String)
+        Dim consulta As String = "INSERT INTO Clientes (RazonSocial, CUIT, Telefono, Email) VALUES (@RS, @CUIT, @Tel, @Email)"
 
-    ''' <summary>
-    ''' Modifica los datos de un producto existente.
-    ''' </summary>
-    ''' <param name="idProducto">El ID del producto a modificar.</param>
-    Public Sub ActualizarProducto(idProducto As Integer, nombre As String, stock As Integer, precio As Decimal, rutaImagen As String)
-        Dim sql As String = "UPDATE Productos SET " &
-                            "Nombre = @nom, " &
-                            "Stock = @stk, " &
-                            "Precio = @pre, " &
-                            "RutaImagen = @ruta " &
-                            "WHERE ProductoID = @id"
+        Using conexion As New SqlConnection(CadenaConexion), cmd As New SqlCommand(consulta, conexion)
+            cmd.Parameters.AddWithValue("@RS", razonSocial)
+            cmd.Parameters.AddWithValue("@CUIT", cuit)
+            ' Manejo de NULLs
+            cmd.Parameters.AddWithValue("@Tel", If(String.IsNullOrWhiteSpace(telefono), CType(DBNull.Value, Object), telefono))
+            cmd.Parameters.AddWithValue("@Email", If(String.IsNullOrWhiteSpace(email), CType(DBNull.Value, Object), email))
 
-        Using con As SqlConnection = ObtenerConexion()
-            Using cmd As New SqlCommand(sql, con)
-                cmd.Parameters.AddWithValue("@id", idProducto)
-                cmd.Parameters.AddWithValue("@nom", nombre)
-                cmd.Parameters.AddWithValue("@stk", stock)
-                cmd.Parameters.AddWithValue("@pre", precio)
-
-                ' Maneja si la ruta es nula o vacía
-                cmd.Parameters.AddWithValue("@ruta", If(String.IsNullOrEmpty(rutaImagen), CType(DBNull.Value, Object), rutaImagen))
-
-                con.Open()
+            Try
+                conexion.Open()
                 cmd.ExecuteNonQuery()
-            End Using
+            Catch ex As Exception
+                Throw New Exception("Fallo al insertar cliente: " & ex.Message, ex)
+            End Try
         End Using
     End Sub
 
-    ' =========================================================================
-    ' 5. CRUD: ELIMINAR (LÓGICO)
-    ' =========================================================================
+    ' ESCRITURA: Modificar Cliente
+    Public Sub ModificarCliente(idCliente As Integer, razonSocial As String, cuit As String, telefono As String, email As String)
+        Dim consulta As String = "UPDATE Clientes SET RazonSocial = @RS, CUIT = @CUIT, Telefono = @Tel, Email = @Email WHERE ClienteID = @ID"
 
-    ''' <summary>
-    ''' Realiza una eliminación lógica estableciendo EstadoLogico a 0 (Inactivo).
-    ''' </summary>
-    ''' <param name="idProducto">El ID del producto a eliminar lógicamente.</param>
-    Public Sub EliminarProductoLogico(idProducto As Integer)
-        ' El comando SQL solo cambia el estado de 1 (Activo) a 0 (Inactivo)
-        Dim sql As String = "UPDATE Productos SET EstadoLogico = 0 WHERE ProductoID = @id"
+        Using conexion As New SqlConnection(CadenaConexion), cmd As New SqlCommand(consulta, conexion)
+            cmd.Parameters.AddWithValue("@ID", idCliente)
+            cmd.Parameters.AddWithValue("@RS", razonSocial)
+            cmd.Parameters.AddWithValue("@CUIT", cuit)
+            cmd.Parameters.AddWithValue("@Tel", If(String.IsNullOrWhiteSpace(telefono), CType(DBNull.Value, Object), telefono))
+            cmd.Parameters.AddWithValue("@Email", If(String.IsNullOrWhiteSpace(email), CType(DBNull.Value, Object), email))
 
-        Using con As SqlConnection = ObtenerConexion()
-            Using cmd As New SqlCommand(sql, con)
-                cmd.Parameters.AddWithValue("@id", idProducto)
-
-                con.Open()
+            Try
+                conexion.Open()
                 cmd.ExecuteNonQuery()
-            End Using
+            Catch ex As Exception
+                Throw New Exception("Fallo al modificar el cliente: " & ex.Message, ex)
+            End Try
         End Using
     End Sub
 
+    ' ESCRITURA: Baja/Alta Lógica
+    Public Sub GestionarEstadoLogicoCliente(idCliente As Integer, nuevoEstado As Integer)
+        Dim consulta As String = "UPDATE Clientes SET EstadoLogico = @NuevoEstado WHERE ClienteID = @ID"
 
+        Using conexion As New SqlConnection(CadenaConexion), cmd As New SqlCommand(consulta, conexion)
+            cmd.Parameters.AddWithValue("@ID", idCliente)
+            cmd.Parameters.AddWithValue("@NuevoEstado", nuevoEstado) ' 0 o 1
+
+            Try
+                conexion.Open()
+                cmd.ExecuteNonQuery()
+            Catch ex As Exception
+                Throw New Exception("Fallo al cambiar estado lógico del cliente: " & ex.Message, ex)
+            End Try
+        End Using
+    End Sub
 End Class

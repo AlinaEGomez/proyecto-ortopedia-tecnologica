@@ -23,7 +23,9 @@ Partial Class FormReporteVentas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         DgvReporte = New DataGridView()
-        DateTimePicker1 = New DateTimePicker()
+        dtpFechaInicio = New DateTimePicker()
+        btnGenerarReporte = New Button()
+        dtpFechaFin = New DateTimePicker()
         CType(DgvReporte, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -32,18 +34,40 @@ Partial Class FormReporteVentas
         DgvReporte.AllowUserToOrderColumns = True
         DgvReporte.BackgroundColor = Color.FromArgb(CByte(255), CByte(128), CByte(255))
         DgvReporte.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DgvReporte.Location = New Point(301, 165)
+        DgvReporte.Location = New Point(99, 165)
         DgvReporte.Name = "DgvReporte"
-        DgvReporte.Size = New Size(240, 150)
+        DgvReporte.Size = New Size(408, 150)
         DgvReporte.TabIndex = 0
         ' 
-        ' DateTimePicker1
+        ' dtpFechaInicio
         ' 
-        DateTimePicker1.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker1.Location = New Point(223, 38)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(335, 33)
-        DateTimePicker1.TabIndex = 1
+        dtpFechaInicio.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpFechaInicio.Location = New Point(223, 38)
+        dtpFechaInicio.Name = "dtpFechaInicio"
+        dtpFechaInicio.Size = New Size(335, 33)
+        dtpFechaInicio.TabIndex = 1
+        ' 
+        ' btnGenerarReporte
+        ' 
+        btnGenerarReporte.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
+        btnGenerarReporte.BackgroundImageLayout = ImageLayout.None
+        btnGenerarReporte.Image = My.Resources.Resources.gen_Ventas
+        btnGenerarReporte.ImageAlign = ContentAlignment.MiddleLeft
+        btnGenerarReporte.Location = New Point(313, 367)
+        btnGenerarReporte.Name = "btnGenerarReporte"
+        btnGenerarReporte.Size = New Size(149, 37)
+        btnGenerarReporte.TabIndex = 2
+        btnGenerarReporte.Text = "Generar Reporte"
+        btnGenerarReporte.TextAlign = ContentAlignment.MiddleRight
+        btnGenerarReporte.UseVisualStyleBackColor = False
+        ' 
+        ' dtpFechaFin
+        ' 
+        dtpFechaFin.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpFechaFin.Location = New Point(223, 87)
+        dtpFechaFin.Name = "dtpFechaFin"
+        dtpFechaFin.Size = New Size(335, 33)
+        dtpFechaFin.TabIndex = 3
         ' 
         ' FormReporteVentas
         ' 
@@ -52,7 +76,9 @@ Partial Class FormReporteVentas
         BackgroundImage = My.Resources.Resources.AltaProd
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(800, 450)
-        Controls.Add(DateTimePicker1)
+        Controls.Add(dtpFechaFin)
+        Controls.Add(btnGenerarReporte)
+        Controls.Add(dtpFechaInicio)
         Controls.Add(DgvReporte)
         Name = "FormReporteVentas"
         Text = "Reporte de Ventas"
@@ -61,5 +87,7 @@ Partial Class FormReporteVentas
     End Sub
 
     Friend WithEvents DgvReporte As DataGridView
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpFechaInicio As DateTimePicker
+    Friend WithEvents btnGenerarReporte As Button
+    Friend WithEvents dtpFechaFin As DateTimePicker
 End Class

@@ -30,8 +30,6 @@ Partial Class Form2
         MantenimientoToolStripMenuItem = New ToolStripMenuItem()
         ProductosToolStripMenuItem = New ToolStripMenuItem()
         AltaToolStripMenuItem1 = New ToolStripMenuItem()
-        ProductosActivosToolStripMenuItem = New ToolStripMenuItem()
-        ProductosSinStockToolStripMenuItem = New ToolStripMenuItem()
         ClientesToolStripMenuItem = New ToolStripMenuItem()
         ClientesToolStripMenuItem1 = New ToolStripMenuItem()
         ActivosToolStripMenuItem = New ToolStripMenuItem()
@@ -108,28 +106,16 @@ Partial Class Form2
         ' 
         ' ProductosToolStripMenuItem
         ' 
-        ProductosToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AltaToolStripMenuItem1, ProductosActivosToolStripMenuItem, ProductosSinStockToolStripMenuItem})
+        ProductosToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AltaToolStripMenuItem1})
         ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        ProductosToolStripMenuItem.Size = New Size(128, 22)
+        ProductosToolStripMenuItem.Size = New Size(180, 22)
         ProductosToolStripMenuItem.Text = "Productos"
         ' 
         ' AltaToolStripMenuItem1
         ' 
         AltaToolStripMenuItem1.Name = "AltaToolStripMenuItem1"
-        AltaToolStripMenuItem1.Size = New Size(209, 22)
-        AltaToolStripMenuItem1.Text = "Crud Producto"
-        ' 
-        ' ProductosActivosToolStripMenuItem
-        ' 
-        ProductosActivosToolStripMenuItem.Name = "ProductosActivosToolStripMenuItem"
-        ProductosActivosToolStripMenuItem.Size = New Size(209, 22)
-        ProductosActivosToolStripMenuItem.Text = "Productos Activos (stock)"
-        ' 
-        ' ProductosSinStockToolStripMenuItem
-        ' 
-        ProductosSinStockToolStripMenuItem.Name = "ProductosSinStockToolStripMenuItem"
-        ProductosSinStockToolStripMenuItem.Size = New Size(209, 22)
-        ProductosSinStockToolStripMenuItem.Text = "Productos sinStock"
+        AltaToolStripMenuItem1.Size = New Size(180, 22)
+        AltaToolStripMenuItem1.Text = "Inventario"
         ' 
         ' ClientesToolStripMenuItem
         ' 
@@ -323,8 +309,6 @@ Partial Class Form2
     Friend WithEvents ActivosToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents InactivosToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents AltaToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ProductosActivosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProductosSinStockToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CopiaDeSeguridadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UsuariosToolStripMenuItem As ToolStripMenuItem
 End Class

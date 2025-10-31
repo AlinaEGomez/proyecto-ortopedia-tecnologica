@@ -176,4 +176,7 @@ Public Class Form6
         UsuarioID_Actual = 0
     End Sub
 
+    Private Sub rbtnHombre_CheckedChanged(sender As Object, e As EventArgs) Handles rbtnHombre.CheckedChanged
+
+    End Sub
 End Class
