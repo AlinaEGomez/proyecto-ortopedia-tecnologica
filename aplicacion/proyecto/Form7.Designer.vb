@@ -29,15 +29,18 @@ Partial Class FormUsuarios
         ' DgvUsuarios
         ' 
         DgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DgvUsuarios.Location = New Point(54, 87)
+        DgvUsuarios.Location = New Point(54, 197)
         DgvUsuarios.Name = "DgvUsuarios"
-        DgvUsuarios.Size = New Size(678, 291)
+        DgvUsuarios.Size = New Size(678, 241)
         DgvUsuarios.TabIndex = 0
         ' 
         ' FormUsuarios
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ActiveCaption
+        BackgroundImage = My.Resources.Resources.clientes_inactivos
+        BackgroundImageLayout = ImageLayout.Zoom
         ClientSize = New Size(800, 450)
         Controls.Add(DgvUsuarios)
         Name = "FormUsuarios"

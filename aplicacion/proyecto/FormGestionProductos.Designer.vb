@@ -130,7 +130,7 @@ Partial Class FormGestionProductos
         ' 
         ' TabPage1
         ' 
-        TabPage1.BackgroundImage = My.Resources.Resources.AltaProd
+        TabPage1.BackgroundImage = My.Resources.Resources.AltaProd2
         TabPage1.Controls.Add(Label8)
         TabPage1.Controls.Add(Label7)
         TabPage1.Controls.Add(Label6)
@@ -359,10 +359,11 @@ Partial Class FormGestionProductos
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.Gainsboro
         ClientSize = New Size(800, 450)
         Controls.Add(TabControlProductos)
         Name = "FormGestionProductos"
-        Text = "FormGestionProductos"
+        Text = "Gestion Productos"
         Tipo3.ResumeLayout(False)
         CType(DgvProductosSinStock, ComponentModel.ISupportInitialize).EndInit()
         TabPage2.ResumeLayout(False)

@@ -114,10 +114,14 @@ Public Class GestorBD
     '---------------------------------------------------------------------------------
     ' --- En GestorBD.vb ---
 
-    ' LECTURA: Clientes Activos
-    Public Function CargarClientes() As DataTable
+
+    ' --- Añadir esta función a tu CLASE GestorBD.vb ---
+
+
+
+    Public Function CargarClientes() As DataTable ' Activos
         Dim dt As New DataTable()
-        Dim consulta As String = "SELECT ClienteID, RazonSocial, CUIT, Telefono, Email FROM Clientes WHERE EstadoLogico = 1 ORDER BY RazonSocial ASC"
+        Dim consulta As String = "SELECT ClienteID, RazonSocial, CUIT, Telefono, Email, EstadoLogico FROM Clientes WHERE EstadoLogico = 1 ORDER BY RazonSocial ASC"
 
         Using conexion As New SqlConnection(CadenaConexion), adaptador As New SqlDataAdapter(consulta, conexion)
             Try
@@ -129,14 +133,26 @@ Public Class GestorBD
         Return dt
     End Function
 
-    ' ESCRITURA: Insertar Cliente
+    Public Function CargarClientesInactivos() As DataTable ' Inactivos
+        Dim dt As New DataTable()
+        Dim consulta As String = "SELECT ClienteID, RazonSocial, CUIT, Telefono, Email FROM Clientes WHERE EstadoLogico = 0 ORDER BY RazonSocial ASC"
+
+        Using conexion As New SqlConnection(CadenaConexion), adaptador As New SqlDataAdapter(consulta, conexion)
+            Try
+                adaptador.Fill(dt)
+            Catch ex As Exception
+                Throw New Exception("Fallo al cargar clientes inactivos.", ex)
+            End Try
+        End Using
+        Return dt
+    End Function
+
     Public Sub InsertarCliente(razonSocial As String, cuit As String, telefono As String, email As String)
         Dim consulta As String = "INSERT INTO Clientes (RazonSocial, CUIT, Telefono, Email) VALUES (@RS, @CUIT, @Tel, @Email)"
 
         Using conexion As New SqlConnection(CadenaConexion), cmd As New SqlCommand(consulta, conexion)
             cmd.Parameters.AddWithValue("@RS", razonSocial)
             cmd.Parameters.AddWithValue("@CUIT", cuit)
-            ' Manejo de NULLs
             cmd.Parameters.AddWithValue("@Tel", If(String.IsNullOrWhiteSpace(telefono), CType(DBNull.Value, Object), telefono))
             cmd.Parameters.AddWithValue("@Email", If(String.IsNullOrWhiteSpace(email), CType(DBNull.Value, Object), email))
 
@@ -149,7 +165,6 @@ Public Class GestorBD
         End Using
     End Sub
 
-    ' ESCRITURA: Modificar Cliente
     Public Sub ModificarCliente(idCliente As Integer, razonSocial As String, cuit As String, telefono As String, email As String)
         Dim consulta As String = "UPDATE Clientes SET RazonSocial = @RS, CUIT = @CUIT, Telefono = @Tel, Email = @Email WHERE ClienteID = @ID"
 
@@ -169,7 +184,6 @@ Public Class GestorBD
         End Using
     End Sub
 
-    ' ESCRITURA: Baja/Alta Lógica
     Public Sub GestionarEstadoLogicoCliente(idCliente As Integer, nuevoEstado As Integer)
         Dim consulta As String = "UPDATE Clientes SET EstadoLogico = @NuevoEstado WHERE ClienteID = @ID"
 

@@ -48,7 +48,6 @@ C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\bin\Debug\net8.0-windows
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\bin\Debug\net8.0-windows\proyecto.runtimeconfig.json
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\bin\Debug\net8.0-windows\proyecto.dll
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\bin\Debug\net8.0-windows\proyecto.pdb
-C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.Form1.resources
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.Form2.resources
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.Form3.resources
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.Form4.resources
@@ -124,9 +123,7 @@ C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormVentas.resources
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormReporteVentas.resources
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormProducActiv.resources
-C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.Form14.resources
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormGestionProductos.resources
 C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormClientes.resources
-C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormClientesInactivos.resources
 C:\Users\Alina\source\repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormLogin.resources
-C:\Users\Alina\source\repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormInventario.resources
+C:\Users\Alina\Source\Repos\taller2\aplicacion\proyecto\obj\Debug\net8.0-windows\proyecto.FormClientesInactivos.resources
