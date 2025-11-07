@@ -1,10 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="FormAdministrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormBackup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormClientes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormClientesInactivos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormCrud.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormGerente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormGestionProductos.vb">
@@ -13,49 +25,55 @@
     <Compile Update="FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form10.vb">
+    <Compile Update="FormGerenteActivo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form11.vb">
+    <Compile Update="FormGerenteInactivo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form12.vb">
+    <Compile Update="FormMisVentas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form13.vb">
+    <Compile Update="FormRegistrarVentas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form15.vb">
+    <Compile Update="FormUsuariosActivos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form16.vb">
+    <Compile Update="FormUsuariosInactivos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form17.vb">
+    <Compile Update="FormVendedor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form2.vb">
+    <Compile Update="FormVendedorActivo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form3.vb">
+    <Compile Update="FormVendedorInactivo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form4.vb">
+    <Compile Update="FormReporteVentas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form5.vb">
+    <Compile Update="FormProductosSinStock.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form6.vb">
+    <Compile Update="FormCrudUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form7.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form8.vb">
+    <Compile Update="FormProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form9.vb">
+    <Compile Update="FormProveedoresInactivos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormRegistroCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormReporteCompras.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

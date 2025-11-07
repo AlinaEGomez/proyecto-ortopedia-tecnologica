@@ -90,9 +90,9 @@ Partial Class FormGestionProductos
         ' DgvProductosSinStock
         ' 
         DgvProductosSinStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DgvProductosSinStock.Location = New Point(155, 69)
+        DgvProductosSinStock.Location = New Point(96, 31)
         DgvProductosSinStock.Name = "DgvProductosSinStock"
-        DgvProductosSinStock.Size = New Size(474, 150)
+        DgvProductosSinStock.Size = New Size(574, 188)
         DgvProductosSinStock.TabIndex = 0
         ' 
         ' TabPage2
@@ -109,6 +109,7 @@ Partial Class FormGestionProductos
         ' 
         ' DgvProductosConStock
         ' 
+        DgvProductosConStock.BackgroundColor = Color.RosyBrown
         DgvProductosConStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DgvProductosConStock.Location = New Point(130, 177)
         DgvProductosConStock.Name = "DgvProductosConStock"
@@ -340,15 +341,17 @@ Partial Class FormGestionProductos
         ' 
         ' BtnDarAlta
         ' 
-        BtnDarAlta.Location = New Point(410, 96)
+        BtnDarAlta.BackColor = Color.LightCoral
+        BtnDarAlta.Location = New Point(310, 77)
         BtnDarAlta.Name = "BtnDarAlta"
         BtnDarAlta.Size = New Size(160, 46)
         BtnDarAlta.TabIndex = 1
         BtnDarAlta.Text = "Alta"
-        BtnDarAlta.UseVisualStyleBackColor = True
+        BtnDarAlta.UseVisualStyleBackColor = False
         ' 
         ' DgvProductosDeBaja
         ' 
+        DgvProductosDeBaja.BackgroundColor = Color.RosyBrown
         DgvProductosDeBaja.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DgvProductosDeBaja.Location = New Point(142, 148)
         DgvProductosDeBaja.Name = "DgvProductosDeBaja"

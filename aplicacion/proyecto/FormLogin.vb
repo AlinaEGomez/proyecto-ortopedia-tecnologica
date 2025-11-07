@@ -62,20 +62,20 @@ Public Class FormLogin
                             ' El código de Select Case para navegación es correcto.
                             Select Case perfil
                                 Case "administrador"
-                                    Dim formAdmin As New Form2()
+                                    Dim formAdmin As New FormAdministrador()
                                     formAdmin.LblBienvenido.Text = $"¡Bienvenido {nombreCompleto} ({perfil})!" ' Usar nombre real
                                     formAdmin.LblBienvenido.ForeColor = Color.DarkBlue
                                     formAdmin.Show()
 
                                 Case "vendedor"
-                                    Dim formVendedor As New Form3()
+                                    Dim formVendedor As New FormVendedor()
                                     formVendedor.LblBienvenido.Text = $"¡Bienvenido {nombreCompleto} ({perfil})!"
                                     formVendedor.LblBienvenido.ForeColor = Color.DarkGreen
                                     formVendedor.Show()
 
                                 Case "gerente"
-                                    Dim formGerente As New Form4()
-                                    formGerente.LblBienvenido.Text = $"¡Bienvenido {nombreCompleto} ({perfil})!"
+                                Dim formGerente As New FormGerente()
+                                formGerente.LblBienvenido.Text = $"¡Bienvenido {nombreCompleto} ({perfil})!"
                                     formGerente.LblBienvenido.ForeColor = Color.DarkRed
                                     formGerente.Show()
                             End Select
