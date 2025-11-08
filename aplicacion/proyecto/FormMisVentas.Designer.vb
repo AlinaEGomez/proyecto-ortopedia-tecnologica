@@ -30,6 +30,7 @@ Partial Class FormMisVentas
         ' DgvMisVentas
         ' 
         DgvMisVentas.AllowUserToOrderColumns = True
+        DgvMisVentas.BackgroundColor = Color.FromArgb(CByte(128), CByte(128), CByte(255))
         DgvMisVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DgvMisVentas.Location = New Point(210, 31)
         DgvMisVentas.Name = "DgvMisVentas"
@@ -38,8 +39,9 @@ Partial Class FormMisVentas
         ' 
         ' btnActualizar
         ' 
-        btnActualizar.BackColor = Color.Honeydew
+        btnActualizar.BackColor = Color.SlateGray
         btnActualizar.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnActualizar.ForeColor = SystemColors.ControlLightLight
         btnActualizar.Location = New Point(287, 243)
         btnActualizar.Name = "btnActualizar"
         btnActualizar.Size = New Size(178, 49)
@@ -51,8 +53,7 @@ Partial Class FormMisVentas
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.Green
-        BackgroundImage = My.Resources.Resources.ventasMias2
+        BackColor = Color.SlateBlue
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(848, 450)
         Controls.Add(btnActualizar)

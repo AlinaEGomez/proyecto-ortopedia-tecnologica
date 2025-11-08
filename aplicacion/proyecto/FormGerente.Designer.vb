@@ -26,15 +26,17 @@ Partial Class FormGerente
         ToolStripMenuItem6 = New ToolStripMenuItem()
         MenuStrip2 = New MenuStrip()
         VentaToolStripMenuItem = New ToolStripMenuItem()
+        RegistrarVentasToolStripMenuItem = New ToolStripMenuItem()
+        VerVentasToolStripMenuItem = New ToolStripMenuItem()
         ClientesToolStripMenuItem = New ToolStripMenuItem()
+        AltaToolStripMenuItem = New ToolStripMenuItem()
         ProveedoresToolStripMenuItem = New ToolStripMenuItem()
+        ProveedoresToolStripMenuItem1 = New ToolStripMenuItem()
         ReportesToolStripMenuItem = New ToolStripMenuItem()
+        VentasToolStripMenuItem = New ToolStripMenuItem()
         ProductosToolStripMenuItem = New ToolStripMenuItem()
         CategoriaToolStripMenuItem = New ToolStripMenuItem()
-        InsumosToolStripMenuItem = New ToolStripMenuItem()
-        ProtesisToolStripMenuItem = New ToolStripMenuItem()
-        CounicacionToolStripMenuItem = New ToolStripMenuItem()
-        FiltrarToolStripMenuItem = New ToolStripMenuItem()
+        VerTodosToolStripMenuItem = New ToolStripMenuItem()
         LBienvenido = New ToolStrip()
         TSalir = New ToolStripButton()
         ToolStripLabel1 = New ToolStripLabel()
@@ -65,69 +67,85 @@ Partial Class FormGerente
         ' 
         ' VentaToolStripMenuItem
         ' 
+        VentaToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {RegistrarVentasToolStripMenuItem, VerVentasToolStripMenuItem})
         VentaToolStripMenuItem.Image = My.Resources.Resources.analisis1
         VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
         VentaToolStripMenuItem.Size = New Size(64, 20)
         VentaToolStripMenuItem.Text = "Venta"
         ' 
+        ' RegistrarVentasToolStripMenuItem
+        ' 
+        RegistrarVentasToolStripMenuItem.Name = "RegistrarVentasToolStripMenuItem"
+        RegistrarVentasToolStripMenuItem.Size = New Size(157, 22)
+        RegistrarVentasToolStripMenuItem.Text = "Registrar Ventas"
+        ' 
+        ' VerVentasToolStripMenuItem
+        ' 
+        VerVentasToolStripMenuItem.Name = "VerVentasToolStripMenuItem"
+        VerVentasToolStripMenuItem.Size = New Size(157, 22)
+        VerVentasToolStripMenuItem.Text = "Ver Ventas"
+        ' 
         ' ClientesToolStripMenuItem
         ' 
+        ClientesToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AltaToolStripMenuItem})
         ClientesToolStripMenuItem.Image = My.Resources.Resources.mercado
         ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
         ClientesToolStripMenuItem.Size = New Size(77, 20)
         ClientesToolStripMenuItem.Text = "Clientes"
         ' 
+        ' AltaToolStripMenuItem
+        ' 
+        AltaToolStripMenuItem.Name = "AltaToolStripMenuItem"
+        AltaToolStripMenuItem.Size = New Size(95, 22)
+        AltaToolStripMenuItem.Text = "Alta"
+        ' 
         ' ProveedoresToolStripMenuItem
         ' 
+        ProveedoresToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ProveedoresToolStripMenuItem1})
         ProveedoresToolStripMenuItem.Image = My.Resources.Resources.proveedor
         ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
         ProveedoresToolStripMenuItem.Size = New Size(92, 20)
         ProveedoresToolStripMenuItem.Text = "Suministro"
         ' 
+        ' ProveedoresToolStripMenuItem1
+        ' 
+        ProveedoresToolStripMenuItem1.Name = "ProveedoresToolStripMenuItem1"
+        ProveedoresToolStripMenuItem1.Size = New Size(139, 22)
+        ProveedoresToolStripMenuItem1.Text = "Proveedores"
+        ' 
         ' ReportesToolStripMenuItem
         ' 
+        ReportesToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {VentasToolStripMenuItem})
         ReportesToolStripMenuItem.Image = My.Resources.Resources.grafico_de_barras
         ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         ReportesToolStripMenuItem.Size = New Size(81, 20)
         ReportesToolStripMenuItem.Text = "Reportes"
         ' 
+        ' VentasToolStripMenuItem
+        ' 
+        VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
+        VentasToolStripMenuItem.Size = New Size(108, 22)
+        VentasToolStripMenuItem.Text = "ventas"
+        ' 
         ' ProductosToolStripMenuItem
         ' 
-        ProductosToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CategoriaToolStripMenuItem, FiltrarToolStripMenuItem})
+        ProductosToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CategoriaToolStripMenuItem, VerTodosToolStripMenuItem})
+        ProductosToolStripMenuItem.Image = My.Resources.Resources.reporte_ventas1
         ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        ProductosToolStripMenuItem.Size = New Size(73, 20)
+        ProductosToolStripMenuItem.Size = New Size(89, 20)
         ProductosToolStripMenuItem.Text = "Productos"
         ' 
         ' CategoriaToolStripMenuItem
         ' 
-        CategoriaToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {InsumosToolStripMenuItem, ProtesisToolStripMenuItem, CounicacionToolStripMenuItem})
         CategoriaToolStripMenuItem.Name = "CategoriaToolStripMenuItem"
-        CategoriaToolStripMenuItem.Size = New Size(123, 22)
-        CategoriaToolStripMenuItem.Text = "categoria"
+        CategoriaToolStripMenuItem.Size = New Size(180, 22)
+        CategoriaToolStripMenuItem.Text = "Inventario"
         ' 
-        ' InsumosToolStripMenuItem
+        ' VerTodosToolStripMenuItem
         ' 
-        InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
-        InsumosToolStripMenuItem.Size = New Size(139, 22)
-        InsumosToolStripMenuItem.Text = "sensorial"
-        ' 
-        ' ProtesisToolStripMenuItem
-        ' 
-        ProtesisToolStripMenuItem.Name = "ProtesisToolStripMenuItem"
-        ProtesisToolStripMenuItem.Size = New Size(139, 22)
-        ProtesisToolStripMenuItem.Text = "movilidad"
-        ' 
-        ' CounicacionToolStripMenuItem
-        ' 
-        CounicacionToolStripMenuItem.Name = "CounicacionToolStripMenuItem"
-        CounicacionToolStripMenuItem.Size = New Size(139, 22)
-        CounicacionToolStripMenuItem.Text = "counicacion"
-        ' 
-        ' FiltrarToolStripMenuItem
-        ' 
-        FiltrarToolStripMenuItem.Name = "FiltrarToolStripMenuItem"
-        FiltrarToolStripMenuItem.Size = New Size(123, 22)
-        FiltrarToolStripMenuItem.Text = "Ver Todo"
+        VerTodosToolStripMenuItem.Name = "VerTodosToolStripMenuItem"
+        VerTodosToolStripMenuItem.Size = New Size(180, 22)
+        VerTodosToolStripMenuItem.Text = "Ver Todos"
         ' 
         ' LBienvenido
         ' 
@@ -160,7 +178,7 @@ Partial Class FormGerente
         LblBienvenido.Name = "LblBienvenido"
         LblBienvenido.Size = New Size(0, 22)
         ' 
-        ' Form4
+        ' FormGerente
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
@@ -171,7 +189,7 @@ Partial Class FormGerente
         Controls.Add(MenuStrip2)
         MainMenuStrip = MenuStrip2
         MdiChildrenMinimizedAnchorBottom = False
-        Name = "Form4"
+        Name = "FormGerente"
         Text = "Perfil  Gerente"
         MenuStrip2.ResumeLayout(False)
         MenuStrip2.PerformLayout()
@@ -194,14 +212,16 @@ Partial Class FormGerente
     Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CategoriaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents InsumosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProtesisToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CounicacionToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FiltrarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents TSalir As ToolStripButton
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents LBienvenido As ToolStrip
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents LblBienvenido As ToolStripLabel
+    Friend WithEvents RegistrarVentasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VerVentasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AltaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProveedoresToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents VentasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VerTodosToolStripMenuItem As ToolStripMenuItem
 End Class

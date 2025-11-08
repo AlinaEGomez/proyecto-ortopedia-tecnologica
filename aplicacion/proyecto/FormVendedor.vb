@@ -35,6 +35,10 @@
     End Sub
 
 
+    Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StockDisponibleToolStripMenuItem.Click
+        Dim frm As New FormStockVendedor()
+        frm.Show()
+    End Sub
 
     Private Sub VerVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerVentasToolStripMenuItem.Click
         Dim frm As New FormMisVentas()

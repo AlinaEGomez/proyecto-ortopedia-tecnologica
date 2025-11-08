@@ -31,4 +31,36 @@
         Dim formInicio As New FormLogin()
         FormLogin.Show()
     End Sub
+
+    Private Sub RegistrarVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarVentasToolStripMenuItem.Click
+        FormRegistarVentas.Show()
+    End Sub
+
+    Private Sub VerVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerVentasToolStripMenuItem.Click
+        FormMisVentasGerente.Show()
+    End Sub
+
+    Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub AltaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AltaToolStripMenuItem.Click
+        FormClientes.Show()
+    End Sub
+
+    Private Sub ProveedoresToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem1.Click
+        FormProveedores.Show()
+    End Sub
+
+    Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
+        FormRegistarVentas.Show()
+    End Sub
+
+    Private Sub CategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CategoriaToolStripMenuItem.Click
+        FormGestionProductos.Show()
+    End Sub
+
+    Private Sub VerTodosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerTodosToolStripMenuItem.Click
+        FormStockVendedor.Show()
+    End Sub
 End Class

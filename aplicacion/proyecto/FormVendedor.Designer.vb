@@ -27,12 +27,7 @@ Partial Class FormVendedor
         RgistrarVentasToolStripMenuItem = New ToolStripMenuItem()
         VerVentasToolStripMenuItem = New ToolStripMenuItem()
         ClientesToolStripMenuItem = New ToolStripMenuItem()
-        ProductosToolStripMenuItem = New ToolStripMenuItem()
-        CategoriaToolStripMenuItem = New ToolStripMenuItem()
-        SensorialToolStripMenuItem = New ToolStripMenuItem()
-        MovilidadToolStripMenuItem = New ToolStripMenuItem()
-        ComunicacionToolStripMenuItem = New ToolStripMenuItem()
-        VerTodoToolStripMenuItem = New ToolStripMenuItem()
+        StockDisponibleToolStripMenuItem = New ToolStripMenuItem()
         ToolStrip1 = New ToolStrip()
         ToolStripButton1 = New ToolStripButton()
         LblBienvenido = New ToolStripLabel()
@@ -42,21 +37,24 @@ Partial Class FormVendedor
         ' 
         ' MenuStrip1
         ' 
-        MenuStrip1.Items.AddRange(New ToolStripItem() {VentasToolStripMenuItem, ClientesToolStripMenuItem, ProductosToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {VentasToolStripMenuItem, ClientesToolStripMenuItem, StockDisponibleToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(834, 39)
+        MenuStrip1.Size = New Size(834, 55)
         MenuStrip1.TabIndex = 0
         MenuStrip1.Text = "MenuStrip1"
         ' 
         ' VentasToolStripMenuItem
         ' 
+        VentasToolStripMenuItem.BackgroundImageLayout = ImageLayout.Stretch
         VentasToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {RgistrarVentasToolStripMenuItem, VerVentasToolStripMenuItem})
         VentasToolStripMenuItem.Image = My.Resources.Resources.analisis1
+        VentasToolStripMenuItem.ImageAlign = ContentAlignment.TopLeft
+        VentasToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None
         VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        VentasToolStripMenuItem.Size = New Size(53, 35)
+        VentasToolStripMenuItem.Size = New Size(85, 51)
         VentasToolStripMenuItem.Text = "Ventas"
-        VentasToolStripMenuItem.TextImageRelation = TextImageRelation.ImageAboveText
+        VentasToolStripMenuItem.TextAlign = ContentAlignment.BottomRight
         ' 
         ' RgistrarVentasToolStripMenuItem
         ' 
@@ -73,53 +71,30 @@ Partial Class FormVendedor
         ' ClientesToolStripMenuItem
         ' 
         ClientesToolStripMenuItem.Image = My.Resources.Resources.mercado1
+        ClientesToolStripMenuItem.ImageAlign = ContentAlignment.TopLeft
+        ClientesToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None
         ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        ClientesToolStripMenuItem.Size = New Size(61, 35)
+        ClientesToolStripMenuItem.Size = New Size(61, 51)
         ClientesToolStripMenuItem.Text = "Clientes"
+        ClientesToolStripMenuItem.TextAlign = ContentAlignment.BottomRight
         ClientesToolStripMenuItem.TextImageRelation = TextImageRelation.ImageAboveText
         ' 
-        ' ProductosToolStripMenuItem
+        ' StockDisponibleToolStripMenuItem
         ' 
-        ProductosToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CategoriaToolStripMenuItem, VerTodoToolStripMenuItem})
-        ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        ProductosToolStripMenuItem.Size = New Size(73, 35)
-        ProductosToolStripMenuItem.Text = "productos"
-        ' 
-        ' CategoriaToolStripMenuItem
-        ' 
-        CategoriaToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SensorialToolStripMenuItem, MovilidadToolStripMenuItem, ComunicacionToolStripMenuItem})
-        CategoriaToolStripMenuItem.Name = "CategoriaToolStripMenuItem"
-        CategoriaToolStripMenuItem.Size = New Size(123, 22)
-        CategoriaToolStripMenuItem.Text = "categoria"
-        ' 
-        ' SensorialToolStripMenuItem
-        ' 
-        SensorialToolStripMenuItem.Name = "SensorialToolStripMenuItem"
-        SensorialToolStripMenuItem.Size = New Size(150, 22)
-        SensorialToolStripMenuItem.Text = "sensorial"
-        ' 
-        ' MovilidadToolStripMenuItem
-        ' 
-        MovilidadToolStripMenuItem.Name = "MovilidadToolStripMenuItem"
-        MovilidadToolStripMenuItem.Size = New Size(150, 22)
-        MovilidadToolStripMenuItem.Text = "movilidad"
-        ' 
-        ' ComunicacionToolStripMenuItem
-        ' 
-        ComunicacionToolStripMenuItem.Name = "ComunicacionToolStripMenuItem"
-        ComunicacionToolStripMenuItem.Size = New Size(150, 22)
-        ComunicacionToolStripMenuItem.Text = "comunicacion"
-        ' 
-        ' VerTodoToolStripMenuItem
-        ' 
-        VerTodoToolStripMenuItem.Name = "VerTodoToolStripMenuItem"
-        VerTodoToolStripMenuItem.Size = New Size(123, 22)
-        VerTodoToolStripMenuItem.Text = "Ver Todo"
+        StockDisponibleToolStripMenuItem.BackgroundImageLayout = ImageLayout.Stretch
+        StockDisponibleToolStripMenuItem.Image = My.Resources.Resources.proveedor
+        StockDisponibleToolStripMenuItem.ImageAlign = ContentAlignment.TopRight
+        StockDisponibleToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None
+        StockDisponibleToolStripMenuItem.MergeAction = MergeAction.Insert
+        StockDisponibleToolStripMenuItem.Name = "StockDisponibleToolStripMenuItem"
+        StockDisponibleToolStripMenuItem.Size = New Size(105, 51)
+        StockDisponibleToolStripMenuItem.Text = "Productos"
+        StockDisponibleToolStripMenuItem.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' ToolStrip1
         ' 
         ToolStrip1.Items.AddRange(New ToolStripItem() {ToolStripButton1, LblBienvenido})
-        ToolStrip1.Location = New Point(0, 39)
+        ToolStrip1.Location = New Point(0, 55)
         ToolStrip1.Name = "ToolStrip1"
         ToolStrip1.Size = New Size(834, 25)
         ToolStrip1.TabIndex = 2
@@ -167,12 +142,7 @@ Partial Class FormVendedor
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RgistrarVentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VerVentasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CategoriaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SensorialToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MovilidadToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ComunicacionToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents VerTodoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StockDisponibleToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents LblBienvenido As ToolStripLabel

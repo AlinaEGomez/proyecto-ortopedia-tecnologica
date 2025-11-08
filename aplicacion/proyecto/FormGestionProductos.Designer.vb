@@ -49,6 +49,8 @@ Partial Class FormGestionProductos
         TabPage3 = New TabPage()
         BtnDarAlta = New Button()
         DgvProductosDeBaja = New DataGridView()
+        Label9 = New Label()
+        txtBuscarProd = New TextBox()
         Tipo3.SuspendLayout()
         CType(DgvProductosSinStock, ComponentModel.ISupportInitialize).BeginInit()
         TabPage2.SuspendLayout()
@@ -132,6 +134,8 @@ Partial Class FormGestionProductos
         ' TabPage1
         ' 
         TabPage1.BackgroundImage = My.Resources.Resources.AltaProd2
+        TabPage1.Controls.Add(txtBuscarProd)
+        TabPage1.Controls.Add(Label9)
         TabPage1.Controls.Add(Label8)
         TabPage1.Controls.Add(Label7)
         TabPage1.Controls.Add(Label6)
@@ -207,7 +211,7 @@ Partial Class FormGestionProductos
         dgvProductos.Anchor = AnchorStyles.None
         dgvProductos.CausesValidation = False
         dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        dgvProductos.Location = New Point(38, 188)
+        dgvProductos.Location = New Point(43, 204)
         dgvProductos.Name = "dgvProductos"
         dgvProductos.Size = New Size(690, 213)
         dgvProductos.TabIndex = 22
@@ -358,6 +362,24 @@ Partial Class FormGestionProductos
         DgvProductosDeBaja.Size = New Size(502, 184)
         DgvProductosDeBaja.TabIndex = 0
         ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Label9.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Location = New Point(12, 163)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(162, 26)
+        Label9.TabIndex = 27
+        Label9.Text = "Buscar Productos:"
+        ' 
+        ' txtBuscarProd
+        ' 
+        txtBuscarProd.Location = New Point(191, 160)
+        txtBuscarProd.Name = "txtBuscarProd"
+        txtBuscarProd.Size = New Size(100, 33)
+        txtBuscarProd.TabIndex = 28
+        ' 
         ' FormGestionProductos
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -408,4 +430,6 @@ Partial Class FormGestionProductos
     Friend WithEvents DgvProductosDeBaja As DataGridView
     Friend WithEvents BtnDarAlta As Button
     Friend WithEvents btnAgregarStock As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents txtBuscarProd As TextBox
 End Class

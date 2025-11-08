@@ -31,26 +31,17 @@ Partial Class FormAdministrador
         ProductosToolStripMenuItem = New ToolStripMenuItem()
         AltaToolStripMenuItem1 = New ToolStripMenuItem()
         ClientesToolStripMenuItem = New ToolStripMenuItem()
-        ClientesToolStripMenuItem1 = New ToolStripMenuItem()
-        ActivosToolStripMenuItem = New ToolStripMenuItem()
-        InactivosToolStripMenuItem = New ToolStripMenuItem()
-        GreToolStripMenuItem = New ToolStripMenuItem()
-        ActivosToolStripMenuItem1 = New ToolStripMenuItem()
-        InactivosToolStripMenuItem1 = New ToolStripMenuItem()
-        VendedoresToolStripMenuItem = New ToolStripMenuItem()
-        ActivosToolStripMenuItem2 = New ToolStripMenuItem()
-        InactivosToolStripMenuItem2 = New ToolStripMenuItem()
         ProveedorToolStripMenuItem = New ToolStripMenuItem()
         ProductosToolStripMenuItem1 = New ToolStripMenuItem()
         NegocioToolStripMenuItem = New ToolStripMenuItem()
         ReporteDeComprasToolStripMenuItem = New ToolStripMenuItem()
         ReportesDeVentasToolStripMenuItem = New ToolStripMenuItem()
         BackToolStripMenuItem = New ToolStripMenuItem()
+        CopiaDeSeguridadToolStripMenuItem = New ToolStripMenuItem()
+        ExcelDeBackupToolStripMenuItem = New ToolStripMenuItem()
         ToolStrip1 = New ToolStrip()
         TSalir = New ToolStripButton()
         LblBienvenido = New ToolStripLabel()
-        CopiaDeSeguridadToolStripMenuItem = New ToolStripMenuItem()
-        ExcelDeBackupToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         ToolStrip1.SuspendLayout()
         SuspendLayout()
@@ -120,69 +111,11 @@ Partial Class FormAdministrador
         ' 
         ' ClientesToolStripMenuItem
         ' 
-        ClientesToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ClientesToolStripMenuItem1, GreToolStripMenuItem, VendedoresToolStripMenuItem})
         ClientesToolStripMenuItem.Image = My.Resources.Resources.mercado
         ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        ClientesToolStripMenuItem.Size = New Size(106, 35)
-        ClientesToolStripMenuItem.Text = "Admin. Usuarios"
+        ClientesToolStripMenuItem.Size = New Size(103, 35)
+        ClientesToolStripMenuItem.Text = "Admin. Clientes"
         ClientesToolStripMenuItem.TextImageRelation = TextImageRelation.ImageAboveText
-        ' 
-        ' ClientesToolStripMenuItem1
-        ' 
-        ClientesToolStripMenuItem1.DropDownItems.AddRange(New ToolStripItem() {ActivosToolStripMenuItem, InactivosToolStripMenuItem})
-        ClientesToolStripMenuItem1.Name = "ClientesToolStripMenuItem1"
-        ClientesToolStripMenuItem1.Size = New Size(135, 22)
-        ClientesToolStripMenuItem1.Text = "Clientes"
-        ' 
-        ' ActivosToolStripMenuItem
-        ' 
-        ActivosToolStripMenuItem.Name = "ActivosToolStripMenuItem"
-        ActivosToolStripMenuItem.Size = New Size(121, 22)
-        ActivosToolStripMenuItem.Text = "Activos"
-        ' 
-        ' InactivosToolStripMenuItem
-        ' 
-        InactivosToolStripMenuItem.Name = "InactivosToolStripMenuItem"
-        InactivosToolStripMenuItem.Size = New Size(121, 22)
-        InactivosToolStripMenuItem.Text = "Inactivos"
-        ' 
-        ' GreToolStripMenuItem
-        ' 
-        GreToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ActivosToolStripMenuItem1, InactivosToolStripMenuItem1})
-        GreToolStripMenuItem.Name = "GreToolStripMenuItem"
-        GreToolStripMenuItem.Size = New Size(135, 22)
-        GreToolStripMenuItem.Text = "Gerentes"
-        ' 
-        ' ActivosToolStripMenuItem1
-        ' 
-        ActivosToolStripMenuItem1.Name = "ActivosToolStripMenuItem1"
-        ActivosToolStripMenuItem1.Size = New Size(121, 22)
-        ActivosToolStripMenuItem1.Text = "Activos"
-        ' 
-        ' InactivosToolStripMenuItem1
-        ' 
-        InactivosToolStripMenuItem1.Name = "InactivosToolStripMenuItem1"
-        InactivosToolStripMenuItem1.Size = New Size(121, 22)
-        InactivosToolStripMenuItem1.Text = "Inactivos"
-        ' 
-        ' VendedoresToolStripMenuItem
-        ' 
-        VendedoresToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ActivosToolStripMenuItem2, InactivosToolStripMenuItem2})
-        VendedoresToolStripMenuItem.Name = "VendedoresToolStripMenuItem"
-        VendedoresToolStripMenuItem.Size = New Size(135, 22)
-        VendedoresToolStripMenuItem.Text = "Vendedores"
-        ' 
-        ' ActivosToolStripMenuItem2
-        ' 
-        ActivosToolStripMenuItem2.Name = "ActivosToolStripMenuItem2"
-        ActivosToolStripMenuItem2.Size = New Size(121, 22)
-        ActivosToolStripMenuItem2.Text = "Activos"
-        ' 
-        ' InactivosToolStripMenuItem2
-        ' 
-        InactivosToolStripMenuItem2.Name = "InactivosToolStripMenuItem2"
-        InactivosToolStripMenuItem2.Size = New Size(121, 22)
-        InactivosToolStripMenuItem2.Text = "Inactivos"
         ' 
         ' ProveedorToolStripMenuItem
         ' 
@@ -229,6 +162,18 @@ Partial Class FormAdministrador
         BackToolStripMenuItem.Text = "Backup"
         BackToolStripMenuItem.TextImageRelation = TextImageRelation.ImageAboveText
         ' 
+        ' CopiaDeSeguridadToolStripMenuItem
+        ' 
+        CopiaDeSeguridadToolStripMenuItem.Name = "CopiaDeSeguridadToolStripMenuItem"
+        CopiaDeSeguridadToolStripMenuItem.Size = New Size(174, 22)
+        CopiaDeSeguridadToolStripMenuItem.Text = "copia de seguridad"
+        ' 
+        ' ExcelDeBackupToolStripMenuItem
+        ' 
+        ExcelDeBackupToolStripMenuItem.Name = "ExcelDeBackupToolStripMenuItem"
+        ExcelDeBackupToolStripMenuItem.Size = New Size(174, 22)
+        ExcelDeBackupToolStripMenuItem.Text = "excel de backup"
+        ' 
         ' ToolStrip1
         ' 
         ToolStrip1.Items.AddRange(New ToolStripItem() {TSalir, LblBienvenido})
@@ -255,18 +200,6 @@ Partial Class FormAdministrador
         LblBienvenido.ForeColor = Color.FromArgb(CByte(0), CByte(0), CByte(192))
         LblBienvenido.Name = "LblBienvenido"
         LblBienvenido.Size = New Size(0, 22)
-        ' 
-        ' CopiaDeSeguridadToolStripMenuItem
-        ' 
-        CopiaDeSeguridadToolStripMenuItem.Name = "CopiaDeSeguridadToolStripMenuItem"
-        CopiaDeSeguridadToolStripMenuItem.Size = New Size(180, 22)
-        CopiaDeSeguridadToolStripMenuItem.Text = "copia de seguridad"
-        ' 
-        ' ExcelDeBackupToolStripMenuItem
-        ' 
-        ExcelDeBackupToolStripMenuItem.Name = "ExcelDeBackupToolStripMenuItem"
-        ExcelDeBackupToolStripMenuItem.Size = New Size(180, 22)
-        ExcelDeBackupToolStripMenuItem.Text = "excel de backup"
         ' 
         ' FormAdministrador
         ' 

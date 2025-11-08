@@ -40,7 +40,7 @@ Partial Class FormClientesInactivos
         ' 
         btnReactivar.BackColor = Color.IndianRed
         btnReactivar.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnReactivar.Location = New Point(361, 370)
+        btnReactivar.Location = New Point(304, 364)
         btnReactivar.Name = "btnReactivar"
         btnReactivar.Size = New Size(207, 45)
         btnReactivar.TabIndex = 1

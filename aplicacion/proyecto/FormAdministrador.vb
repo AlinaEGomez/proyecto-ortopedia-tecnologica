@@ -55,8 +55,7 @@ Public Class FormAdministrador
     End Sub
 
     Private Sub ActivosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActivosToolStripMenuItem.Click
-        FormClientes.MdiParent = Me
-        FormClientes.Show()
+
     End Sub
 
     Private Sub InactivosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InactivosToolStripMenuItem.Click
@@ -85,7 +84,7 @@ Public Class FormAdministrador
     End Sub
 
     Private Sub AltaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AltaToolStripMenuItem.Click
-        FormGerente.Show()
+        FormCrudUsuarios.Show()
     End Sub
 
 
@@ -119,4 +118,11 @@ Public Class FormAdministrador
     Private Sub CopiaDeSeguridadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopiaDeSeguridadToolStripMenuItem.Click
         FormBackup.Show()
     End Sub
+
+    Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
+        FormClientes.MdiParent = Me
+        FormClientes.Show()
+    End Sub
+
+
 End Class

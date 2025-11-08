@@ -261,10 +261,7 @@ Public Class FormGestionProductos
         Return True
     End Function
 
-    ' Dentro de Public Class FormGestionProductos
 
-    ' ⚠️ El 'Handles MyBase.Load' que venía de FormInventario_Load debe ser ELIMINADO.
-    '    Ahora la carga inicial y la de las pestañas se hará aquí.
 
     Private Sub FormGestionProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Opcional: Cargar la primera pestaña por defecto al iniciar el formulario
@@ -344,12 +341,7 @@ Public Class FormGestionProductos
         End Try
     End Sub
 
-    ' ... (El resto de tus funciones como ActualizarDataGrid, CargarProductosConStock, CargarProductosSinStock, LimpiarCampos, etc.)
-    ' ... (Botones BtnBuscarImagen_Click, BtnGuardar_Click, BtnEliminar_Click)
-    ' ... (Eventos dgvProductos_CellClick, dgvProductos_CellFormatting)
-    ' ... (Función ValidarCampos)
 
-    ' --- En el formulario (donde está el DgvProductosDeBaja) ---
 
     Private Sub BtnDarAlta_Click(sender As Object, e As EventArgs) Handles BtnDarAlta.Click
         ' Asegúrate de tener la fila seleccionada
@@ -363,17 +355,18 @@ Public Class FormGestionProductos
 
         If MessageBox.Show("¿Está seguro de reactivar este producto y volver a darlo de ALTA?", "Confirmar Alta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             Try
-                ' 🔑 Llama a la función del gestor
-                gestor.GestionarEstadoLogicoProducto(ProductoID_Actual, 1)
+
+                ' 1. Ejecutar la reactivación (EstadoLogico = 1)
+                gestor.GestionarEstadoLogicoProducto(idProducto, 1)
+
+                    ' 2. Refrescar la lista de INACTIVOS (desaparece de aquí)
+                    CargarProductosDeBaja()
+
+                ' 3. 🔑 LLAMAR AL FORMULARIO DE INVENTARIO PARA RECARGAR
+                ActualizarDataGrid()
+
                 MessageBox.Show("Producto reactivado con éxito.", "Éxito")
-
-                ' Refrescar la lista de productos dados de baja (el DGV actual)
-                CargarProductosDeBaja()
-
-                ' Opcional: Refrescar la vista general o con stock
-                ' CargarProductosGeneral() 
-
-            Catch ex As Exception
+                Catch ex As Exception
                 MessageBox.Show("Error al reactivar el producto: " & ex.Message, "Error BD")
             End Try
         End If
@@ -406,12 +399,11 @@ Public Class FormGestionProductos
         End Try
     End Sub
 
-    Private Sub Tipo3_Click(sender As Object, e As EventArgs) Handles Tipo3.Click
+    '------------------------------------------------------------------------------------------
+    '          AGREGAR STOCK
+    '--------------------------------------------------------------------------------------
 
-    End Sub
 
-
-    ' --- En el FormGestionProductos.vb (Pestaña Sin Stock) ---
     Private Sub BtnAgregarStock_Click(sender As Object, e As EventArgs) Handles btnAgregarStock.Click
 
         ' 1. Validar selección
@@ -449,7 +441,34 @@ Public Class FormGestionProductos
         End Try
 
     End Sub
-    ' ✅ CÓDIGO CORREGIDO (En el BtnEliminar_Click)
+    '--------------------------------------------------------------------------------------
+    '        BUSCAR PRODUCTOS
+    '------------------------------------------------------------------------------------
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles txtBuscarProd.TextChanged
+        Dim filtro = txtBuscarProd.Text.Trim
 
+        Try
+            If String.IsNullOrEmpty(filtro) Then
+                ' Si el campo está vacío, recargamos la lista completa
+                ActualizarDataGrid()
+            Else
+                ' 🔑 Llamamos al gestor para buscar
+                dgvProductos.DataSource = gestor.BuscarProductos(filtro)
 
+                If dgvProductos.Rows.Count = 0 Then
+                    MessageBox.Show("No se encontraron productos que coincidan con la búsqueda.", "Resultado")
+                End If
+
+                ' Después de la búsqueda, siempre limpiamos el modo edición/alta
+                LimpiarCampos()
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("Error al realizar la búsqueda: " & ex.Message, "Error BD")
+        End Try
+    End Sub
+
+    Private Sub txtBuscarProd_TabStopChanged(sender As Object, e As EventArgs) Handles txtBuscarProd.TabStopChanged
+
+    End Sub
 End Class

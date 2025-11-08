@@ -1,10 +1,10 @@
-﻿Imports System.Transactions
+﻿Imports System.Numerics
+Imports System.Windows.Forms.DataVisualization.Charting
 Imports Microsoft.Data.SqlClient
-
 Public Class FormReporteVentas
 
-    Private conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;")
 
+    Private conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;")
     Private Sub CargarReporte()
 
         ' 1. Obtener las fechas desde la interfaz
@@ -51,5 +51,9 @@ Public Class FormReporteVentas
 
     Private Sub btnGenerarReporte_Click(sender As Object, e As EventArgs) Handles btnGenerarReporte.Click
         CargarReporte()
+    End Sub
+
+    Private Sub DgvReporte_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvReporte.CellContentClick
+
     End Sub
 End Class

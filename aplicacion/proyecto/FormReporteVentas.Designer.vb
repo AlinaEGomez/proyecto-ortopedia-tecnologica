@@ -22,72 +22,90 @@ Partial Class FormReporteVentas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        DgvReporte = New DataGridView()
         dtpFechaInicio = New DateTimePicker()
-        btnGenerarReporte = New Button()
         dtpFechaFin = New DateTimePicker()
+        DgvReporte = New DataGridView()
+        btnGenerarReporte = New Button()
+        Label1 = New Label()
+        Label2 = New Label()
         CType(DgvReporte, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' DgvReporte
-        ' 
-        DgvReporte.AllowUserToOrderColumns = True
-        DgvReporte.BackgroundColor = Color.FromArgb(CByte(255), CByte(128), CByte(255))
-        DgvReporte.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DgvReporte.Location = New Point(99, 165)
-        DgvReporte.Name = "DgvReporte"
-        DgvReporte.Size = New Size(408, 150)
-        DgvReporte.TabIndex = 0
-        ' 
         ' dtpFechaInicio
         ' 
-        dtpFechaInicio.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dtpFechaInicio.Location = New Point(223, 38)
+        dtpFechaInicio.Location = New Point(413, 74)
         dtpFechaInicio.Name = "dtpFechaInicio"
-        dtpFechaInicio.Size = New Size(335, 33)
-        dtpFechaInicio.TabIndex = 1
-        ' 
-        ' btnGenerarReporte
-        ' 
-        btnGenerarReporte.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
-        btnGenerarReporte.BackgroundImageLayout = ImageLayout.None
-        btnGenerarReporte.Image = My.Resources.Resources.gen_Ventas
-        btnGenerarReporte.ImageAlign = ContentAlignment.MiddleLeft
-        btnGenerarReporte.Location = New Point(313, 367)
-        btnGenerarReporte.Name = "btnGenerarReporte"
-        btnGenerarReporte.Size = New Size(149, 37)
-        btnGenerarReporte.TabIndex = 2
-        btnGenerarReporte.Text = "Generar Reporte"
-        btnGenerarReporte.TextAlign = ContentAlignment.MiddleRight
-        btnGenerarReporte.UseVisualStyleBackColor = False
+        dtpFechaInicio.Size = New Size(200, 23)
+        dtpFechaInicio.TabIndex = 0
         ' 
         ' dtpFechaFin
         ' 
-        dtpFechaFin.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dtpFechaFin.Location = New Point(223, 87)
+        dtpFechaFin.Location = New Point(413, 138)
         dtpFechaFin.Name = "dtpFechaFin"
-        dtpFechaFin.Size = New Size(335, 33)
-        dtpFechaFin.TabIndex = 3
+        dtpFechaFin.Size = New Size(200, 23)
+        dtpFechaFin.TabIndex = 1
+        ' 
+        ' DgvReporte
+        ' 
+        DgvReporte.BackgroundColor = Color.IndianRed
+        DgvReporte.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DgvReporte.Location = New Point(33, 219)
+        DgvReporte.Name = "DgvReporte"
+        DgvReporte.Size = New Size(399, 150)
+        DgvReporte.TabIndex = 2
+        ' 
+        ' btnGenerarReporte
+        ' 
+        btnGenerarReporte.Location = New Point(446, 219)
+        btnGenerarReporte.Name = "btnGenerarReporte"
+        btnGenerarReporte.Size = New Size(134, 39)
+        btnGenerarReporte.TabIndex = 3
+        btnGenerarReporte.Text = "Generar Reporte"
+        btnGenerarReporte.UseVisualStyleBackColor = True
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(289, 71)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(80, 26)
+        Label1.TabIndex = 4
+        Label1.Text = "Desde :"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(289, 135)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(75, 26)
+        Label2.TabIndex = 5
+        Label2.Text = "Hasta :"
         ' 
         ' FormReporteVentas
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackgroundImage = My.Resources.Resources.AltaProd
-        BackgroundImageLayout = ImageLayout.Stretch
+        BackColor = Color.LightSlateGray
         ClientSize = New Size(800, 450)
-        Controls.Add(dtpFechaFin)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
         Controls.Add(btnGenerarReporte)
-        Controls.Add(dtpFechaInicio)
         Controls.Add(DgvReporte)
+        Controls.Add(dtpFechaFin)
+        Controls.Add(dtpFechaInicio)
         Name = "FormReporteVentas"
-        Text = "Reporte de Ventas"
+        Text = "FReporte de Ventas"
         CType(DgvReporte, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
-    Friend WithEvents DgvReporte As DataGridView
     Friend WithEvents dtpFechaInicio As DateTimePicker
-    Friend WithEvents btnGenerarReporte As Button
     Friend WithEvents dtpFechaFin As DateTimePicker
+    Friend WithEvents DgvReporte As DataGridView
+    Friend WithEvents btnGenerarReporte As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class

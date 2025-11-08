@@ -5,7 +5,7 @@ Imports System.IO
 Imports System.Windows.Forms ' Necesario para Throw New Exception
 Imports Microsoft.Data.SqlClient
 Imports Microsoft.Identity.Client.Platforms.Shared
-Imports ClosedXML.Excel
+
 Public Class GestorBD
     ' ⚠️ ASUME que CadenaConexion está definida aquí o en un módulo global
     Private Const CadenaConexion As String = "Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;"
@@ -109,8 +109,71 @@ Public Class GestorBD
             End Try
         End Using
     End Sub
+    '--------------------------------------------------------------------------------------
+    '            BUSCAR PRODUCTO
+    '-------------------------------------------------------------------------------------
 
+    ' --- En GestorBD.vb ---
 
+    Public Function BuscarProductos(ByVal textoFiltro As String) As DataTable
+        Dim dt As New DataTable()
+
+        ' Usamos el comodín % para buscar coincidencias parciales en Codigo o Descripcion
+        ' La clave es la cláusula LIKE:
+        Dim consulta As String = "SELECT Codigo, Descripcion, Stock, Precio " &
+                         "FROM Productos " &
+                         "WHERE EstadoLogico = 1 AND Stock > 0 AND " &
+                         "(Codigo LIKE @Filtro OR Descripcion LIKE @Filtro) " &
+                         "ORDER BY Descripcion ASC"
+
+        Using conexion As New SqlConnection(CadenaConexion), cmd As New SqlCommand(consulta, conexion)
+            ' 🔑 IMPORTANTE: Añadimos % a la variable para que SQL funcione con LIKE
+            cmd.Parameters.AddWithValue("@Filtro", "%" & textoFiltro & "%")
+
+            Using adaptador As New SqlDataAdapter(cmd)
+                Try
+                    adaptador.Fill(dt)
+                Catch ex As Exception
+                    Throw New Exception("Fallo al ejecutar la búsqueda: " & ex.Message, ex)
+                End Try
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    ' --- En GestorBD.vb ---
+
+    Public Function BuscarStockParaVendedor(ByVal textoFiltro As String) As DataTable
+        Dim dt As New DataTable()
+
+        ' 🔑 Paso 1: Si el filtro es nulo o solo espacios, devuelves la lista completa
+        If String.IsNullOrWhiteSpace(textoFiltro) Then
+            ' Esto debería llamar a CargarProductosEnStock() si la quieres completa
+            ' Pero si la queremos filtrada, seguimos con el LIKE.
+        End If
+
+        ' Paso 2: Ejecución de la consulta
+        Dim consulta As String = "SELECT Codigo, Descripcion, Stock, Precio " &
+                                 "FROM Productos " &
+                                 "WHERE EstadoLogico = 1 AND Stock > 0 AND " &
+                                 "(Codigo LIKE @Filtro OR Descripcion LIKE @Filtro) " &
+                                 "ORDER BY Descripcion ASC"
+
+        Using conexion As New SqlConnection(CadenaConexion), cmd As New SqlCommand(consulta, conexion)
+            ' El comodín es crucial: '%xyz%'
+            cmd.Parameters.AddWithValue("@Filtro", "%" & textoFiltro & "%")
+
+            Using adaptador As New SqlDataAdapter(cmd)
+                Try
+                    adaptador.Fill(dt)
+                Catch ex As Exception
+                    Throw New Exception("Fallo al ejecutar la búsqueda: " & ex.Message, ex)
+                End Try
+            End Using
+        End Using
+        Return dt
+
+    End Function
     '---------------------------------------------------------------------------------
     '                              GESTION DE CLIENTES
     '---------------------------------------------------------------------------------
@@ -464,6 +527,26 @@ Public Class GestorBD
                 adaptador.Fill(dt)
             Catch ex As Exception
                 Throw New Exception("Fallo al cargar clientes inactivos.", ex)
+            End Try
+        End Using
+        Return dt
+    End Function
+    Public Function ObtenerReporteVentasParaGrafico() As DataTable
+        Dim dt As New DataTable()
+
+        ' Consulta que agrupa el TOTAL vendido por el nombre del usuario
+        Dim consulta As String = "SELECT U.Nombre_Apellido AS Vendedor, SUM(V.Total) AS Monto_Vendido " &
+                                 "FROM Ventas V " &
+                                 "JOIN Usuarios U ON V.IdVendedor = U.Id " &
+                                 "WHERE U.Perfil IN ('vendedor', 'gerente') " &
+                                 "GROUP BY U.Nombre_Apellido " &
+                                 "ORDER BY Monto_Vendido DESC"
+
+        Using conexion As New SqlConnection(CadenaConexion), adaptador As New SqlDataAdapter(consulta, conexion)
+            Try
+                adaptador.Fill(dt)
+            Catch ex As Exception
+                Throw New Exception("Fallo al obtener datos para el gráfico de ventas: " & ex.Message, ex)
             End Try
         End Using
         Return dt
