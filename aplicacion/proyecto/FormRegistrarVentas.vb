@@ -1,128 +1,113 @@
 ﻿Imports System.Drawing
 Imports System.Drawing.Printing
-Imports System.IO ' Aunque solo es texto, es buena práctica
 Imports System.Text
 Imports Microsoft.Data.SqlClient
 
-Public Class FormregistarVentas
-    ' Dentro de FormVentas.vb (Ej: Control de seguridad)
+Public Class FormRegistarVentas
 
+    ' 🔗 Conexión SQL segura
+    Private conexion As New SqlConnection("Server=localhost\SQLEXPRESS;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;")
+
+    Private totalVenta As Decimal = 0D
+    Private cargando As Boolean = True
+
+    ' ------------------- SEGURIDAD Y SESIÓN --------------------
     Private Sub AplicarRestriccionRol()
-        ' Lees el valor del módulo
         If MdlSesion.PerfilUsuario = "Administrador" Then
             btnConfirmarVenta.Enabled = False
         End If
     End Sub
 
-    Private Sub AlgunaFuncionBD()
-        ' Usas la cadena de conexión global
-        Dim conexion As New SqlConnection(MdlSesion.CadenaConexion)
-        Dim consulta As String = "SELECT Id, Contrasena, Perfil, Nombre_Apellido, Activo FROM Usuarios WHERE Email = @Email"
-        Dim cmd As New SqlCommand(consulta, conexion)
-        ' Usas el ID global
-        cmd.Parameters.AddWithValue("@idVendedor", MdlSesion.VendedorID)
+    Private Sub FormClientes_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Select Case MdlSesion.PerfilUsuario.ToLower()
+            Case "administrador"
+                Dim frm As New FormAdministrador()
+                frm.Show()
+            Case "gerente"
+                Dim frm As New FormGerente()
+                frm.Show()
+            Case "vendedor"
+                Dim frm As New FormVendedor()
+                frm.Show()
+        End Select
     End Sub
-    ' Variable global para el ID del usuario logueado
-    Public Shared VendedorID_Actual As Integer = 2
-    Public Shared NombreVendedor_Actual As String = "Vendedor"
-    Public Shared GlobalData = "Administrador"
-    ' 🔗 Cambia estos datos según tu configuración local
-    Private conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;")
 
-    Private totalVenta As Decimal = 0D
-
-
-    ' 📦 Cargar productos en el ComboBox
-    Private Sub FormRegistarVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    ' ----------------------------------------------------------
+    Private Sub FormRegistrarVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cargando = True
         CargarProductos()
         ConfigurarDataGridView()
+        CargarClientes()
+        cargando = False
     End Sub
 
+    ' ------------------- CARGAR PRODUCTOS --------------------
     Private Sub CargarProductos()
-        Try
-            conexion.Open()
-            Dim consulta As String = "SELECT ProductoID, descripcion,Precio, Stock FROM Productos WHERE EstadoLogico = 1 AND Stock > 0"
-            Dim cmd As New SqlCommand(consulta, conexion)
-            Dim reader As SqlDataReader = cmd.ExecuteReader()
+        Dim dt As New DataTable()
 
-            Dim dt As New DataTable()
-            dt.Load(reader)
+        Try
+            Using cn As New SqlConnection(conexion.ConnectionString)
+                cn.Open()
+
+                Dim consulta As String = "
+                    SELECT ProductoID, Codigo, Descripcion, Precio, Stock
+                    FROM Productos
+                    WHERE EstadoLogico = 1 AND Stock > 0
+                "
+
+                Using cmd As New SqlCommand(consulta, cn)
+                    Using reader As SqlDataReader = cmd.ExecuteReader()
+                        dt.Load(reader)
+                    End Using
+                End Using
+            End Using
 
             cmbProductos.DataSource = dt
             cmbProductos.DisplayMember = "Descripcion"
             cmbProductos.ValueMember = "ProductoID"
 
         Catch ex As Exception
-            MessageBox.Show("Error al cargar los productos: " & ex.Message)
-        Finally
-            conexion.Close()
+            MessageBox.Show("⚠️ Error al cargar los productos: " & ex.Message, "Error al cargar", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-
-
     End Sub
 
-    ' ⚙️ Configurar columnas del DataGridView
+    ' ------------------- CONFIGURAR DGV --------------------
     Private Sub ConfigurarDataGridView()
-        DgvDetalle.Columns.Add("ProductoID", "ID Producto")
-        DgvDetalle.Columns.Add("Descripcion", "Producto")
-        DgvDetalle.Columns.Add("Cantidad", "Cantidad")
-        DgvDetalle.Columns.Add("PrecioUnitario", "Precio Unitario")
-        DgvDetalle.Columns.Add("Subtotal", "Subtotal")
-
-        DgvDetalle.ReadOnly = True
-        DgvDetalle.AllowUserToAddRows = False
+        With DgvDetalle
+            .Columns.Clear()
+            .Columns.Add("ProductoID", "ID Producto")
+            .Columns.Add("Descripcion", "Producto")
+            .Columns.Add("Cantidad", "Cantidad")
+            .Columns.Add("PrecioUnitario", "Precio Unitario")
+            .Columns.Add("Subtotal", "Subtotal")
+            .ReadOnly = True
+            .AllowUserToAddRows = False
+        End With
     End Sub
 
-    ' 🔍 Mostrar precio del producto seleccionado
-
+    ' ------------------- MOSTRAR PRECIO --------------------
     Private Sub cmbProductos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbProductos.SelectedIndexChanged
+        If cargando OrElse cmbProductos.SelectedIndex = -1 Then Exit Sub
 
-        ' 1. Verificación Inicial: Si no hay un elemento seleccionado o el DataSource está reiniciándose, salir.
-        If cmbProductos.SelectedIndex = -1 Then Return
-
-        ' 🔑 VERIFICACIÓN CRÍTICA: Asegurarse de que SelectedValue NO sea Nothing o DBNull.
-        If cmbProductos.SelectedValue Is Nothing OrElse cmbProductos.SelectedValue Is DBNull.Value Then
-            txtPrecio.Text = "00.00" ' Limpiar si no hay valor
-            Return
-        End If
-
-        ' Si llegamos aquí, SelectedValue contiene un valor válido (el ProductoID)
         Try
-            ' 2. Obtener el ID del producto (Conversión segura)
-            Dim productoID As Integer = CInt(cmbProductos.SelectedValue)
+            Using cn As New SqlConnection(conexion.ConnectionString)
+                cn.Open()
+                Dim cmd As New SqlCommand("SELECT Precio FROM Productos WHERE ProductoID = @ProductoID", cn)
+                cmd.Parameters.AddWithValue("@ProductoID", CInt(cmbProductos.SelectedValue))
 
-            ' 3. Abrir la conexión y ejecutar la consulta
-            conexion.Open()
-
-            Dim consulta As String = "SELECT Precio FROM Productos WHERE ProductoID = @id"
-            Dim cmd As New SqlCommand(consulta, conexion)
-            cmd.Parameters.AddWithValue("@id", productoID)
-
-            Dim precio = cmd.ExecuteScalar()
-
-            ' 4. Mostrar el precio si es válido
-            If precio IsNot DBNull.Value AndAlso precio IsNot Nothing Then
-                txtPrecio.Text = Convert.ToDecimal(precio).ToString("0.00")
-            Else
-                txtPrecio.Text = "00.00"
-            End If
+                Dim precio = cmd.ExecuteScalar()
+                txtPrecio.Text = If(precio IsNot Nothing, Convert.ToDecimal(precio).ToString("0.00"), "0.00")
+            End Using
 
         Catch ex As Exception
-            MessageBox.Show("Error al obtener precio: " & ex.Message, "Error BD")
-
-        Finally
-            ' 5. Asegurar el cierre de la conexión (Esto ya está bien implementado)
-            If conexion.State = ConnectionState.Open Then
-                conexion.Close()
-            End If
+            MessageBox.Show("⚠️ Error al obtener el precio: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-
     End Sub
 
-    ' ➕ Agregar producto al detalle
+    ' ------------------- AGREGAR PRODUCTO --------------------
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        If cmbProductos.SelectedValue Is Nothing OrElse txtCantidad.Text = "" Then
-            MessageBox.Show("Seleccione un producto y cantidad.")
+        If cmbProductos.SelectedValue Is Nothing OrElse Not IsNumeric(txtCantidad.Text) OrElse CInt(txtCantidad.Text) <= 0 Then
+            MessageBox.Show("Seleccione un producto válido y una cantidad mayor que 0.")
             Return
         End If
 
@@ -135,237 +120,195 @@ Public Class FormregistarVentas
         DgvDetalle.Rows.Add(idProducto, descripcion, cantidad, precioUnitario.ToString("0.00"), subtotal.ToString("0.00"))
         totalVenta += subtotal
         lblTotal.Text = totalVenta.ToString("0.00")
-
         txtCantidad.Clear()
     End Sub
 
-    ' 🗑️ Quitar producto del detalle
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+    ' ------------------- CARGAR CLIENTES EXISTENTES --------------------
+    Private Sub CargarClientes()
+        Try
+            Using cn As New SqlConnection(conexion.ConnectionString)
+                cn.Open()
+                Dim cmd As New SqlCommand("SELECT ClienteID, RazonSocial, CUIT FROM Clientes WHERE EstadoLogico = 1", cn)
+                Dim dt As New DataTable()
+                dt.Load(cmd.ExecuteReader())
 
-        ' 1. Verificar si hay filas y si hay alguna fila seleccionada (CurrentRow)
-        If DgvDetalle.CurrentRow IsNot Nothing AndAlso DgvDetalle.Rows.Count > 0 Then
+                CmbRazonSocial.DataSource = dt.Copy()
+                CmbRazonSocial.DisplayMember = "RazonSocial"
+                CmbRazonSocial.ValueMember = "ClienteID"
+                CmbRazonSocial.SelectedIndex = -1
 
-            Dim filaActual As DataGridViewRow = DgvDetalle.CurrentRow
+                Cmbcuil.DataSource = dt.Copy()
+                Cmbcuil.DisplayMember = "CUIT"
+                Cmbcuil.ValueMember = "ClienteID"
+                Cmbcuil.SelectedIndex = -1
+            End Using
 
-            Try
-                ' 2. Obtener el Subtotal de la celda de forma segura
-                ' Usamos CDec para conversión y verificamos el valor de la celda.
+        Catch ex As Exception
+            MessageBox.Show("Error al cargar clientes: " & ex.Message)
+        End Try
+    End Sub
 
-                Dim valorCelda As Object = filaActual.Cells("Subtotal").Value
-
-                ' Aseguramos que el valor no sea DBNull antes de convertir
-                If valorCelda IsNot Nothing AndAlso valorCelda IsNot DBNull.Value Then
-
-                    Dim subtotal As Decimal = CDec(valorCelda)
-
-                    ' 3. Actualizar el Total y la Etiqueta
-                    totalVenta -= subtotal
-                    lblTotal.Text = totalVenta.ToString("0.00")
-
-                    ' 4. Eliminar la Fila
-                    DgvDetalle.Rows.Remove(filaActual)
-
-                Else
-                    MessageBox.Show("No se pudo obtener el subtotal. La fila puede estar vacía o dañada.", "Error Interno", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                End If
-
-            Catch ex As Exception
-                MessageBox.Show("Error al quitar el producto: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
-
+    ' ------------------- SINCRONIZAR COMBOS --------------------
+    Private Sub CmbRazonSocial_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbRazonSocial.SelectedIndexChanged
+        If cargando Then Return
+        If CmbRazonSocial.SelectedIndex <> -1 AndAlso TypeOf CmbRazonSocial.SelectedValue Is Integer Then
+            Cmbcuil.SelectedValue = CmbRazonSocial.SelectedValue
         Else
-            ' Mensaje útil si el usuario presiona sin seleccionar
-            MessageBox.Show("Debe seleccionar una fila del detalle para poder quitar el producto.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Cmbcuil.SelectedIndex = -1
         End If
     End Sub
 
-    ' 💾 Confirmar venta (guardar en SQL)
+    Private Sub CmbCuil_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmbcuil.SelectedIndexChanged
+        If cargando Then Return
+        If Cmbcuil.SelectedIndex <> -1 AndAlso TypeOf Cmbcuil.SelectedValue Is Integer Then
+            CmbRazonSocial.SelectedValue = Cmbcuil.SelectedValue
+        Else
+            CmbRazonSocial.SelectedIndex = -1
+        End If
+    End Sub
 
-    Private Sub btnConfirmarVenta_Click(sender As Object, e As EventArgs) Handles btnConfirmarVenta.Click
-
-        ' 🔑 PASO 1: VALIDACIÓN COMPLETA - Si falla, no abrimos la conexión
-        If Not ValidarVenta() Then
+    ' ------------------- QUITAR PRODUCTO --------------------
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        If DgvDetalle.CurrentRow Is Nothing Then
+            MessageBox.Show("Seleccione una fila para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
 
-        ' 🔑 CONTROL DE SEGURIDAD DE ROL (Aseguramos que solo vendan los autorizados)
+        Dim subtotal As Decimal = CDec(DgvDetalle.CurrentRow.Cells("Subtotal").Value)
+        totalVenta -= subtotal
+        lblTotal.Text = totalVenta.ToString("0.00")
+        DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
+    End Sub
+
+    ' ------------------- CONFIRMAR VENTA --------------------
+    Private Sub btnConfirmarVenta_Click(sender As Object, e As EventArgs) Handles btnConfirmarVenta.Click
+        If Not ValidarVenta() Then Return
         If MdlSesion.PerfilUsuario <> "vendedor" AndAlso MdlSesion.PerfilUsuario <> "gerente" Then
-            MessageBox.Show("Solo Vendedores y Gerentes pueden confirmar ventas.", "Permiso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Solo Vendedores o Gerentes pueden confirmar ventas.")
             Return
         End If
 
         Dim idVentaRegistrada As Integer = 0
-        Dim transaccion As SqlTransaction = Nothing
+        Dim idCliente As Object = DBNull.Value
 
         Try
-            conexion.Open()
-            transaccion = conexion.BeginTransaction()
+            Using cn As New SqlConnection(conexion.ConnectionString)
+                cn.Open()
+                Dim trans = cn.BeginTransaction()
 
-            ' 3. Insertar venta (Cabecera)
-            Using cmdVenta As New SqlCommand("INSERT INTO Ventas (Fecha, IdVendedor, Total) OUTPUT INSERTED.VentaID VALUES (GETDATE(), @idVendedor, @total)", conexion, transaccion)
-                ' ⚠️ Usamos MdlSesion.VendedorID para el ID real
-                cmdVenta.Parameters.AddWithValue("@idVendedor", MdlSesion.VendedorID)
-                cmdVenta.Parameters.AddWithValue("@total", totalVenta)
-                idVentaRegistrada = CInt(cmdVenta.ExecuteScalar())
+                If Not ChkOcasional.Checked Then
+                    If CmbRazonSocial.SelectedIndex = -1 Then
+                        MessageBox.Show("Seleccione un cliente o marque 'Cliente Ocasional'.")
+                        Return
+                    End If
+                    idCliente = CmbRazonSocial.SelectedValue
+                End If
+
+                Using cmdVenta As New SqlCommand("
+                    INSERT INTO Ventas (Fecha, IdVendedor, IdCliente, Total)
+                    OUTPUT INSERTED.VentaID
+                    VALUES (GETDATE(), @idVendedor, @idCliente, @total)", cn, trans)
+                    cmdVenta.Parameters.AddWithValue("@idVendedor", MdlSesion.VendedorID)
+                    cmdVenta.Parameters.AddWithValue("@idCliente", idCliente)
+                    cmdVenta.Parameters.AddWithValue("@total", totalVenta)
+                    idVentaRegistrada = CInt(cmdVenta.ExecuteScalar())
+                End Using
+
+                For Each fila As DataGridViewRow In DgvDetalle.Rows
+                    Using cmdDet As New SqlCommand("
+                        INSERT INTO DetalleVenta (VentaID, ProductoID, Cantidad, PrecioUnitario)
+                        VALUES (@v, @p, @c, @pu)", cn, trans)
+                        cmdDet.Parameters.AddWithValue("@v", idVentaRegistrada)
+                        cmdDet.Parameters.AddWithValue("@p", CInt(fila.Cells("ProductoID").Value))
+                        cmdDet.Parameters.AddWithValue("@c", CInt(fila.Cells("Cantidad").Value))
+                        cmdDet.Parameters.AddWithValue("@pu", CDec(fila.Cells("PrecioUnitario").Value))
+                        cmdDet.ExecuteNonQuery()
+                    End Using
+
+                    Using cmdStock As New SqlCommand("UPDATE Productos SET Stock = Stock - @c WHERE ProductoID = @p", cn, trans)
+                        cmdStock.Parameters.AddWithValue("@c", CInt(fila.Cells("Cantidad").Value))
+                        cmdStock.Parameters.AddWithValue("@p", CInt(fila.Cells("ProductoID").Value))
+                        cmdStock.ExecuteNonQuery()
+                    End Using
+                Next
+
+                trans.Commit()
             End Using
 
-            ' 4. Bucle For Each para Detalle y Stock
-            Dim insertDetalleSQL As String = "INSERT INTO DetalleVenta (VentaID, ProductoID, Cantidad, PrecioUnitario) VALUES (@vID, @pID, @cant, @precioU)"
-            Dim updateStockSQL As String = "UPDATE Productos SET Stock = Stock - @cant WHERE ProductoID = @pID" ' 🔑 DESCUENTO DE STOCK
+            Dim cuilMostrar As String = If(ChkOcasional.Checked, "Ocasional", Cmbcuil.Text)
+            GenerarComprobante(idVentaRegistrada, DgvDetalle, cuilMostrar)
+            MessageBox.Show("✅ Venta registrada correctamente.", "Éxito")
 
-            For Each fila As DataGridViewRow In DgvDetalle.Rows
-                Dim pID As Integer = CInt(fila.Cells("ProductoID").Value)
-                Dim cantidadVendida As Integer = CInt(fila.Cells("Cantidad").Value)
-                Dim precioUnitario As Decimal = Decimal.Parse(fila.Cells("PrecioUnitario").Value.ToString())
-
-                ' 4a. Insertar Detalle
-                Using cmdDetalle As New SqlCommand(insertDetalleSQL, conexion, transaccion)
-                    cmdDetalle.Parameters.AddWithValue("@vID", idVentaRegistrada)
-                    cmdDetalle.Parameters.AddWithValue("@pID", pID)
-                    cmdDetalle.Parameters.AddWithValue("@cant", cantidadVendida)
-                    cmdDetalle.Parameters.AddWithValue("@precioU", precioUnitario)
-                    cmdDetalle.ExecuteNonQuery()
-                End Using
-
-                ' 4b. Actualizar Stock
-                Using cmdStock As New SqlCommand(updateStockSQL, conexion, transaccion)
-                    cmdStock.Parameters.AddWithValue("@cant", cantidadVendida)
-                    cmdStock.Parameters.AddWithValue("@pID", pID)
-                    cmdStock.ExecuteNonQuery()
-                End Using
-
-            Next ' FIN DEL BUCLE
-
-            ' 5. COMMIT
-            transaccion.Commit()
-            GenerarComprobante(idVentaRegistrada, DgvDetalle)
-            MessageBox.Show("✅ Venta N° " & idVentaRegistrada & " registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-            ' 6. Limpieza post-venta
+            ' Limpiar formulario
             DgvDetalle.Rows.Clear()
-            totalVenta = 0D
             lblTotal.Text = "0.00"
-            CargarProductos() ' Recarga el ComboBox de productos para actualizar el stock visible
+            totalVenta = 0D
+            CmbRazonSocial.SelectedIndex = -1
+            Cmbcuil.SelectedIndex = -1
+            ChkOcasional.Checked = False
+            CargarProductos()
 
         Catch ex As Exception
-            MessageBox.Show("Error al guardar la venta: " & ex.Message & vbCrLf & "Se ha revertido la transacción.", "Error")
-
-            ' 7. ROLLBACK SEGURO
-            If transaccion IsNot Nothing Then
-                Try
-                    transaccion.Rollback()
-                Catch rollEx As Exception
-                    MessageBox.Show("Error al intentar revertir la transacción: " & rollEx.Message, "Error Crítico")
-                End Try
-            End If
-
-        Finally
-            If conexion.State = ConnectionState.Open Then
-                conexion.Close()
-            End If
+            MessageBox.Show("Error al guardar venta: " & ex.Message)
         End Try
     End Sub
 
-    ' ----------------------------------------------------
-    ' 🔑 FUNCIÓN DE VALIDACIÓN (Añadir al formulario)
-    ' ----------------------------------------------------
+    ' ------------------- VALIDAR --------------------
     Private Function ValidarVenta() As Boolean
-
-        ' 1. Verificar Vendedor/Usuario Logueado (ID de Vendedor)
         If MdlSesion.VendedorID <= 0 Then
-            MessageBox.Show("Error de sesión: No se ha detectado un vendedor válido.", "Error de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error de sesión. No se ha detectado un vendedor válido.")
             Return False
         End If
-
-        ' 2. Verificar si hay productos en el detalle
         If DgvDetalle.Rows.Count = 0 Then
-            MessageBox.Show("No puede confirmar una venta sin productos en el detalle.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Debe agregar al menos un producto.")
             Return False
         End If
-
-        ' 3. Verificar que el total de la venta no sea cero
         If totalVenta <= 0 Then
-            MessageBox.Show("El total de la venta es cero. Agregue productos o verifique los precios.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("El total de la venta no puede ser 0.")
             Return False
         End If
-
-        ' 4. (Opcional) Validación de stock insuficiente (Se podría hacer un chequeo final aquí o en SQL)
-        '    Por ahora, confiamos en que el SQL UPDATE falle si el stock es bajo (Stock - Cantidad < 0)
-
         Return True
     End Function
 
-    Private Sub GenerarComprobante(ByVal idVenta As Integer, ByVal detalleVenta As DataGridView)
-
-        ' 1. CONSTRUIR EL CONTENIDO DEL TEXTO
+    ' ------------------- GENERAR COMPROBANTE --------------------
+    Private Sub GenerarComprobante(ByVal idVenta As Integer, ByVal detalle As DataGridView, ByVal cuil As String)
         Dim sb As New StringBuilder()
-
-        ' --- ENCABEZADO ---
-        sb.AppendLine("    ORTOPEDIA TECNOLOGICA")
-        sb.AppendLine("    COMPROBANTE DE VENTA")
+        sb.AppendLine("     ORTOPEDIA TECNOLÓGICA")
+        sb.AppendLine("       COMPROBANTE DE VENTA")
         sb.AppendLine("==================================")
-        sb.AppendLine($"TICKET NO: {idVenta}")
-
-        sb.AppendLine($"FECHA: {DateTime.Now.ToString("dd/MM/yyyy HH:mm")}")
+        sb.AppendLine($"TICKET N°: {idVenta}")
+        sb.AppendLine($"FECHA: {DateTime.Now:dd/MM/yyyy HH:mm}")
+        sb.AppendLine($"CLIENTE: {cuil}")
         sb.AppendLine("----------------------------------")
         sb.AppendLine("CANT | PRODUCTO             | IMPORTE")
         sb.AppendLine("----------------------------------")
 
-        ' --- DETALLE DE PRODUCTOS ---
-        For Each fila As DataGridViewRow In detalleVenta.Rows
-            Dim nombreProd As String = fila.Cells("Descripcion").Value.ToString()
-            Dim cantidad As Integer = CInt(fila.Cells("Cantidad").Value)
-            Dim subtotal As Decimal = CDec(fila.Cells("Subtotal").Value)
-
-            ' Formato de texto con alineación para simular tabla
-            Dim nombreRecortado As String = If(nombreProd.Length > 20, nombreProd.Substring(0, 20), nombreProd)
-
-            sb.Append(String.Format("{0,-4}", cantidad.ToString()))
-            sb.Append(String.Format("| {0,-21}", nombreRecortado))
-            sb.AppendLine(String.Format("| {0,7:N2}", subtotal))
+        For Each fila As DataGridViewRow In detalle.Rows
+            Dim nombre As String = fila.Cells("Descripcion").Value.ToString()
+            Dim cant As Integer = CInt(fila.Cells("Cantidad").Value)
+            Dim subTot As Decimal = CDec(fila.Cells("Subtotal").Value)
+            sb.AppendLine($"{cant,-4}| {nombre,-20}| {subTot,7:N2}")
         Next
 
-        ' --- TOTAL Y PIE DE PÁGINA ---
         sb.AppendLine("----------------------------------")
-        sb.AppendLine(String.Format("TOTAL A PAGAR: {0,21:N2}", totalVenta))
+        sb.AppendLine($"TOTAL A PAGAR:{totalVenta,21:N2}")
         sb.AppendLine("==================================")
-        sb.AppendLine(vbCrLf)
-        sb.AppendLine("       GRACIAS POR SU COMPRA")
+        sb.AppendLine(vbCrLf & "GRACIAS POR SU COMPRA")
 
-        Dim TextoCompleto As String = sb.ToString()
-
-        ' 2. ENVIAR EL TEXTO A IMPRESIÓN
         Try
             Dim pd As New PrintDocument()
-
-            ' Asignar la fuente, generalmente monoespaciada para alineación
             Dim printFont As New Font("Courier New", 10)
-
-            ' Abrir el diálogo de impresión para que el usuario elija la impresora
-            Using pDialog As New PrintDialog()
-                pDialog.Document = pd
-
-                If pDialog.ShowDialog() = DialogResult.OK Then
-                    ' El usuario seleccionará "Microsoft Print to PDF" o similar
-
-                    AddHandler pd.PrintPage, Sub(s, ev)
-                                                 ev.Graphics.DrawString(TextoCompleto, printFont, Brushes.Black, 0, 0)
-                                                 ev.HasMorePages = False ' Solo una página
-                                             End Sub
-
-                    pd.Print()
-                Else
-                    MessageBox.Show("Impresión cancelada por el usuario.", "Aviso")
-                End If
-            End Using
-
+            AddHandler pd.PrintPage, Sub(s, ev)
+                                         ev.Graphics.DrawString(sb.ToString(), printFont, Brushes.Black, 0, 0)
+                                         ev.HasMorePages = False
+                                     End Sub
+            pd.Print()
         Catch ex As Exception
-            MessageBox.Show("Error al generar el PDF/Imprimir: " & ex.Message, "Error")
+            MessageBox.Show("Error al imprimir comprobante: " & ex.Message)
         End Try
-
     End Sub
 
-
-
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
 End Class

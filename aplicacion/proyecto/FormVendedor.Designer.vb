@@ -37,10 +37,12 @@ Partial Class FormVendedor
         ' 
         ' MenuStrip1
         ' 
+        MenuStrip1.ImageScalingSize = New Size(20, 20)
         MenuStrip1.Items.AddRange(New ToolStripItem() {VentasToolStripMenuItem, ClientesToolStripMenuItem, StockDisponibleToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(834, 55)
+        MenuStrip1.Padding = New Padding(7, 3, 0, 3)
+        MenuStrip1.Size = New Size(953, 62)
         MenuStrip1.TabIndex = 0
         MenuStrip1.Text = "MenuStrip1"
         ' 
@@ -52,20 +54,20 @@ Partial Class FormVendedor
         VentasToolStripMenuItem.ImageAlign = ContentAlignment.TopLeft
         VentasToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None
         VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        VentasToolStripMenuItem.Size = New Size(85, 51)
+        VentasToolStripMenuItem.Size = New Size(98, 56)
         VentasToolStripMenuItem.Text = "Ventas"
         VentasToolStripMenuItem.TextAlign = ContentAlignment.BottomRight
         ' 
         ' RgistrarVentasToolStripMenuItem
         ' 
         RgistrarVentasToolStripMenuItem.Name = "RgistrarVentasToolStripMenuItem"
-        RgistrarVentasToolStripMenuItem.Size = New Size(180, 22)
+        RgistrarVentasToolStripMenuItem.Size = New Size(197, 26)
         RgistrarVentasToolStripMenuItem.Text = "Registrar ventas"
         ' 
         ' VerVentasToolStripMenuItem
         ' 
         VerVentasToolStripMenuItem.Name = "VerVentasToolStripMenuItem"
-        VerVentasToolStripMenuItem.Size = New Size(180, 22)
+        VerVentasToolStripMenuItem.Size = New Size(197, 26)
         VerVentasToolStripMenuItem.Text = "Ver ventas"
         ' 
         ' ClientesToolStripMenuItem
@@ -74,7 +76,7 @@ Partial Class FormVendedor
         ClientesToolStripMenuItem.ImageAlign = ContentAlignment.TopLeft
         ClientesToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None
         ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        ClientesToolStripMenuItem.Size = New Size(61, 51)
+        ClientesToolStripMenuItem.Size = New Size(75, 56)
         ClientesToolStripMenuItem.Text = "Clientes"
         ClientesToolStripMenuItem.TextAlign = ContentAlignment.BottomRight
         ClientesToolStripMenuItem.TextImageRelation = TextImageRelation.ImageAboveText
@@ -87,16 +89,17 @@ Partial Class FormVendedor
         StockDisponibleToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None
         StockDisponibleToolStripMenuItem.MergeAction = MergeAction.Insert
         StockDisponibleToolStripMenuItem.Name = "StockDisponibleToolStripMenuItem"
-        StockDisponibleToolStripMenuItem.Size = New Size(105, 51)
+        StockDisponibleToolStripMenuItem.Size = New Size(121, 56)
         StockDisponibleToolStripMenuItem.Text = "Productos"
         StockDisponibleToolStripMenuItem.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' ToolStrip1
         ' 
+        ToolStrip1.ImageScalingSize = New Size(20, 20)
         ToolStrip1.Items.AddRange(New ToolStripItem() {ToolStripButton1, LblBienvenido})
-        ToolStrip1.Location = New Point(0, 55)
+        ToolStrip1.Location = New Point(0, 62)
         ToolStrip1.Name = "ToolStrip1"
-        ToolStrip1.Size = New Size(834, 25)
+        ToolStrip1.Size = New Size(953, 27)
         ToolStrip1.TabIndex = 2
         ToolStrip1.Text = "ToolStrip1"
         ' 
@@ -107,7 +110,7 @@ Partial Class FormVendedor
         ToolStripButton1.Image = My.Resources.Resources.borrar
         ToolStripButton1.ImageTransparentColor = Color.Magenta
         ToolStripButton1.Name = "ToolStripButton1"
-        ToolStripButton1.Size = New Size(23, 22)
+        ToolStripButton1.Size = New Size(29, 24)
         ToolStripButton1.Text = "ToolStripButton1"
         ' 
         ' LblBienvenido
@@ -115,19 +118,21 @@ Partial Class FormVendedor
         LblBienvenido.Font = New Font("Segoe UI Emoji", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         LblBienvenido.ForeColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
         LblBienvenido.Name = "LblBienvenido"
-        LblBienvenido.Size = New Size(0, 22)
+        LblBienvenido.Size = New Size(0, 24)
         ' 
         ' FormVendedor
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.inicio_sesion1
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(834, 450)
+        ClientSize = New Size(953, 600)
         Controls.Add(ToolStrip1)
         Controls.Add(MenuStrip1)
         MainMenuStrip = MenuStrip1
+        Margin = New Padding(3, 4, 3, 4)
         Name = "FormVendedor"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "perfil vendedor"
         MenuStrip1.ResumeLayout(False)
         MenuStrip1.PerformLayout()

@@ -21,10 +21,10 @@ Public Class FormLogin
                 Exit Sub
             End If
 
-            Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;Encrypt=False;")
+        Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS;Database=ortopedicTecnologi_taller;Trusted_Connection=True;Encrypt=False;")
 
-            ' 🔑 CORRECCIÓN: Seleccionar también el ID para la tabla Ventas
-            Dim consulta As String = "SELECT Id, Contrasena, Perfil, Nombre_Apellido, Activo FROM Usuarios WHERE Email = @Email"
+        ' 🔑 CORRECCIÓN: Seleccionar también el ID para la tabla Ventas
+        Dim consulta As String = "SELECT Id, Contrasena, Perfil, Nombre_Apellido, Activo FROM Usuarios WHERE Email = @Email"
 
             Dim comando As New SqlCommand(consulta, conexion)
             comando.Parameters.AddWithValue("@Email", correoIngresado)

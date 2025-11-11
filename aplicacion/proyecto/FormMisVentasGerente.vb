@@ -39,7 +39,11 @@ Public Class FormMisVentasGerente ' 🔑 Nuevo nombre de formulario
     End Sub
 
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
-        CargarMisVentas()
+        CargarMisVentas
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        FormGerente.Show()
+    End Sub
 End Class

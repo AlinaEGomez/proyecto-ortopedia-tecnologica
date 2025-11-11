@@ -23,6 +23,7 @@
     End Sub
 
     Private Sub RgistrarVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RgistrarVentasToolStripMenuItem.Click
+        Me.Hide()
         FormRegistarVentas.Show()
     End Sub
 
@@ -31,16 +32,19 @@
     End Sub
 
     Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
+        Me.Hide()
         FormClientes.Show()
     End Sub
 
 
     Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StockDisponibleToolStripMenuItem.Click
+        Me.Hide()
         Dim frm As New FormStockVendedor()
         frm.Show()
     End Sub
 
     Private Sub VerVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerVentasToolStripMenuItem.Click
+        Me.Hide()
         Dim frm As New FormMisVentas()
         frm.Show()
     End Sub

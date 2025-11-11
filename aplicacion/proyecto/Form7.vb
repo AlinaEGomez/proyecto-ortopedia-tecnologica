@@ -1,7 +1,7 @@
 ﻿Imports Microsoft.Data.SqlClient
 
 Public Class FormUsuarios
-    Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;")
+    Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;")
 
     Public Sub FormUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarUsuarios()
@@ -11,12 +11,15 @@ Public Class FormUsuarios
     Public Sub CargarUsuarios()
         Try
             conexion.Open()
-            Dim consulta As String = "SELECT * FROM Usuarios"
+            Dim consulta As String = "SELECT * FROM Usuarios "
             Dim adaptador As New SqlDataAdapter(consulta, conexion)
             Dim tabla As New DataTable()
             adaptador.Fill(tabla)
             DgvUsuarios.DataSource = tabla
-
+            ' 🔒 Ocultar columna de contraseña si existe
+            If DgvUsuarios.Columns.Contains("Contrasena") Then
+                DgvUsuarios.Columns("Contrasena").Visible = False
+            End If
             AgregarBotones()
         Catch ex As Exception
             MessageBox.Show("Error al cargar usuarios: " & ex.Message)
@@ -87,4 +90,8 @@ Public Class FormUsuarios
         End Try
     End Sub
 
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Close()
+        FormAdministrador.Show()
+    End Sub
 End Class

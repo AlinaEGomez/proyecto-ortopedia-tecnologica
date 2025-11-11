@@ -11,7 +11,20 @@ Public Class FormProveedores
     Private Sub FormProveedores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarProveedores()
     End Sub
-
+    Private Sub FormClientes_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        ' Volver al formulario según el perfil
+        Select Case MdlSesion.PerfilUsuario
+            Case "administrador"
+                Dim frmAdmin As New FormAdministrador()
+                frmAdmin.Show()
+            Case "gerente"
+                Dim frmGerente As New FormGerente()
+                frmGerente.Show()
+            Case "vendedor"
+                Dim frmVendedor As New FormVendedor()
+                frmVendedor.Show()
+        End Select
+    End Sub
     ' 🔑 FUNCIÓN PRINCIPAL DE CARGA
     Public Sub CargarProveedores()
         Try
@@ -128,6 +141,11 @@ Public Class FormProveedores
         ' 3. Llama a la función de carga del formulario secundario para refrescar los datos
         ' (Esta función debe existir en FormProveedoresInactivos.vb)
         frm.CargarListaInactivos()
+
+    End Sub
+
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Close()
 
     End Sub
 End Class

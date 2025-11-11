@@ -15,7 +15,20 @@ Public Class FormClientes
     Private Sub FormClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarClientes()
     End Sub
-
+    Private Sub FormClientes_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        ' Volver al formulario según el perfil
+        Select Case MdlSesion.PerfilUsuario
+            Case "administrador"
+                Dim frmAdmin As New FormAdministrador()
+                frmAdmin.Show()
+            Case "gerente"
+                Dim frmGerente As New FormGerente()
+                frmGerente.Show()
+            Case "vendedor"
+                Dim frmVendedor As New FormVendedor()
+                frmVendedor.Show()
+        End Select
+    End Sub
     ' --- FUNCIÓN PRINCIPAL PARA CARGAR LA GRILLA (ÚNICA DEFINICIÓN) ---
     Public Sub CargarClientes()
         Try
@@ -71,7 +84,7 @@ Public Class FormClientes
     End Sub
 
     Private Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
-        LimpiarCampos()
+        LimpiarCampos
     End Sub
 
 
@@ -133,4 +146,8 @@ Public Class FormClientes
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+
+    End Sub
 End Class

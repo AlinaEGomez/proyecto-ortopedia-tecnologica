@@ -37,50 +37,57 @@ Partial Class FormProveedores
         Label4 = New Label()
         Label5 = New Label()
         btnProveedoresInactivos = New Button()
+        BtnCerrar = New Button()
         CType(DgvProveedores, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' txtRazonSocial
         ' 
-        txtRazonSocial.Location = New Point(197, 36)
+        txtRazonSocial.Location = New Point(225, 48)
+        txtRazonSocial.Margin = New Padding(3, 4, 3, 4)
         txtRazonSocial.Name = "txtRazonSocial"
-        txtRazonSocial.Size = New Size(100, 23)
+        txtRazonSocial.Size = New Size(114, 27)
         txtRazonSocial.TabIndex = 0
         ' 
         ' txtCuit
         ' 
-        txtCuit.Location = New Point(161, 102)
+        txtCuit.Location = New Point(225, 108)
+        txtCuit.Margin = New Padding(3, 4, 3, 4)
         txtCuit.Name = "txtCuit"
-        txtCuit.Size = New Size(100, 23)
+        txtCuit.Size = New Size(114, 27)
         txtCuit.TabIndex = 1
         ' 
         ' txtContactoNombre
         ' 
-        txtContactoNombre.Location = New Point(188, 186)
+        txtContactoNombre.Location = New Point(225, 184)
+        txtContactoNombre.Margin = New Padding(3, 4, 3, 4)
         txtContactoNombre.Name = "txtContactoNombre"
-        txtContactoNombre.Size = New Size(100, 23)
+        txtContactoNombre.Size = New Size(114, 27)
         txtContactoNombre.TabIndex = 2
         ' 
         ' txtTelefono
         ' 
-        txtTelefono.Location = New Point(487, 33)
+        txtTelefono.Location = New Point(557, 44)
+        txtTelefono.Margin = New Padding(3, 4, 3, 4)
         txtTelefono.Name = "txtTelefono"
-        txtTelefono.Size = New Size(100, 23)
+        txtTelefono.Size = New Size(114, 27)
         txtTelefono.TabIndex = 3
         ' 
         ' txtEmail
         ' 
-        txtEmail.Location = New Point(487, 145)
+        txtEmail.Location = New Point(557, 123)
+        txtEmail.Margin = New Padding(3, 4, 3, 4)
         txtEmail.Name = "txtEmail"
-        txtEmail.Size = New Size(100, 23)
+        txtEmail.Size = New Size(114, 27)
         txtEmail.TabIndex = 4
         ' 
         ' btnGuardar
         ' 
         btnGuardar.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnGuardar.Location = New Point(634, 24)
+        btnGuardar.Location = New Point(725, 32)
+        btnGuardar.Margin = New Padding(3, 4, 3, 4)
         btnGuardar.Name = "btnGuardar"
-        btnGuardar.Size = New Size(119, 35)
+        btnGuardar.Size = New Size(136, 47)
         btnGuardar.TabIndex = 5
         btnGuardar.Text = "Guardar"
         btnGuardar.UseVisualStyleBackColor = True
@@ -88,9 +95,10 @@ Partial Class FormProveedores
         ' btnEliminar
         ' 
         btnEliminar.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnEliminar.Location = New Point(639, 81)
+        btnEliminar.Location = New Point(725, 103)
+        btnEliminar.Margin = New Padding(3, 4, 3, 4)
         btnEliminar.Name = "btnEliminar"
-        btnEliminar.Size = New Size(119, 35)
+        btnEliminar.Size = New Size(136, 47)
         btnEliminar.TabIndex = 6
         btnEliminar.Text = "Eliminar"
         btnEliminar.UseVisualStyleBackColor = True
@@ -98,9 +106,10 @@ Partial Class FormProveedores
         ' btnLimpiar
         ' 
         btnLimpiar.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnLimpiar.Location = New Point(639, 130)
+        btnLimpiar.Location = New Point(725, 169)
+        btnLimpiar.Margin = New Padding(3, 4, 3, 4)
         btnLimpiar.Name = "btnLimpiar"
-        btnLimpiar.Size = New Size(119, 38)
+        btnLimpiar.Size = New Size(136, 42)
         btnLimpiar.TabIndex = 7
         btnLimpiar.Text = "Limpiar"
         btnLimpiar.UseVisualStyleBackColor = True
@@ -110,18 +119,20 @@ Partial Class FormProveedores
         DgvProveedores.BackgroundColor = Color.Firebrick
         DgvProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DgvProveedores.GridColor = Color.White
-        DgvProveedores.Location = New Point(46, 245)
+        DgvProveedores.Location = New Point(53, 290)
+        DgvProveedores.Margin = New Padding(3, 4, 3, 4)
         DgvProveedores.Name = "DgvProveedores"
-        DgvProveedores.Size = New Size(707, 150)
+        DgvProveedores.RowHeadersWidth = 51
+        DgvProveedores.Size = New Size(808, 200)
         DgvProveedores.TabIndex = 8
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(23, 31)
+        Label1.Location = New Point(26, 41)
         Label1.Name = "Label1"
-        Label1.Size = New Size(135, 28)
+        Label1.Size = New Size(171, 36)
         Label1.TabIndex = 9
         Label1.Text = "Razon Social:"
         ' 
@@ -129,9 +140,9 @@ Partial Class FormProveedores
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(23, 104)
+        Label2.Location = New Point(26, 114)
         Label2.Name = "Label2"
-        Label2.Size = New Size(92, 28)
+        Label2.Size = New Size(120, 36)
         Label2.TabIndex = 10
         Label2.Text = "Cuil/Cuit"
         ' 
@@ -139,9 +150,9 @@ Partial Class FormProveedores
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(23, 186)
+        Label3.Location = New Point(26, 184)
         Label3.Name = "Label3"
-        Label3.Size = New Size(135, 28)
+        Label3.Size = New Size(173, 36)
         Label3.TabIndex = 11
         Label3.Text = "Nombre Prov"
         ' 
@@ -149,9 +160,9 @@ Partial Class FormProveedores
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(354, 31)
+        Label4.Location = New Point(405, 41)
         Label4.Name = "Label4"
-        Label4.Size = New Size(93, 28)
+        Label4.Size = New Size(119, 36)
         Label4.TabIndex = 12
         Label4.Text = "Telefono"
         ' 
@@ -159,29 +170,42 @@ Partial Class FormProveedores
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(354, 154)
+        Label5.Location = New Point(405, 114)
         Label5.Name = "Label5"
-        Label5.Size = New Size(62, 28)
+        Label5.Size = New Size(80, 36)
         Label5.TabIndex = 13
         Label5.Text = "Email"
         ' 
         ' btnProveedoresInactivos
         ' 
         btnProveedoresInactivos.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnProveedoresInactivos.Location = New Point(639, 188)
+        btnProveedoresInactivos.Location = New Point(151, 513)
+        btnProveedoresInactivos.Margin = New Padding(3, 4, 3, 4)
         btnProveedoresInactivos.Name = "btnProveedoresInactivos"
-        btnProveedoresInactivos.Size = New Size(119, 43)
+        btnProveedoresInactivos.Size = New Size(150, 52)
         btnProveedoresInactivos.TabIndex = 14
         btnProveedoresInactivos.Text = "Inactivos"
         btnProveedoresInactivos.UseVisualStyleBackColor = True
         ' 
+        ' BtnCerrar
+        ' 
+        BtnCerrar.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BtnCerrar.Location = New Point(636, 514)
+        BtnCerrar.Margin = New Padding(3, 4, 3, 4)
+        BtnCerrar.Name = "BtnCerrar"
+        BtnCerrar.Size = New Size(143, 52)
+        BtnCerrar.TabIndex = 15
+        BtnCerrar.Text = "Cerrar"
+        BtnCerrar.UseVisualStyleBackColor = True
+        ' 
         ' FormProveedores
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackgroundImage = My.Resources.Resources.proveedor2
+        BackgroundImage = My.Resources.Resources.vendedor
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(914, 600)
+        Controls.Add(BtnCerrar)
         Controls.Add(btnProveedoresInactivos)
         Controls.Add(Label5)
         Controls.Add(Label4)
@@ -197,7 +221,9 @@ Partial Class FormProveedores
         Controls.Add(txtContactoNombre)
         Controls.Add(txtCuit)
         Controls.Add(txtRazonSocial)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "FormProveedores"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Proveedores"
         CType(DgvProveedores, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
@@ -219,4 +245,5 @@ Partial Class FormProveedores
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents btnProveedoresInactivos As Button
+    Friend WithEvents BtnCerrar As Button
 End Class

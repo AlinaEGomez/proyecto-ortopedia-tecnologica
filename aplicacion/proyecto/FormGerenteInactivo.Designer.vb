@@ -29,21 +29,25 @@ Partial Class FormGerenteInactivo
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(41, 178)
+        DataGridView1.Location = New Point(47, 237)
+        DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(709, 160)
+        DataGridView1.RowHeadersWidth = 51
+        DataGridView1.Size = New Size(810, 213)
         DataGridView1.TabIndex = 0
         ' 
-        ' Form11
+        ' FormGerenteInactivo
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
         BackgroundImage = My.Resources.Resources.gerente
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(914, 600)
         Controls.Add(DataGridView1)
-        Name = "Form11"
+        Margin = New Padding(3, 4, 3, 4)
+        Name = "FormGerenteInactivo"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Gerente Inactivo"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

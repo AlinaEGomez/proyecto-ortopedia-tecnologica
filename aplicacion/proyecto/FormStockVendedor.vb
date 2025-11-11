@@ -11,7 +11,20 @@ Public Class FormStockVendedor
         ' Carga inicial (sin filtro)
         CargarStockDisponible()
     End Sub
-
+    Private Sub FormClientes_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        ' Volver al formulario según el perfil
+        Select Case MdlSesion.PerfilUsuario
+            Case "administrador"
+                Dim frmAdmin As New FormAdministrador()
+                frmAdmin.Show()
+            Case "gerente"
+                Dim frmGerente As New FormGerente()
+                frmGerente.Show()
+            Case "vendedor"
+                Dim frmVendedor As New FormVendedor()
+                frmVendedor.Show()
+        End Select
+    End Sub
     ' ----------------------------------------------------
     ' FUNCIÓN PRINCIPAL DE CARGA Y FILTRADO (ÚNICA)
     ' ----------------------------------------------------
@@ -61,13 +74,13 @@ Public Class FormStockVendedor
     ' ----------------------------------------------------
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
 
-        Dim filtro As String = txtBuscarProd.Text.Trim()
+        Dim filtro = txtBuscarProd.Text.Trim
 
         ' 1. Verificación para evitar buscar en vacío
         If String.IsNullOrEmpty(filtro) Then
             MessageBox.Show("Por favor, ingrese un código o descripción para buscar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             ' Recargamos la grilla completa si está vacía
-            CargarStockDisponible()
+            CargarStockDisponible
             Return
         End If
 
@@ -80,5 +93,10 @@ Public Class FormStockVendedor
         Else
             MessageBox.Show($"Búsqueda completada. {DgvStock.Rows.Count} producto(s) encontrado(s).", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+
     End Sub
 End Class

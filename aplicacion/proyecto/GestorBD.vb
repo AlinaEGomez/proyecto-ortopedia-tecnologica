@@ -8,7 +8,7 @@ Imports Microsoft.Identity.Client.Platforms.Shared
 
 Public Class GestorBD
     ' ⚠️ ASUME que CadenaConexion está definida aquí o en un módulo global
-    Private Const CadenaConexion As String = "Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;"
+    Private Const CadenaConexion As String = "Server=localhost\SQLEXPRESS;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;"
 
     ' ----------------------------------------------------------------------
     ' LEER (Cargar todo el inventario ACTIVO - FUNCIÓN PRINCIPAL)
@@ -396,27 +396,27 @@ Public Class GestorBD
         End Using
         Return dt
     End Function
-    Public Function ObtenerReporteCompras(fechaInicio As DateTime, fechaFin As DateTime) As DataTable
-        Dim dt As New DataTable()
-        Dim consulta As String = "SELECT P.RazonSocial AS Proveedor, U.Nombre_Apellido AS Usuario_Registro, COUNT(C.CompraID) AS Total_Ordenes, SUM(C.TotalCompra) AS Monto_Total_Comprado FROM Compras C JOIN Proveedores P ON C.ProveedorID = P.ProveedorID JOIN Usuarios U ON C.IdUsuarioRegistro = U.Id WHERE C.FechaCompra BETWEEN @FechaInicio AND @FechaFin GROUP BY P.RazonSocial, U.Nombre_Apellido ORDER BY Monto_Total_Comprado DESC"
+    ' Public Function ObtenerReporteCompras(fechaInicio As DateTime, fechaFin As DateTime) As DataTable
+    '    Dim dt As New DataTable()
+    '    Dim consulta As String = "SELECT P.RazonSocial AS Proveedor, U.Nombre_Apellido AS Usuario_Registro, COUNT(C.CompraID) AS Total_Ordenes, SUM(C.TotalCompra) AS Monto_Total_Comprado FROM Compras C JOIN Proveedores P ON C.ProveedorID = P.ProveedorID JOIN Usuarios U ON C.IdUsuarioRegistro = U.Id WHERE C.FechaCompra BETWEEN @FechaInicio AND @FechaFin GROUP BY P.RazonSocial, U.Nombre_Apellido ORDER BY Monto_Total_Comprado DESC"
 
-        Using conexion As New SqlConnection(CadenaConexion)
-            Using cmd As New SqlCommand(consulta, conexion)
-                ' 🔑 Añadir Parámetros de Fecha
-                cmd.Parameters.AddWithValue("@FechaInicio", fechaInicio)
-                cmd.Parameters.AddWithValue("@FechaFin", fechaFin)
-
-                Using adaptador As New SqlDataAdapter(cmd)
-                    Try
-                        adaptador.Fill(dt)
-                    Catch ex As Exception
-                        Throw New Exception("Fallo al generar el reporte de compras: " & ex.Message, ex)
-                    End Try
-                End Using
-            End Using
-        End Using
-        Return dt
-    End Function
+    '    Using conexion As New SqlConnection(CadenaConexion)
+    '        Using cmd As New SqlCommand(consulta, conexion)
+    '           ' 🔑 Añadir Parámetros de Fecha
+    '            cmd.Parameters.AddWithValue("@FechaInicio", fechaInicio)
+    '            cmd.Parameters.AddWithValue("@FechaFin", fechaFin)
+    '
+    '           Using adaptador As New SqlDataAdapter(cmd)
+    '               Try
+    '                    adaptador.Fill(dt)
+    'Catch ex As Exception
+    'Throw New Exception("Fallo al generar el reporte de compras: " & ex.Message, ex)
+    'End Try
+    'End Using
+    'End Using
+    'End Using
+    'Return dt
+    'End Function
     '----------------------------------------------------------------------------
     '                      BACKUP DE DATOS
     '--------------------------------------------------------------------------
@@ -551,5 +551,54 @@ Public Class GestorBD
         End Using
         Return dt
     End Function
+
+    Public Function ObtenerReporteCompras(fechaInicio As DateTime, fechaFin As DateTime) As DataTable
+        Dim dt As New DataTable()
+        Using conexion As New SqlConnection("Server=localhost\SQLEXPRESS;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;")
+            Dim consulta As String = "
+            SELECT 
+                C.CompraID,
+                P.RazonSocial AS Proveedor,
+                PR.Descripcion AS Producto,
+                DC.Cantidad,
+                DC.PrecioCosto AS PrecioUnitario,
+                DC.Subtotal AS Monto_Total_Comprado,
+                C.FechaCompra
+            FROM Compras C
+            INNER JOIN Proveedores P ON C.ProveedorID = P.ProveedorID
+            INNER JOIN DetalleCompra DC ON C.CompraID = DC.CompraID
+            INNER JOIN Productos PR ON DC.ProductoID = PR.ProductoID
+            WHERE C.FechaCompra BETWEEN @FechaInicio AND @FechaFin
+            ORDER BY C.FechaCompra DESC
+        "
+
+            Using cmd As New SqlCommand(consulta, conexion)
+                cmd.Parameters.AddWithValue("@FechaInicio", fechaInicio)
+                cmd.Parameters.AddWithValue("@FechaFin", fechaFin)
+
+                Dim adaptador As New SqlDataAdapter(cmd)
+                adaptador.Fill(dt)
+            End Using
+        End Using
+        Return dt
+    End Function
+    Public Function ObtenerPrecioProducto(idProducto As Integer) As Decimal
+        Dim precio As Decimal = 0D
+        Dim consulta As String = "SELECT Precio FROM Productos WHERE ProductoID = @ProductoID"
+
+        Using conexion As New SqlConnection(CadenaConexion)
+            Using comando As New SqlCommand(consulta, conexion)
+                comando.Parameters.AddWithValue("@ProductoID", idProducto)
+                conexion.Open()
+                Dim resultado = comando.ExecuteScalar()
+                If resultado IsNot Nothing Then
+                    precio = Convert.ToDecimal(resultado)
+                End If
+            End Using
+        End Using
+
+        Return precio
+    End Function
+
 
 End Class

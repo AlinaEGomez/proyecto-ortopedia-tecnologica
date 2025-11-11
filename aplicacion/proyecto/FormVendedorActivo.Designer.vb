@@ -30,20 +30,24 @@ Partial Class FormVendedorActivo
         ' 
         DataGridView1.BackgroundColor = SystemColors.ButtonFace
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(106, 88)
+        DataGridView1.Location = New Point(121, 117)
+        DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(597, 233)
+        DataGridView1.RowHeadersWidth = 51
+        DataGridView1.Size = New Size(682, 311)
         DataGridView1.TabIndex = 0
         ' 
-        ' Form12
+        ' FormVendedorActivo
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.vendedor
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(914, 600)
         Controls.Add(DataGridView1)
-        Name = "Form12"
+        Margin = New Padding(3, 4, 3, 4)
+        Name = "FormVendedorActivo"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Vendedor Activo"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

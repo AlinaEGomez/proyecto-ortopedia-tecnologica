@@ -26,66 +26,95 @@ Partial Class FormReporteCompras
         dtpFechaFin = New DateTimePicker()
         dgvReporte = New DataGridView()
         btnGenerarReporteCompras = New Button()
-        lblTotalGlobal = New Label()
+        LblTotalGrupal = New Label()
+        Button1 = New Button()
+        LblTotalGlobal = New Label()
         CType(dgvReporte, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' dtpFechaInicio
         ' 
-        dtpFechaInicio.Location = New Point(302, 62)
+        dtpFechaInicio.Location = New Point(80, 88)
+        dtpFechaInicio.Margin = New Padding(3, 4, 3, 4)
         dtpFechaInicio.Name = "dtpFechaInicio"
-        dtpFechaInicio.Size = New Size(200, 23)
+        dtpFechaInicio.Size = New Size(228, 27)
         dtpFechaInicio.TabIndex = 0
         ' 
         ' dtpFechaFin
         ' 
-        dtpFechaFin.Location = New Point(308, 109)
+        dtpFechaFin.Location = New Point(80, 157)
+        dtpFechaFin.Margin = New Padding(3, 4, 3, 4)
         dtpFechaFin.Name = "dtpFechaFin"
-        dtpFechaFin.Size = New Size(200, 23)
+        dtpFechaFin.Size = New Size(228, 27)
         dtpFechaFin.TabIndex = 1
         ' 
         ' dgvReporte
         ' 
         dgvReporte.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvReporte.Location = New Point(126, 235)
+        dgvReporte.Location = New Point(69, 220)
+        dgvReporte.Margin = New Padding(3, 4, 3, 4)
         dgvReporte.Name = "dgvReporte"
-        dgvReporte.Size = New Size(562, 150)
+        dgvReporte.RowHeadersWidth = 51
+        dgvReporte.Size = New Size(758, 234)
         dgvReporte.TabIndex = 2
         ' 
         ' btnGenerarReporteCompras
         ' 
         btnGenerarReporteCompras.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnGenerarReporteCompras.Location = New Point(345, 400)
+        btnGenerarReporteCompras.Location = New Point(569, 99)
+        btnGenerarReporteCompras.Margin = New Padding(3, 4, 3, 4)
         btnGenerarReporteCompras.Name = "btnGenerarReporteCompras"
-        btnGenerarReporteCompras.Size = New Size(163, 38)
+        btnGenerarReporteCompras.Size = New Size(230, 51)
         btnGenerarReporteCompras.TabIndex = 3
         btnGenerarReporteCompras.Text = "Generar Reporte"
         btnGenerarReporteCompras.UseVisualStyleBackColor = True
         ' 
-        ' lblTotalGlobal
+        ' LblTotalGrupal
         ' 
-        lblTotalGlobal.AutoSize = True
-        lblTotalGlobal.BackColor = Color.MediumPurple
-        lblTotalGlobal.Font = New Font("Segoe UI Emoji", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblTotalGlobal.Location = New Point(208, 404)
-        lblTotalGlobal.Name = "lblTotalGlobal"
-        lblTotalGlobal.Size = New Size(88, 36)
-        lblTotalGlobal.TabIndex = 4
-        lblTotalGlobal.Text = "label1"
+        LblTotalGrupal.AutoSize = True
+        LblTotalGrupal.Font = New Font("Segoe UI Emoji", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LblTotalGrupal.Location = New Point(87, 500)
+        LblTotalGrupal.Name = "LblTotalGrupal"
+        LblTotalGrupal.Size = New Size(0, 31)
+        LblTotalGrupal.TabIndex = 4
+        ' 
+        ' Button1
+        ' 
+        Button1.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(703, 490)
+        Button1.Margin = New Padding(3, 4, 3, 4)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(124, 51)
+        Button1.TabIndex = 5
+        Button1.Text = "Cerrar"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' LblTotalGlobal
+        ' 
+        LblTotalGlobal.AutoSize = True
+        LblTotalGlobal.Font = New Font("Segoe UI Emoji", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LblTotalGlobal.Location = New Point(125, 519)
+        LblTotalGlobal.Name = "LblTotalGlobal"
+        LblTotalGlobal.Size = New Size(0, 31)
+        LblTotalGlobal.TabIndex = 6
         ' 
         ' FormReporteCompras
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        BackgroundImage = My.Resources.Resources.reporte_ventas
+        BackgroundImage = My.Resources.Resources.vendedor
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(800, 450)
-        Controls.Add(lblTotalGlobal)
+        ClientSize = New Size(914, 600)
+        Controls.Add(LblTotalGlobal)
+        Controls.Add(Button1)
+        Controls.Add(LblTotalGrupal)
         Controls.Add(btnGenerarReporteCompras)
         Controls.Add(dgvReporte)
         Controls.Add(dtpFechaFin)
         Controls.Add(dtpFechaInicio)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "FormReporteCompras"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Reporte de compras"
         CType(dgvReporte, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
@@ -96,5 +125,7 @@ Partial Class FormReporteCompras
     Friend WithEvents dtpFechaFin As DateTimePicker
     Friend WithEvents dgvReporte As DataGridView
     Friend WithEvents btnGenerarReporteCompras As Button
-    Friend WithEvents lblTotalGlobal As Label
+    Friend WithEvents LblTotalGrupal As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents LblTotalGlobal As Label
 End Class

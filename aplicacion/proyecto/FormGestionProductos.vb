@@ -2,8 +2,7 @@
 Imports System.Data.SqlClient
 Imports System.Data
 Public Class FormGestionProductos
-    ' Asegúrate de que coincida con el nombre del archivo
-    ' ... todo el código de FormInventario.vb va aquí ...
+
 
     ' ⚠️ DECLARACIONES CLAVE
     Private gestor As New GestorBD() ' Instancia del Gestor de Base de Datos
@@ -12,9 +11,24 @@ Public Class FormGestionProductos
 
 
     Private Sub FormInventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        AddHandler dgvProductos.DataError, AddressOf dgvProductos_DataError
         ActualizarDataGrid()
-    End Sub
 
+    End Sub
+    Private Sub FormClientes_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        ' Volver al formulario según el perfil
+        Select Case MdlSesion.PerfilUsuario
+            Case "administrador"
+                Dim frmAdmin As New FormAdministrador()
+                frmAdmin.Show()
+            Case "gerente"
+                Dim frmGerente As New FormGerente()
+                frmGerente.Show()
+            Case "vendedor"
+                Dim frmVendedor As New FormVendedor()
+                frmVendedor.Show()
+        End Select
+    End Sub
     ' =========================================================================
     ' 1. FUNCIÓN DE ACTUALIZACIÓN DEL DATAGRID Y CONFIGURACIÓN
     ' =========================================================================
@@ -31,7 +45,6 @@ Public Class FormGestionProductos
 
     ' 🔑 FUNCIÓN PARA CONFIGURAR COLUMNAS (Llamada DESPUÉS de asignar el DataSource)
     Private Sub ConfigurarDataGridColumns()
-        ' CONFIGURAR COLUMNA DE IMAGEN Y FORMATO
 
         ' 1. Formato y ocultamiento de columnas de la BD
         If dgvProductos.Columns.Contains("ProductoID") Then
@@ -61,10 +74,31 @@ Public Class FormGestionProductos
                 dgvProductos.Columns.Add(colImagen)
             End If
         End If
+        'For Each fila As DataGridViewRow In dgvProductos.Rows
+        'Try
+        'If fila.Cells("RutaImagen").Value IsNot Nothing AndAlso
+        '       Not IsDBNull(fila.Cells("RutaImagen").Value) Then
+
+        'Dim ruta As String = fila.Cells("RutaImagen").Value.ToString()
+        '
+        'If IO.File.Exists(ruta) Then
+        ' fila.Cells("ColImagen").Value = Image.FromFile(ruta)
+        'Else
+        'f'ila.Cells("ColImagen").Value = Nothing
+        ' End If
+        'El'se
+        'fila.Cells("ColImagen").Value = Nothing
+        ' End If
+        ' Catch ex As Exception
+        'fila.Cells("ColImagen").Value = Nothing
+        'End Try
+        ' Next
     End Sub
 
+
+
     Private Sub LimpiarCampos()
-        ' 🔑 Nuevos campos: Código y Descripción
+
         TxtCodigo.Clear()
         TxtDescripcion.Clear()
         TxtStock.Text = "0"
@@ -72,8 +106,17 @@ Public Class FormGestionProductos
         pbImagenProducto.Image = Nothing
         rutaArchivoTemporal = ""
         ProductoID_Actual = 0 ' Resetear a modo ALTA
-        ' Actualizar texto del botón a "Guardar" si es necesario
+
         BtnGuardar.Text = "Guardar Nuevo"
+    End Sub
+
+    ' =========================================================================
+    ' MANEJAR ERRORES DEL DATAGRID
+    ' =========================================================================
+    Private Sub dgvProductos_DataError(sender As Object, e As DataGridViewDataErrorEventArgs)
+        e.ThrowException = False
+        ' Opcional: Mostrar error en consola o log (no interrumpe la app)
+        Console.WriteLine($"Error en columna {e.ColumnIndex}: {e.Exception.Message}")
     End Sub
 
     ' =========================================================================
@@ -132,11 +175,11 @@ Public Class FormGestionProductos
 
             ' 2. GESTIÓN DE BD (INSERTAR O MODIFICAR)
             If ProductoID_Actual = 0 Then
-                ' ALTA
+
                 gestor.InsertarProducto(codigo, descripcion, stock, precio, rutaFinalImagen)
                 MessageBox.Show("Producto guardado con éxito.", "Guardado")
             Else
-                ' MODIFICACIÓN
+
                 gestor.ModificarProducto(ProductoID_Actual, codigo, descripcion, stock, precio, rutaFinalImagen)
                 MessageBox.Show("Producto modificado con éxito.", "Modificado")
             End If
@@ -161,7 +204,7 @@ Public Class FormGestionProductos
 
         If MessageBox.Show("¿Está seguro de eliminar (Baja Lógica) el producto seleccionado?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
             Try
-                ' ✅ CÓDIGO CORREGIDO (En el BtnEliminar_Click)
+                '  BtnEliminar_Click
                 gestor.GestionarEstadoLogicoProducto(ProductoID_Actual, 0)
                 MessageBox.Show("Producto eliminado (Baja Lógica) con éxito.", "Eliminado")
                 ActualizarDataGrid()
@@ -218,7 +261,7 @@ Public Class FormGestionProductos
             End If
 
             ' 2. Obtener el objeto Value de la celda de la ruta
-            ' 🔑 NUEVA LÍNEA DE SEGURIDAD
+            '  NUEVA LÍNEA DE SEGURIDAD
             Dim rutaObjeto As Object = dgvProductos.Rows(e.RowIndex).Cells("RutaImagen").Value
 
             ' 3. COMPROBACIÓN EXHAUSTIVA DE NULOS
@@ -283,7 +326,7 @@ Public Class FormGestionProductos
     End Sub
     Private Sub CargarProductosConStock()
         Dim dtProductos As New DataTable()
-        Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;Encrypt=False;")
+        Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS;Database=ortopedicTecnologi_taller;Trusted_Connection=True;Encrypt=False;")
 
         ' Consulta: Trae productos activos (EstadoLogico=1) Y con Stock positivo
         Dim consulta As String = "SELECT ProductoID, Codigo, Descripcion, Stock, Precio " &
@@ -314,7 +357,7 @@ Public Class FormGestionProductos
 
     Private Sub CargarProductosSinStock()
         Dim dtProductos As New DataTable()
-        Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;Encrypt=False;")
+        Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS;Database=ortopedicTecnologi_taller;Trusted_Connection=True;Encrypt=False;")
 
         ' Consulta: Trae productos activos (EstadoLogico=1) Y con Stock igual a cero
         Dim consulta As String = "SELECT ProductoID, Codigo, Descripcion, Stock, Precio " &
@@ -359,21 +402,21 @@ Public Class FormGestionProductos
                 ' 1. Ejecutar la reactivación (EstadoLogico = 1)
                 gestor.GestionarEstadoLogicoProducto(idProducto, 1)
 
-                    ' 2. Refrescar la lista de INACTIVOS (desaparece de aquí)
-                    CargarProductosDeBaja()
+                ' 2. Refrescar la lista de INACTIVOS (desaparece de aquí)
+                CargarProductosDeBaja()
 
-                ' 3. 🔑 LLAMAR AL FORMULARIO DE INVENTARIO PARA RECARGAR
+                ' 3.  LLAMAR AL FORMULARIO DE INVENTARIO PARA RECARGAR
                 ActualizarDataGrid()
 
                 MessageBox.Show("Producto reactivado con éxito.", "Éxito")
-                Catch ex As Exception
+            Catch ex As Exception
                 MessageBox.Show("Error al reactivar el producto: " & ex.Message, "Error BD")
             End Try
         End If
     End Sub
     Private Sub CargarProductosDeBaja()
         Dim dtProductosBaja As New DataTable()
-        Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;Encrypt=False;")
+        Dim conexion As New SqlConnection("Server=localhost\SQLEXPRESS;Database=ortopedicTecnologi_taller;Trusted_Connection=True;Encrypt=False;")
         ' Consulta: Trae productos que tienen EstadoLogico = 0
         Dim consulta As String = "SELECT ProductoID, Codigo, Descripcion, Stock, Precio " &
                                  "FROM Productos " &
@@ -452,7 +495,7 @@ Public Class FormGestionProductos
                 ' Si el campo está vacío, recargamos la lista completa
                 ActualizarDataGrid()
             Else
-                ' 🔑 Llamamos al gestor para buscar
+                '  Llamamos al gestor para buscar
                 dgvProductos.DataSource = gestor.BuscarProductos(filtro)
 
                 If dgvProductos.Rows.Count = 0 Then
@@ -469,6 +512,30 @@ Public Class FormGestionProductos
     End Sub
 
     Private Sub txtBuscarProd_TabStopChanged(sender As Object, e As EventArgs) Handles txtBuscarProd.TabStopChanged
+
+    End Sub
+
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Close()
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Close()
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Close()
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Close()
+
+    End Sub
+
+    Private Sub TxtStock_TextChanged(sender As Object, e As EventArgs) Handles TxtStock.TextChanged
 
     End Sub
 End Class

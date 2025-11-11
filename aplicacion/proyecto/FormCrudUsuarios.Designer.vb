@@ -22,17 +22,19 @@ Partial Class FormCrudUsuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        PictureBox1 = New PictureBox()
         Panel1 = New Panel()
+        GroupBoxSexo = New GroupBox()
+        Label5 = New Label()
+        rbtnMujer = New RadioButton()
+        rbtnHombre = New RadioButton()
+        BtnLimpiar = New Button()
+        BtnBuscar = New Button()
         TxtContrasena = New TextBox()
         Contraseña = New Label()
         CmbPuesto = New ComboBox()
         BtnModificar = New Button()
-        BtnAlta = New Button()
+        BtnCerrar = New Button()
         Label6 = New Label()
-        rbtnHombre = New RadioButton()
-        rbtnMujer = New RadioButton()
-        Label5 = New Label()
         Label4 = New Label()
         TxtDni = New TextBox()
         Label3 = New Label()
@@ -40,33 +42,28 @@ Partial Class FormCrudUsuarios
         Label2 = New Label()
         Label1 = New Label()
         TxtNombre = New TextBox()
-        BtnBuscar = New Button()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        RbtInactivo = New RadioButton()
+        RbtActivo = New RadioButton()
+        Label8 = New Label()
+        DgvUsuarios = New DataGridView()
+        GroupBox1 = New GroupBox()
         Panel1.SuspendLayout()
+        GroupBoxSexo.SuspendLayout()
+        CType(DgvUsuarios, ComponentModel.ISupportInitialize).BeginInit()
+        GroupBox1.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.BackgroundImage = My.Resources.Resources.protesis
-        PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(12, 12)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(403, 426)
-        PictureBox1.TabIndex = 0
-        PictureBox1.TabStop = False
         ' 
         ' Panel1
         ' 
+        Panel1.Controls.Add(GroupBoxSexo)
+        Panel1.Controls.Add(BtnLimpiar)
         Panel1.Controls.Add(BtnBuscar)
         Panel1.Controls.Add(TxtContrasena)
         Panel1.Controls.Add(Contraseña)
         Panel1.Controls.Add(CmbPuesto)
         Panel1.Controls.Add(BtnModificar)
-        Panel1.Controls.Add(BtnAlta)
+        Panel1.Controls.Add(BtnCerrar)
         Panel1.Controls.Add(Label6)
-        Panel1.Controls.Add(rbtnHombre)
-        Panel1.Controls.Add(rbtnMujer)
-        Panel1.Controls.Add(Label5)
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(TxtDni)
         Panel1.Controls.Add(Label3)
@@ -74,26 +71,101 @@ Partial Class FormCrudUsuarios
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(TxtNombre)
-        Panel1.Font = New Font("Segoe UI Emoji", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Panel1.Location = New Point(421, 22)
+        Panel1.Font = New Font("Segoe UI Emoji", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Panel1.Location = New Point(481, 29)
+        Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(449, 430)
+        Panel1.Size = New Size(513, 573)
         Panel1.TabIndex = 1
+        ' 
+        ' GroupBoxSexo
+        ' 
+        GroupBoxSexo.Controls.Add(Label5)
+        GroupBoxSexo.Controls.Add(rbtnMujer)
+        GroupBoxSexo.Controls.Add(rbtnHombre)
+        GroupBoxSexo.Location = New Point(3, 219)
+        GroupBoxSexo.Name = "GroupBoxSexo"
+        GroupBoxSexo.Size = New Size(504, 68)
+        GroupBoxSexo.TabIndex = 24
+        GroupBoxSexo.TabStop = False
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(15, 20)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(84, 36)
+        Label5.TabIndex = 7
+        Label5.Text = "Sexo :"
+        ' 
+        ' rbtnMujer
+        ' 
+        rbtnMujer.AutoSize = True
+        rbtnMujer.Checked = True
+        rbtnMujer.Location = New Point(240, 24)
+        rbtnMujer.Margin = New Padding(3, 4, 3, 4)
+        rbtnMujer.Name = "rbtnMujer"
+        rbtnMujer.Size = New Size(84, 31)
+        rbtnMujer.TabIndex = 8
+        rbtnMujer.TabStop = True
+        rbtnMujer.Text = "Mujer"
+        rbtnMujer.UseVisualStyleBackColor = True
+        ' 
+        ' rbtnHombre
+        ' 
+        rbtnHombre.AutoSize = True
+        rbtnHombre.Location = New Point(344, 25)
+        rbtnHombre.Margin = New Padding(3, 4, 3, 4)
+        rbtnHombre.Name = "rbtnHombre"
+        rbtnHombre.Size = New Size(105, 31)
+        rbtnHombre.TabIndex = 9
+        rbtnHombre.Text = "Hombre"
+        rbtnHombre.UseVisualStyleBackColor = True
+        ' 
+        ' BtnLimpiar
+        ' 
+        BtnLimpiar.BackgroundImageLayout = ImageLayout.Stretch
+        BtnLimpiar.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BtnLimpiar.ImageAlign = ContentAlignment.MiddleLeft
+        BtnLimpiar.Location = New Point(60, 496)
+        BtnLimpiar.Margin = New Padding(3, 4, 3, 4)
+        BtnLimpiar.Name = "BtnLimpiar"
+        BtnLimpiar.Size = New Size(115, 39)
+        BtnLimpiar.TabIndex = 23
+        BtnLimpiar.Text = "Limpiar"
+        BtnLimpiar.TextAlign = ContentAlignment.MiddleRight
+        BtnLimpiar.UseVisualStyleBackColor = True
+        ' 
+        ' BtnBuscar
+        ' 
+        BtnBuscar.BackgroundImageLayout = ImageLayout.Stretch
+        BtnBuscar.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BtnBuscar.ImageAlign = ContentAlignment.MiddleLeft
+        BtnBuscar.Location = New Point(212, 496)
+        BtnBuscar.Margin = New Padding(3, 4, 3, 4)
+        BtnBuscar.Name = "BtnBuscar"
+        BtnBuscar.Size = New Size(115, 39)
+        BtnBuscar.TabIndex = 19
+        BtnBuscar.Text = "Buscar"
+        BtnBuscar.TextAlign = ContentAlignment.MiddleRight
+        BtnBuscar.UseVisualStyleBackColor = True
         ' 
         ' TxtContrasena
         ' 
-        TxtContrasena.Location = New Point(226, 159)
+        TxtContrasena.Location = New Point(258, 134)
+        TxtContrasena.Margin = New Padding(3, 4, 3, 4)
         TxtContrasena.Name = "TxtContrasena"
-        TxtContrasena.Size = New Size(158, 29)
+        TxtContrasena.Size = New Size(180, 34)
         TxtContrasena.TabIndex = 18
         ' 
         ' Contraseña
         ' 
         Contraseña.AutoSize = True
-        Contraseña.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Contraseña.Location = New Point(26, 160)
+        Contraseña.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Contraseña.Location = New Point(18, 131)
         Contraseña.Name = "Contraseña"
-        Contraseña.Size = New Size(125, 28)
+        Contraseña.Size = New Size(157, 36)
         Contraseña.TabIndex = 17
         Contraseña.Text = "contraseña :"
         ' 
@@ -101,169 +173,186 @@ Partial Class FormCrudUsuarios
         ' 
         CmbPuesto.FormattingEnabled = True
         CmbPuesto.Items.AddRange(New Object() {"Vendedor", "Gerente", "Administrador"})
-        CmbPuesto.Location = New Point(227, 323)
+        CmbPuesto.Location = New Point(257, 294)
+        CmbPuesto.Margin = New Padding(3, 4, 3, 4)
         CmbPuesto.Name = "CmbPuesto"
-        CmbPuesto.Size = New Size(158, 29)
+        CmbPuesto.Size = New Size(180, 35)
         CmbPuesto.TabIndex = 14
         ' 
         ' BtnModificar
         ' 
         BtnModificar.Image = My.Resources.Resources.modificacion
         BtnModificar.ImageAlign = ContentAlignment.MiddleLeft
-        BtnModificar.Location = New Point(161, 369)
+        BtnModificar.Location = New Point(319, 420)
+        BtnModificar.Margin = New Padding(3, 4, 3, 4)
         BtnModificar.Name = "BtnModificar"
-        BtnModificar.Size = New Size(125, 44)
+        BtnModificar.Size = New Size(143, 43)
         BtnModificar.TabIndex = 13
         BtnModificar.Text = "Modificar"
         BtnModificar.TextAlign = ContentAlignment.MiddleRight
         BtnModificar.UseVisualStyleBackColor = True
         ' 
-        ' BtnAlta
+        ' BtnCerrar
         ' 
-        BtnAlta.Image = My.Resources.Resources.formulario_de_firma
-        BtnAlta.ImageAlign = ContentAlignment.MiddleLeft
-        BtnAlta.Location = New Point(33, 369)
-        BtnAlta.Name = "BtnAlta"
-        BtnAlta.Size = New Size(99, 44)
-        BtnAlta.TabIndex = 12
-        BtnAlta.Text = "Alta"
-        BtnAlta.TextAlign = ContentAlignment.MiddleRight
-        BtnAlta.UseVisualStyleBackColor = True
+        BtnCerrar.Image = My.Resources.Resources.formulario_de_firma
+        BtnCerrar.ImageAlign = ContentAlignment.MiddleLeft
+        BtnCerrar.Location = New Point(360, 492)
+        BtnCerrar.Margin = New Padding(3, 4, 3, 4)
+        BtnCerrar.Name = "BtnCerrar"
+        BtnCerrar.Size = New Size(113, 43)
+        BtnCerrar.TabIndex = 12
+        BtnCerrar.Text = "Cerrar"
+        BtnCerrar.TextAlign = ContentAlignment.MiddleRight
+        BtnCerrar.UseVisualStyleBackColor = True
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label6.Location = New Point(23, 322)
+        Label6.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(18, 291)
         Label6.Name = "Label6"
-        Label6.Size = New Size(86, 28)
+        Label6.Size = New Size(108, 36)
         Label6.TabIndex = 10
         Label6.Text = "Puesto :"
-        ' 
-        ' rbtnHombre
-        ' 
-        rbtnHombre.AutoSize = True
-        rbtnHombre.Location = New Point(315, 277)
-        rbtnHombre.Name = "rbtnHombre"
-        rbtnHombre.Size = New Size(85, 25)
-        rbtnHombre.TabIndex = 9
-        rbtnHombre.Text = "Hombre"
-        rbtnHombre.UseVisualStyleBackColor = True
-        ' 
-        ' rbtnMujer
-        ' 
-        rbtnMujer.AutoSize = True
-        rbtnMujer.Checked = True
-        rbtnMujer.Location = New Point(226, 277)
-        rbtnMujer.Name = "rbtnMujer"
-        rbtnMujer.Size = New Size(69, 25)
-        rbtnMujer.TabIndex = 8
-        rbtnMujer.TabStop = True
-        rbtnMujer.Text = "Mujer"
-        rbtnMujer.UseVisualStyleBackColor = True
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label5.Location = New Point(26, 273)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(67, 28)
-        Label5.TabIndex = 7
-        Label5.Text = "Sexo :"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label4.Location = New Point(39, 245)
+        Label4.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(45, 327)
         Label4.Name = "Label4"
-        Label4.Size = New Size(0, 28)
+        Label4.Size = New Size(0, 36)
         Label4.TabIndex = 6
         ' 
         ' TxtDni
         ' 
-        TxtDni.Location = New Point(225, 216)
+        TxtDni.Location = New Point(257, 182)
+        TxtDni.Margin = New Padding(3, 4, 3, 4)
         TxtDni.Name = "TxtDni"
-        TxtDni.Size = New Size(159, 29)
+        TxtDni.Size = New Size(181, 34)
         TxtDni.TabIndex = 5
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label3.Location = New Point(32, 219)
+        Label3.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(18, 184)
         Label3.Name = "Label3"
-        Label3.Size = New Size(61, 26)
+        Label3.Size = New Size(77, 32)
         Label3.TabIndex = 4
         Label3.Text = "D.N.I :"
         ' 
         ' TxtEmail
         ' 
-        TxtEmail.Location = New Point(226, 103)
+        TxtEmail.Location = New Point(257, 83)
+        TxtEmail.Margin = New Padding(3, 4, 3, 4)
         TxtEmail.Name = "TxtEmail"
-        TxtEmail.Size = New Size(159, 29)
+        TxtEmail.Size = New Size(181, 34)
         TxtEmail.TabIndex = 3
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label2.Location = New Point(16, 103)
+        Label2.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(18, 82)
         Label2.Name = "Label2"
-        Label2.Size = New Size(173, 26)
+        Label2.Size = New Size(216, 32)
         Label2.TabIndex = 2
         Label2.Text = "Correo electronico:"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label1.Location = New Point(16, 52)
+        Label1.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(18, 24)
         Label1.Name = "Label1"
-        Label1.Size = New Size(170, 26)
+        Label1.Size = New Size(216, 32)
         Label1.TabIndex = 1
         Label1.Text = "Nombre y Apellido"
         ' 
         ' TxtNombre
         ' 
-        TxtNombre.Location = New Point(226, 52)
+        TxtNombre.Location = New Point(257, 24)
+        TxtNombre.Margin = New Padding(3, 4, 3, 4)
         TxtNombre.Name = "TxtNombre"
-        TxtNombre.Size = New Size(159, 29)
+        TxtNombre.Size = New Size(181, 34)
         TxtNombre.TabIndex = 0
         ' 
-        ' BtnBuscar
+        ' RbtInactivo
         ' 
-        BtnBuscar.BackgroundImageLayout = ImageLayout.Stretch
-        BtnBuscar.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        BtnBuscar.Image = My.Resources.Resources.buscarUsuario1
-        BtnBuscar.ImageAlign = ContentAlignment.MiddleLeft
-        BtnBuscar.Location = New Point(315, 369)
-        BtnBuscar.Name = "BtnBuscar"
-        BtnBuscar.Size = New Size(118, 45)
-        BtnBuscar.TabIndex = 19
-        BtnBuscar.Text = "Buscar"
-        BtnBuscar.TextAlign = ContentAlignment.MiddleRight
-        BtnBuscar.UseVisualStyleBackColor = True
+        RbtInactivo.AutoSize = True
+        RbtInactivo.Location = New Point(347, 26)
+        RbtInactivo.Name = "RbtInactivo"
+        RbtInactivo.Size = New Size(82, 24)
+        RbtInactivo.TabIndex = 22
+        RbtInactivo.TabStop = True
+        RbtInactivo.Text = "Inactivo"
+        RbtInactivo.UseVisualStyleBackColor = True
         ' 
-        ' Form6
+        ' RbtActivo
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        RbtActivo.AutoSize = True
+        RbtActivo.Location = New Point(238, 27)
+        RbtActivo.Name = "RbtActivo"
+        RbtActivo.Size = New Size(72, 24)
+        RbtActivo.TabIndex = 21
+        RbtActivo.TabStop = True
+        RbtActivo.Text = "Activo"
+        RbtActivo.UseVisualStyleBackColor = True
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.Location = New Point(0, 23)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(108, 36)
+        Label8.TabIndex = 20
+        Label8.Text = "Estado :"
+        ' 
+        ' DgvUsuarios
+        ' 
+        DgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DgvUsuarios.Location = New Point(26, 34)
+        DgvUsuarios.Name = "DgvUsuarios"
+        DgvUsuarios.RowHeadersWidth = 51
+        DgvUsuarios.Size = New Size(431, 547)
+        DgvUsuarios.TabIndex = 2
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Controls.Add(Label8)
+        GroupBox1.Controls.Add(RbtActivo)
+        GroupBox1.Controls.Add(RbtInactivo)
+        GroupBox1.Location = New Point(481, 356)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(507, 68)
+        GroupBox1.TabIndex = 25
+        GroupBox1.TabStop = False
+        ' 
+        ' FormCrudUsuarios
+        ' 
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(128, 128, 255)
+        BackColor = Color.FromArgb(CByte(128), CByte(128), CByte(255))
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(882, 450)
+        ClientSize = New Size(1008, 600)
+        Controls.Add(GroupBox1)
+        Controls.Add(DgvUsuarios)
         Controls.Add(Panel1)
-        Controls.Add(PictureBox1)
-        Name = "Form6"
+        Margin = New Padding(3, 4, 3, 4)
+        Name = "FormCrudUsuarios"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "crud Usuarios"
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        GroupBoxSexo.ResumeLayout(False)
+        GroupBoxSexo.PerformLayout()
+        CType(DgvUsuarios, ComponentModel.ISupportInitialize).EndInit()
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
         ResumeLayout(False)
     End Sub
-
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents TxtNombre As TextBox
     Friend WithEvents Label2 As Label
@@ -274,7 +363,7 @@ Partial Class FormCrudUsuarios
     Friend WithEvents Label3 As Label
     Friend WithEvents TxtEmail As TextBox
     Friend WithEvents BtnModificar As Button
-    Friend WithEvents BtnAlta As Button
+    Friend WithEvents BtnCerrar As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents rbtnMujer As RadioButton
@@ -286,4 +375,11 @@ Partial Class FormCrudUsuarios
     Friend WithEvents R As RadioButton
     Friend WithEvents rbtnHombre As RadioButton
     Friend WithEvents BtnBuscar As Button
+    Friend WithEvents DgvUsuarios As DataGridView
+    Friend WithEvents RbtActivo As RadioButton
+    Friend WithEvents Label8 As Label
+    Friend WithEvents RbtInactivo As RadioButton
+    Friend WithEvents BtnLimpiar As Button
+    Friend WithEvents GroupBoxSexo As GroupBox
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

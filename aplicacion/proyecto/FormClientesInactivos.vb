@@ -25,8 +25,8 @@ Public Class FormClientesInactivos
     Private Sub BtnReactivar_Click(sender As Object, e As EventArgs) Handles btnReactivar.Click
         If DgvClientesInactivos.CurrentRow Is Nothing Then Return
 
-        Dim idCliente As Integer = CInt(DgvClientesInactivos.CurrentRow.Cells("ClienteID").Value)
-        Dim razonSocial As String = DgvClientesInactivos.CurrentRow.Cells("RazonSocial").Value.ToString()
+        Dim idCliente As Integer = DgvClientesInactivos.CurrentRow.Cells("ClienteID").Value
+        Dim razonSocial = DgvClientesInactivos.CurrentRow.Cells("RazonSocial").Value.ToString
 
         If MessageBox.Show($"¿Desea reactivar al cliente: {razonSocial}?", "Confirmar Alta", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             Try
@@ -34,13 +34,13 @@ Public Class FormClientesInactivos
                 gestor.GestionarEstadoLogicoCliente(idCliente, 1)
 
                 ' 2. Refrescar la vista actual (el cliente desaparecerá)
-                CargarListaInactivos()
+                CargarListaInactivos
 
                 ' 3. 🔑 RECARGAR EL FORMULARIO PRINCIPAL
-                Dim frmActivos As FormClientes = Application.OpenForms.OfType(Of FormClientes)().FirstOrDefault()
+                Dim frmActivos = Application.OpenForms.OfType(Of FormClientes).FirstOrDefault
 
                 If frmActivos IsNot Nothing Then
-                    frmActivos.CargarClientes()
+                    frmActivos.CargarClientes
                 End If
 
                 MessageBox.Show("Cliente reactivado con éxito.", "Éxito")
@@ -49,5 +49,10 @@ Public Class FormClientesInactivos
                 MessageBox.Show("Error al reactivar el cliente: " & ex.Message, "Error BD")
             End Try
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        FormClientes.Show()
     End Sub
 End Class

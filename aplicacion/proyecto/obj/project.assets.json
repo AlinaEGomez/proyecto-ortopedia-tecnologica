@@ -3071,6 +3071,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "Azure.Core >= 1.49.0",
       "ClosedXML >= 0.105.0",
       "HIC.System.Windows.Forms.DataVisualization >= 1.0.1",
       "Microsoft.Data.SqlClient >= 7.0.0-preview2.25289.6",
@@ -3078,23 +3079,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alina\\.nuget\\packages\\": {},
+    "C:\\Users\\delga\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alina\\Source\\Repos\\taller2\\aplicacion\\proyecto\\proyecto.vbproj",
+      "projectUniqueName": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\proyecto.vbproj",
       "projectName": "proyecto",
-      "projectPath": "C:\\Users\\Alina\\Source\\Repos\\taller2\\aplicacion\\proyecto\\proyecto.vbproj",
-      "packagesPath": "C:\\Users\\Alina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alina\\Source\\Repos\\taller2\\aplicacion\\proyecto\\obj\\",
+      "projectPath": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\proyecto.vbproj",
+      "packagesPath": "C:\\Users\\delga\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Alina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\delga\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3103,7 +3104,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3128,6 +3128,10 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "Azure.Core": {
+            "target": "Package",
+            "version": "[1.49.0, )"
+          },
           "ClosedXML": {
             "target": "Package",
             "version": "[0.105.0, )"
@@ -3164,7 +3168,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

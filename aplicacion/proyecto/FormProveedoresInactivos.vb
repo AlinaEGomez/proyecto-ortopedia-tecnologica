@@ -34,8 +34,8 @@ Public Class FormProveedoresInactivos
             Return
         End If
 
-        Dim idProveedor As Integer = CInt(DgvProveedoresInactivos.CurrentRow.Cells("ProveedorID").Value)
-        Dim razonSocial As String = DgvProveedoresInactivos.CurrentRow.Cells("RazonSocial").Value.ToString()
+        Dim idProveedor As Integer = DgvProveedoresInactivos.CurrentRow.Cells("ProveedorID").Value
+        Dim razonSocial = DgvProveedoresInactivos.CurrentRow.Cells("RazonSocial").Value.ToString
 
         If MessageBox.Show($"¿Desea reactivar al proveedor: {razonSocial}?", "Confirmar Alta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             Try
@@ -45,10 +45,10 @@ Public Class FormProveedoresInactivos
                 MessageBox.Show($"El proveedor {razonSocial} ha sido reactivado con éxito.", "Éxito")
 
                 ' 2. Refrescar la vista actual (el proveedor desaparecerá de esta lista)
-                CargarListaInactivos()
+                CargarListaInactivos
 
                 ' 3. 🔑 LLAMAR AL FORMULARIO PRINCIPAL Y RECARGAR ACTIVOS (CLAVE)
-                RefrescarProveedoresActivos()
+                RefrescarProveedoresActivos
 
             Catch ex As Exception
                 MessageBox.Show("Error al reactivar el proveedor: " & ex.Message, "Error BD")
@@ -65,5 +65,10 @@ Public Class FormProveedoresInactivos
             ' 🔑 Llamamos al método público CargarProveedores()
             frmActivos.CargarProveedores()
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        FormProveedores.Show()
     End Sub
 End Class

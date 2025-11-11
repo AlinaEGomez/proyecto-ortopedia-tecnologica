@@ -1,33 +1,65 @@
-﻿Public Class FormReporteCompras
-    ' --- En FormReporteCompras.vb o FormPrincipal.vb ---
+﻿Imports System.Data
+Imports Microsoft.Data.SqlClient
+Imports System.Drawing
 
-    Private gestor As New GestorBD() ' Asumimos que el gestor está accesible
+Public Class FormReporteCompras
 
+    ' Instancia de GestorBD
+    Private gestor As New GestorBD()
+
+    Private Sub FormReporteCompras_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Inicializamos controles
+        dtpFechaInicio.Value = DateTime.Now.AddMonths(-1)
+        dtpFechaFin.Value = DateTime.Now
+
+        dgvReporte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvReporte.RowHeadersVisible = False
+        dgvReporte.ReadOnly = True
+    End Sub
+
+    ' ===========================
+    ' BOTÓN GENERAR REPORTE
+    ' ===========================
     Private Sub btnGenerarReporteCompras_Click(sender As Object, e As EventArgs) Handles btnGenerarReporteCompras.Click
+        CargarReporte()
+    End Sub
 
-        ' 1. Obtener el rango de fechas
+    ' ===========================
+    ' MÉTODO CARGAR REPORTE
+    ' ===========================
+    Private Sub CargarReporte()
         Dim fechaInicio As DateTime = dtpFechaInicio.Value.Date
-        ' Para incluir todo el día de fin, sumamos casi 24 horas.
         Dim fechaFin As DateTime = dtpFechaFin.Value.Date.AddDays(1).AddSeconds(-1)
 
         Try
-            ' 2. Llamar al GestorBD para obtener los datos
             Dim dtReporte As DataTable = gestor.ObtenerReporteCompras(fechaInicio, fechaFin)
 
-            ' 3. Mostrar el resultado
-            dgvReporte.DataSource = dtReporte
-
             If dtReporte.Rows.Count = 0 Then
-                MessageBox.Show("No se encontraron compras en el rango de fechas seleccionado.", "Aviso")
+                MessageBox.Show("No se encontraron compras en el rango de fechas seleccionado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
 
-            ' 4. Calcular y mostrar el total global (Opcional)
-            Dim totalGlobal As Decimal = CDec(dtReporte.Compute("SUM(Monto_Total_Comprado)", String.Empty))
-            lblTotalGlobal.Text = $"Total Compra: {totalGlobal:C2}" ' Muestra el total formateado como moneda
+            ' Mostrar en DataGridView
+            dgvReporte.DataSource = dtReporte
+
+            ' Total global
+            Dim totalGlobal As Decimal = 0
+            If dtReporte.Rows.Count > 0 Then
+                totalGlobal = CDec(dtReporte.Compute("SUM(Monto_Total_Comprado)", String.Empty))
+            End If
+            lblTotalGlobal.Text = $"Total Compra: {totalGlobal:C2}"
 
         Catch ex As Exception
-            MessageBox.Show("Error al procesar el reporte: " & ex.Message, "Error")
+            MessageBox.Show("Error al generar el reporte: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
 
+    ' ===========================
+    ' BOTÓN CERRAR FORM
+    ' ===========================
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        FormAdministrador.Show()
     End Sub
 End Class

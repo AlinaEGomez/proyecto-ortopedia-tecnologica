@@ -30,20 +30,24 @@ Partial Class FormGerenteActivo
         ' 
         DataGridView1.BackgroundColor = Color.White
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(62, 139)
+        DataGridView1.Location = New Point(71, 185)
+        DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(651, 274)
+        DataGridView1.RowHeadersWidth = 51
+        DataGridView1.Size = New Size(744, 365)
         DataGridView1.TabIndex = 0
         ' 
-        ' Form10
+        ' FormGerenteActivo
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.gerente
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(914, 600)
         Controls.Add(DataGridView1)
-        Name = "Form10"
+        Margin = New Padding(3, 4, 3, 4)
+        Name = "FormGerenteActivo"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Gerente Activo"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

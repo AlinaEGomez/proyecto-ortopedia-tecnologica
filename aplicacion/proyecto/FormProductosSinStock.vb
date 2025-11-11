@@ -1,7 +1,7 @@
 ﻿Imports Microsoft.Data.SqlClient
 Imports System.Data.SqlClient
 Public Class FormProducActiv
-    Private conexion As New SqlConnection("Server=localhost\SQLEXPRESS01;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;")
+    Private conexion As New SqlConnection("Server=localhost\SQLEXPRESS;Database=ortopedicTecnologi_taller;Trusted_Connection=True;TrustServerCertificate=True;")
 
 
     ' Asegúrate de que tu objeto de conexión (conexion) esté accesible
@@ -36,5 +36,13 @@ Public Class FormProducActiv
 
     Private Sub FormProducActiv_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
     End Sub
 End Class

@@ -1,142 +1,340 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\",
+  "WorkspaceRootPath": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\gestorbd.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\gestorbd.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formstockvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formstockvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formstockvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formstockvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formclientesinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formclientesinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formgestionproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgestionproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formgestionproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgestionproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formadministrador.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formadministrador.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formclientesinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formclientesinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formadministrador.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formadministrador.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formcrudusuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formcrudusuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formusuariosinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formusuariosinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formusuariosactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formusuariosactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formreporteventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formreporteventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formreporteventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formreporteventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\proyecto.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\proyecto.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formmisventasgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formmisventasgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formregistrocompra.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formregistrocompra.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formmisventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formmisventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formgestionproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgestionproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formmisventasgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formmisventasgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formregistrocompra.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formregistrocompra.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formmisventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formmisventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formgestionproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgestionproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formregistrarventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formregistrarventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\form7.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\form7.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formregistrarventas.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formregistrarventas.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formadministrador.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formadministrador.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formregistrarventas.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formregistrarventas.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\form7.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\form7.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formvendedoractivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedoractivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formadministrador.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formadministrador.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formvendedoractivo.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedoractivo.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formcrudusuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formcrudusuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formvendedoractivo.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedoractivo.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formgerenteactivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgerenteactivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formgerente.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgerente.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formgerenteinactivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgerenteinactivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\alina\\source\\repos\\taller2\\aplicacion\\proyecto\\formgerente.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formmisventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formmisventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formmisventasgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formmisventasgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formproductossinstock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formproductossinstock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formproveedores.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formproveedores.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formproveedoresinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formproveedoresinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formregistrarventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formregistrarventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formreportecompras.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formreportecompras.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formreporteventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formreporteventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formstockvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formstockvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formusuariosactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formusuariosactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formusuariosinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formusuariosinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formvendedoractivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedoractivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formvendedorinactivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedorinactivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formexcel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formexcel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formcrud.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formcrud.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formclientesinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formclientesinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formregistrarventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formregistrarventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\gestorbd.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\gestorbd.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formproductossinstock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formproductossinstock.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formadmnusuario.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formadmnusuario.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formbackup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formbackup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formstockvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formstockvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formproveedores.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formproveedores.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedor.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formmisventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formmisventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formmisventasgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formmisventasgerente.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formreportecompras.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formreportecompras.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formreporteventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formreporteventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formproveedoresinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formproveedoresinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formclientesinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formclientesinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formadmnusuario.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formadmnusuario.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\mdlsesion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\mdlsesion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\proyecto.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\proyecto.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formreporteventas.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formreporteventas.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formcrudusuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formcrudusuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formcrud.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formcrud.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formvendedorinactivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedorinactivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formvendedoractivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedoractivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formusuariosinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formusuariosinactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formgerenteinactivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgerenteinactivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formgerenteactivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgerenteactivo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formbackup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formbackup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formproveedores.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formproveedores.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formproductossinstock.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formproductossinstock.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formregistrarventas.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formregistrarventas.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formgestionproductos.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgestionproductos.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formmisventasgerente.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formmisventasgerente.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formproveedoresinactivos.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formproveedoresinactivos.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\proyecto.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\proyecto.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formreportecompras.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formreportecompras.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formgerente.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgerente.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formstockvendedor.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formstockvendedor.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formbackup.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formbackup.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\form7.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\form7.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formclientes.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formclientes.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formclientesinactivos.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formclientesinactivos.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formcrudusuarios.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formcrudusuarios.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\my project\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\my project\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\my project\\resources.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\my project\\resources.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formusuariosactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formusuariosactivos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formregistrarventas.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formregistrarventas.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formvendedoractivo.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedoractivo.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formvendedoractivo.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formvendedoractivo.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|c:\\users\\delga\\source\\repos\\alinaegomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\formgerente.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{13BDD77E-FD03-4D71-85A5-B069EF468096}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\formgerente.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -151,136 +349,113 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormStockVendedor.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormStockVendedor.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormStockVendedor.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormStockVendedor.vb",
-              "RelativeToolTip": "proyecto\\FormStockVendedor.vb",
-              "ViewState": "AgIAADsAAAAAAAAAAAAQwEAAAAAAAAAAAAAAAA==",
+              "Title": "FormGerente.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerente.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormGerente.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerente.vb [Dise\u00F1o]*",
+              "RelativeToolTip": "proyecto\\FormGerente.vb [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T17:32:41.766Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormVendedor.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormVendedor.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormVendedor.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormVendedor.vb [Dise\u00F1o]",
-              "RelativeToolTip": "proyecto\\FormVendedor.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T08:00:11.996Z",
+              "WhenOpened": "2025-11-07T12:54:51.385Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FormVendedor.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormVendedor.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormVendedor.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormVendedor.vb",
-              "RelativeToolTip": "proyecto\\FormVendedor.vb",
-              "ViewState": "AgIAABwAAAAAAAAAAAAvwCYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T08:38:34.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormStockVendedor.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormStockVendedor.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormStockVendedor.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormStockVendedor.vb [Dise\u00F1o]",
-              "RelativeToolTip": "proyecto\\FormStockVendedor.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T10:42:43.132Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GestorBD.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\GestorBD.vb",
-              "RelativeDocumentMoniker": "proyecto\\GestorBD.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\GestorBD.vb*",
-              "RelativeToolTip": "proyecto\\GestorBD.vb*",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAAgwK4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T08:44:43.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormClientes.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormClientes.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormClientes.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormClientes.vb",
-              "RelativeToolTip": "proyecto\\FormClientes.vb",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAAwIcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T15:17:23.269Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormClientesInactivos.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormClientesInactivos.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormClientesInactivos.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormClientesInactivos.vb [Dise\u00F1o]",
-              "RelativeToolTip": "proyecto\\FormClientesInactivos.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T15:20:59.165Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FormGestionProductos.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormGestionProductos.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormGestionProductos.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormGestionProductos.vb [Dise\u00F1o]",
-              "RelativeToolTip": "proyecto\\FormGestionProductos.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T16:58:41.297Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "FormGestionProductos.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormGestionProductos.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGestionProductos.vb",
               "RelativeDocumentMoniker": "proyecto\\FormGestionProductos.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormGestionProductos.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGestionProductos.vb",
               "RelativeToolTip": "proyecto\\FormGestionProductos.vb",
-              "ViewState": "AgIAAIoBAAAAAAAAAAAAAG0BAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-11-08T16:58:55.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FormClientesInactivos.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormClientesInactivos.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormClientesInactivos.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormClientesInactivos.vb",
-              "RelativeToolTip": "proyecto\\FormClientesInactivos.vb",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwC8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "FormRegistroCompra.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormRegistroCompra.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormRegistroCompra.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormRegistroCompra.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormRegistroCompra.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T15:21:10.443Z",
+              "WhenOpened": "2025-11-09T00:44:38.159Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormRegistroCompra.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormRegistroCompra.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormRegistroCompra.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormRegistroCompra.vb",
+              "RelativeToolTip": "proyecto\\FormRegistroCompra.vb",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAAALsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:45:22.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
+              "Title": "FormGerente.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerente.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormGerente.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerente.vb*",
+              "RelativeToolTip": "proyecto\\FormGerente.vb*",
+              "ViewState": "AgIAAD0AAAAAAAAAAAD4v0sAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T12:59:44.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormGestionProductos.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGestionProductos.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormGestionProductos.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGestionProductos.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormGestionProductos.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T16:58:41.297Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form7.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\Form7.vb",
+              "RelativeDocumentMoniker": "proyecto\\Form7.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\Form7.vb",
+              "RelativeToolTip": "proyecto\\Form7.vb",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T20:28:46.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form7.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\Form7.vb",
+              "RelativeDocumentMoniker": "proyecto\\Form7.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\Form7.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\Form7.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T20:28:36.558Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "FormAdministrador.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormAdministrador.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormAdministrador.vb",
               "RelativeDocumentMoniker": "proyecto\\FormAdministrador.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormAdministrador.vb [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormAdministrador.vb [Dise\u00F1o]",
               "RelativeToolTip": "proyecto\\FormAdministrador.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-11-08T14:49:05.523Z",
@@ -288,11 +463,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
+              "Title": "FormAdministrador.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormAdministrador.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormAdministrador.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormAdministrador.vb",
+              "RelativeToolTip": "proyecto\\FormAdministrador.vb",
+              "ViewState": "AgIAAFEAAAAAAAAAAIAwwF8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T06:36:50.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormGerenteActivo.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerenteActivo.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormGerenteActivo.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerenteActivo.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormGerenteActivo.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-09T00:43:11.796Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "FormCrudUsuarios.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormCrudUsuarios.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormCrudUsuarios.vb",
               "RelativeDocumentMoniker": "proyecto\\FormCrudUsuarios.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormCrudUsuarios.vb [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormCrudUsuarios.vb [Dise\u00F1o]",
               "RelativeToolTip": "proyecto\\FormCrudUsuarios.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-11-08T15:09:37.352Z",
@@ -300,248 +499,23 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormGerenteInactivo.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerenteInactivo.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormGerenteInactivo.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerenteInactivo.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormGerenteInactivo.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-09T00:43:20.665Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "FormUsuariosInactivos.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormUsuariosInactivos.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormUsuariosInactivos.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormUsuariosInactivos.vb [Dise\u00F1o]",
-              "RelativeToolTip": "proyecto\\FormUsuariosInactivos.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T15:08:45.217Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FormAdministrador.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormAdministrador.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormAdministrador.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormAdministrador.vb",
-              "RelativeToolTip": "proyecto\\FormAdministrador.vb",
-              "ViewState": "AgIAAHEAAAAAAAAAAIAxwHoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T06:36:50.884Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FormUsuariosActivos.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormUsuariosActivos.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormUsuariosActivos.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormUsuariosActivos.vb [Dise\u00F1o]",
-              "RelativeToolTip": "proyecto\\FormUsuariosActivos.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T15:08:07.986Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "FormGerente.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormGerente.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormGerente.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormGerente.vb [Dise\u00F1o]",
-              "RelativeToolTip": "proyecto\\FormGerente.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T12:54:51.385Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "proyecto.vbproj",
-              "DocumentMoniker": "C:\\Users\\Alina\\Source\\Repos\\taller2\\aplicacion\\proyecto\\proyecto.vbproj",
-              "RelativeDocumentMoniker": "proyecto\\proyecto.vbproj",
-              "ToolTip": "C:\\Users\\Alina\\Source\\Repos\\taller2\\aplicacion\\proyecto\\proyecto.vbproj",
-              "RelativeToolTip": "proyecto\\proyecto.vbproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
-              "WhenOpened": "2025-11-08T12:37:52.503Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FormReporteVentas.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormReporteVentas.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormReporteVentas.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormReporteVentas.vb",
-              "RelativeToolTip": "proyecto\\FormReporteVentas.vb",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T13:31:33.24Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FormReporteVentas.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormReporteVentas.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormReporteVentas.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormReporteVentas.vb [Dise\u00F1o]",
-              "RelativeToolTip": "proyecto\\FormReporteVentas.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T14:20:47.081Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FormGerente.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormGerente.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormGerente.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormGerente.vb",
-              "RelativeToolTip": "proyecto\\FormGerente.vb",
-              "ViewState": "AgIAAC0AAAAAAAAAAAApwCcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T12:59:44.474Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "FormMisVentasGerente.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormMisVentasGerente.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormMisVentasGerente.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormMisVentasGerente.vb [Dise\u00F1o]",
-              "RelativeToolTip": "proyecto\\FormMisVentasGerente.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T14:08:28.919Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "FormMisVentas.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormMisVentas.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormMisVentas.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormMisVentas.vb [Dise\u00F1o]",
-              "RelativeToolTip": "proyecto\\FormMisVentas.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T08:57:04.911Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "FormMisVentasGerente.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormMisVentasGerente.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormMisVentasGerente.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormMisVentasGerente.vb",
-              "RelativeToolTip": "proyecto\\FormMisVentasGerente.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T14:08:52.162Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "FormMisVentas.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormMisVentas.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormMisVentas.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormMisVentas.vb",
-              "RelativeToolTip": "proyecto\\FormMisVentas.vb",
-              "ViewState": "AgIAABcAAAAAAAAAAAAQwCsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T09:07:51.036Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "FormRegistrarVentas.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormRegistrarVentas.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormRegistrarVentas.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormRegistrarVentas.vb",
-              "RelativeToolTip": "proyecto\\FormRegistrarVentas.vb",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAUwAYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T07:05:20.112Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "FormRegistrarVentas.resx",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormRegistrarVentas.resx",
-              "RelativeDocumentMoniker": "proyecto\\FormRegistrarVentas.resx",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormRegistrarVentas.resx",
-              "RelativeToolTip": "proyecto\\FormRegistrarVentas.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-11-07T08:22:48.698Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "FormRegistrarVentas.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormRegistrarVentas.Designer.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormRegistrarVentas.Designer.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormRegistrarVentas.Designer.vb",
-              "RelativeToolTip": "proyecto\\FormRegistrarVentas.Designer.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T08:22:51.813Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "FormVendedorActivo.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormVendedorActivo.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormVendedorActivo.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormVendedorActivo.vb [Dise\u00F1o]",
-              "RelativeToolTip": "proyecto\\FormVendedorActivo.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T06:38:40.334Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "FormVendedorActivo.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormVendedorActivo.Designer.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormVendedorActivo.Designer.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormVendedorActivo.Designer.vb",
-              "RelativeToolTip": "proyecto\\FormVendedorActivo.Designer.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T06:37:38.856Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "FormVendedorActivo.resx",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormVendedorActivo.resx",
-              "RelativeDocumentMoniker": "proyecto\\FormVendedorActivo.resx",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormVendedorActivo.resx",
-              "RelativeToolTip": "proyecto\\FormVendedorActivo.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-11-07T06:37:32.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "FormGerente.resx",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormGerente.resx",
-              "RelativeDocumentMoniker": "proyecto\\FormGerente.resx",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormGerente.resx",
-              "RelativeToolTip": "proyecto\\FormGerente.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-11-07T06:37:15.483Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "FormLogin.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormLogin.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormLogin.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormLogin.vb",
-              "RelativeToolTip": "proyecto\\FormLogin.vb",
-              "ViewState": "AgIAADoAAAAAAAAAAAAgwEwAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T06:36:12.052Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
               "Title": "FormLogin.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormLogin.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormLogin.vb",
               "RelativeDocumentMoniker": "proyecto\\FormLogin.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormLogin.vb [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormLogin.vb [Dise\u00F1o]",
               "RelativeToolTip": "proyecto\\FormLogin.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-11-07T06:36:04.946Z",
@@ -549,15 +523,843 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "FormGerente.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormGerente.Designer.vb",
-              "RelativeDocumentMoniker": "proyecto\\FormGerente.Designer.vb",
-              "ToolTip": "C:\\Users\\Alina\\source\\repos\\taller2\\aplicacion\\proyecto\\FormGerente.Designer.vb",
-              "RelativeToolTip": "proyecto\\FormGerente.Designer.vb",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAowAwAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "FormMisVentas.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormMisVentas.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormMisVentas.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormMisVentas.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormMisVentas.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T06:35:01.291Z"
+              "WhenOpened": "2025-11-07T08:57:04.911Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormMisVentasGerente.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormMisVentasGerente.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormMisVentasGerente.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormMisVentasGerente.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormMisVentasGerente.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T14:08:28.919Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormProductosSinStock.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProductosSinStock.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormProductosSinStock.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProductosSinStock.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormProductosSinStock.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T22:50:52.358Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FormProveedores.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProveedores.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormProveedores.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProveedores.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormProveedores.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T22:51:01.298Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FormProveedoresInactivos.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProveedoresInactivos.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormProveedoresInactivos.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProveedoresInactivos.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormProveedoresInactivos.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-09T00:44:27.715Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FormRegistrarVentas.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormRegistrarVentas.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormRegistrarVentas.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormRegistrarVentas.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormRegistrarVentas.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-09T00:44:33.059Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FormReporteCompras.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormReporteCompras.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormReporteCompras.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormReporteCompras.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormReporteCompras.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-09T00:44:42.768Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FormReporteVentas.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormReporteVentas.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormReporteVentas.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormReporteVentas.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormReporteVentas.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T14:20:47.081Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FormStockVendedor.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormStockVendedor.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormStockVendedor.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormStockVendedor.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormStockVendedor.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T10:42:43.132Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FormUsuariosActivos.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormUsuariosActivos.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormUsuariosActivos.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormUsuariosActivos.vb",
+              "RelativeToolTip": "proyecto\\FormUsuariosActivos.vb",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-09T00:44:56.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FormUsuariosInactivos.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormUsuariosInactivos.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormUsuariosInactivos.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormUsuariosInactivos.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormUsuariosInactivos.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T15:08:45.217Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FormVendedor.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedor.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormVendedor.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedor.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormVendedor.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T08:00:11.996Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FormVendedorActivo.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedorActivo.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormVendedorActivo.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedorActivo.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormVendedorActivo.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T06:38:40.334Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "FormVendedorInactivo.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedorInactivo.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormVendedorInactivo.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedorInactivo.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormVendedorInactivo.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T20:29:47.647Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "FormExcel.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormExcel.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormExcel.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormExcel.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormExcel.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-09T22:38:38.035Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "FormCrud.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormCrud.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormCrud.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormCrud.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormCrud.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T20:23:41.937Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "FormClientesInactivos.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormClientesInactivos.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormClientesInactivos.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormClientesInactivos.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormClientesInactivos.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T15:20:59.165Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "FormClientes.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormClientes.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormClientes.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormClientes.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormClientes.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T20:29:13.652Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "FormLogin.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormLogin.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormLogin.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormLogin.vb",
+              "RelativeToolTip": "proyecto\\FormLogin.vb",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAQwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T06:36:12.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "FormRegistrarVentas.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormRegistrarVentas.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormRegistrarVentas.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormRegistrarVentas.vb",
+              "RelativeToolTip": "proyecto\\FormRegistrarVentas.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T07:05:20.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "GestorBD.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\GestorBD.vb",
+              "RelativeDocumentMoniker": "proyecto\\GestorBD.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\GestorBD.vb",
+              "RelativeToolTip": "proyecto\\GestorBD.vb",
+              "ViewState": "AgIAAEICAAAAAAAAAAAswFkCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T08:44:43.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "FormProductosSinStock.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProductosSinStock.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormProductosSinStock.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProductosSinStock.vb",
+              "RelativeToolTip": "proyecto\\FormProductosSinStock.vb",
+              "ViewState": "AgIAABwAAAAAAAAAAAApwC0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T22:50:55.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "FormClientes.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormClientes.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormClientes.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormClientes.vb",
+              "RelativeToolTip": "proyecto\\FormClientes.vb",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAtwFYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T15:17:23.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "FormAdmnUsuario.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormAdmnUsuario.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormAdmnUsuario.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormAdmnUsuario.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormAdmnUsuario.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-09T19:44:01.119Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "FormBackup.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormBackup.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormBackup.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormBackup.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormBackup.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T20:29:06.215Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "FormStockVendedor.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormStockVendedor.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormStockVendedor.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormStockVendedor.vb",
+              "RelativeToolTip": "proyecto\\FormStockVendedor.vb",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAwwA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T17:32:41.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "FormVendedor.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedor.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormVendedor.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedor.vb",
+              "RelativeToolTip": "proyecto\\FormVendedor.vb",
+              "ViewState": "AgIAACIAAAAAAAAAAAAtwC4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T08:38:34.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "FormProveedores.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProveedores.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormProveedores.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProveedores.vb",
+              "RelativeToolTip": "proyecto\\FormProveedores.vb",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBoAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T22:51:04.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "FormMisVentas.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormMisVentas.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormMisVentas.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormMisVentas.vb",
+              "RelativeToolTip": "proyecto\\FormMisVentas.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T09:07:51.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "FormMisVentasGerente.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormMisVentasGerente.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormMisVentasGerente.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormMisVentasGerente.vb",
+              "RelativeToolTip": "proyecto\\FormMisVentasGerente.vb",
+              "ViewState": "AgIAACAAAAAAAAAAAAD4vy4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T14:08:52.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "FormReporteCompras.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormReporteCompras.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormReporteCompras.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormReporteCompras.vb",
+              "RelativeToolTip": "proyecto\\FormReporteCompras.vb",
+              "ViewState": "AgIAADkAAAAAAAAAAAAtwD4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:45:30.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "FormReporteVentas.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormReporteVentas.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormReporteVentas.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormReporteVentas.vb",
+              "RelativeToolTip": "proyecto\\FormReporteVentas.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T13:31:33.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "FormProveedoresInactivos.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProveedoresInactivos.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormProveedoresInactivos.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProveedoresInactivos.vb",
+              "RelativeToolTip": "proyecto\\FormProveedoresInactivos.vb",
+              "ViewState": "AgIAADkAAAAAAAAAAAD4v0cAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:44:41.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "FormClientesInactivos.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormClientesInactivos.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormClientesInactivos.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormClientesInactivos.vb",
+              "RelativeToolTip": "proyecto\\FormClientesInactivos.vb",
+              "ViewState": "AgIAACkAAAAAAAAAAAD4vzcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T15:21:10.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "FormAdmnUsuario.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormAdmnUsuario.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormAdmnUsuario.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormAdmnUsuario.vb",
+              "RelativeToolTip": "proyecto\\FormAdmnUsuario.vb",
+              "ViewState": "AgIAAEQAAAAAAAAAAADwv4QAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-09T19:55:30.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "MdlSesion.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\MdlSesion.vb",
+              "RelativeDocumentMoniker": "proyecto\\MdlSesion.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\MdlSesion.vb",
+              "RelativeToolTip": "proyecto\\MdlSesion.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:04:16.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "FormReporteVentas.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormReporteVentas.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormReporteVentas.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormReporteVentas.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormReporteVentas.Designer.vb",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAYwIMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-09T17:20:02.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "proyecto",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\proyecto.vbproj",
+              "RelativeDocumentMoniker": "proyecto\\proyecto.vbproj",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\proyecto.vbproj",
+              "RelativeToolTip": "proyecto\\proyecto.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2025-11-08T22:45:01.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "FormCrudUsuarios.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormCrudUsuarios.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormCrudUsuarios.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormCrudUsuarios.vb",
+              "RelativeToolTip": "proyecto\\FormCrudUsuarios.vb",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:42:52.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "FormCrud.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormCrud.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormCrud.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormCrud.vb",
+              "RelativeToolTip": "proyecto\\FormCrud.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:42:49.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "FormVendedorInactivo.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedorInactivo.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormVendedorInactivo.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedorInactivo.vb",
+              "RelativeToolTip": "proyecto\\FormVendedorInactivo.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T20:29:51.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "FormVendedorActivo.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedorActivo.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormVendedorActivo.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedorActivo.vb",
+              "RelativeToolTip": "proyecto\\FormVendedorActivo.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T20:29:59.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "FormUsuariosInactivos.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormUsuariosInactivos.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormUsuariosInactivos.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormUsuariosInactivos.vb",
+              "RelativeToolTip": "proyecto\\FormUsuariosInactivos.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T20:30:07.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "FormGerenteInactivo.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerenteInactivo.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormGerenteInactivo.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerenteInactivo.vb",
+              "RelativeToolTip": "proyecto\\FormGerenteInactivo.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:43:16.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "FormGerenteActivo.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerenteActivo.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormGerenteActivo.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerenteActivo.vb",
+              "RelativeToolTip": "proyecto\\FormGerenteActivo.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:43:13.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "FormBackup.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormBackup.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormBackup.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormBackup.vb",
+              "RelativeToolTip": "proyecto\\FormBackup.vb",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:42:29.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "FormProveedores.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProveedores.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormProveedores.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProveedores.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormProveedores.Designer.vb",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAkwLUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:31:37.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "FormProductosSinStock.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProductosSinStock.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormProductosSinStock.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProductosSinStock.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormProductosSinStock.Designer.vb",
+              "ViewState": "AgIAABoAAAAAAAAAAAAkwCgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:31:02.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "FormRegistrarVentas.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormRegistrarVentas.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormRegistrarVentas.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormRegistrarVentas.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormRegistrarVentas.Designer.vb",
+              "ViewState": "AgIAADkAAAAAAAAAAAD4v0YAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T08:22:51.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "FormGestionProductos.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGestionProductos.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormGestionProductos.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGestionProductos.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormGestionProductos.Designer.vb",
+              "ViewState": "AgIAAFgAAAAAAAAAAAD4v2UAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:30:39.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "FormMisVentasGerente.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormMisVentasGerente.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormMisVentasGerente.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormMisVentasGerente.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormMisVentasGerente.Designer.vb",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwDQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:31:33.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "FormProveedoresInactivos.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProveedoresInactivos.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormProveedoresInactivos.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormProveedoresInactivos.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormProveedoresInactivos.Designer.vb",
+              "ViewState": "AgIAACcAAAAAAAAAAAAkwDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:31:41.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "proyecto.vbproj",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\proyecto.vbproj",
+              "RelativeDocumentMoniker": "proyecto\\proyecto.vbproj",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\proyecto.vbproj",
+              "RelativeToolTip": "proyecto\\proyecto.vbproj",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2025-11-08T12:37:52.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "FormReporteCompras.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormReporteCompras.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormReporteCompras.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormReporteCompras.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormReporteCompras.Designer.vb",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAkwHMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:31:57.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "FormGerente.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerente.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormGerente.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerente.Designer.vb*",
+              "RelativeToolTip": "proyecto\\FormGerente.Designer.vb*",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAkwIQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T06:35:01.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "FormStockVendedor.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormStockVendedor.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormStockVendedor.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormStockVendedor.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormStockVendedor.Designer.vb",
+              "ViewState": "AgIAADAAAAAAAAAAAAAkwD4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:30:58.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "FormBackup.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormBackup.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormBackup.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormBackup.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormBackup.Designer.vb",
+              "ViewState": "AgIAACkAAAAAAAAAAAAkwDcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:30:44.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "Form7.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\Form7.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\Form7.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\Form7.Designer.vb",
+              "RelativeToolTip": "proyecto\\Form7.Designer.vb",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAkwD4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:30:33.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "FormClientesInactivos.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormClientesInactivos.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormClientesInactivos.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormClientesInactivos.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormClientesInactivos.Designer.vb",
+              "ViewState": "AgIAACcAAAAAAAAAAAAkwDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:30:15.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "FormCrudUsuarios.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormCrudUsuarios.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormCrudUsuarios.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormCrudUsuarios.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormCrudUsuarios.Designer.vb",
+              "ViewState": "AgIAAAABAAAAAAAAAAAkwA4BAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:29:50.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "FormClientes.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormClientes.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormClientes.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormClientes.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormClientes.Designer.vb",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAkwKkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T23:11:35.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\My Project\\Resources.resx",
+              "RelativeDocumentMoniker": "proyecto\\My Project\\Resources.resx",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\My Project\\Resources.resx",
+              "RelativeToolTip": "proyecto\\My Project\\Resources.resx",
+              "ViewState": "AgIAANQAAAAAAAAAAAAewOYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-08T22:52:30.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "Resources.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\My Project\\Resources.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\My Project\\Resources.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\My Project\\Resources.Designer.vb",
+              "RelativeToolTip": "proyecto\\My Project\\Resources.Designer.vb",
+              "ViewState": "AgIAAPwAAAAAAAAAAIAwwAkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T22:51:55.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAG8NAAAAAAAAAAAwwH4NAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-11-08T20:25:50.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "Microsoft.PackageDependencyResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAwwAsBAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-11-08T20:25:48.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "FormUsuariosActivos.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormUsuariosActivos.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormUsuariosActivos.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormUsuariosActivos.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FormUsuariosActivos.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-08T15:08:07.986Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "FormRegistrarVentas.resx",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormRegistrarVentas.resx",
+              "RelativeDocumentMoniker": "proyecto\\FormRegistrarVentas.resx",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormRegistrarVentas.resx",
+              "RelativeToolTip": "proyecto\\FormRegistrarVentas.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-07T08:22:48.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "FormVendedorActivo.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedorActivo.Designer.vb",
+              "RelativeDocumentMoniker": "proyecto\\FormVendedorActivo.Designer.vb",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedorActivo.Designer.vb",
+              "RelativeToolTip": "proyecto\\FormVendedorActivo.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-07T06:37:38.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "FormVendedorActivo.resx",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedorActivo.resx",
+              "RelativeDocumentMoniker": "proyecto\\FormVendedorActivo.resx",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormVendedorActivo.resx",
+              "RelativeToolTip": "proyecto\\FormVendedorActivo.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-07T06:37:32.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "FormGerente.resx",
+              "DocumentMoniker": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerente.resx",
+              "RelativeDocumentMoniker": "proyecto\\FormGerente.resx",
+              "ToolTip": "C:\\Users\\delga\\source\\repos\\AlinaEGomez\\proyecto-ortopedia-tecnologica\\aplicacion\\proyecto\\FormGerente.resx*",
+              "RelativeToolTip": "proyecto\\FormGerente.resx*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-07T06:37:15.483Z",
+              "EditorCaption": ""
             }
           ]
         }

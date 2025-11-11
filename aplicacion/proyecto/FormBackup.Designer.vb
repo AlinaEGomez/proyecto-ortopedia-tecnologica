@@ -53,7 +53,6 @@ Partial Class FormBackup
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.BackgroundImage = My.Resources.Resources.DBI_1
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Location = New Point(0, 3)
         PictureBox1.Name = "PictureBox1"
@@ -63,15 +62,16 @@ Partial Class FormBackup
         ' 
         ' FormBackup
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ActiveCaption
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(799, 401)
         Controls.Add(Panel1)
-        Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Name = "FormBackup"
         RightToLeftLayout = True
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Backup"
         Panel1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()

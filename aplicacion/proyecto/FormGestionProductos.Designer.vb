@@ -23,12 +23,17 @@ Partial Class FormGestionProductos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Tipo3 = New TabPage()
+        Button2 = New Button()
         btnAgregarStock = New Button()
         DgvProductosSinStock = New DataGridView()
         TabPage2 = New TabPage()
+        Button1 = New Button()
         DgvProductosConStock = New DataGridView()
         TabControlProductos = New TabControl()
         TabPage1 = New TabPage()
+        BtnCerrar = New Button()
+        txtBuscarProd = New TextBox()
+        Label9 = New Label()
         Label8 = New Label()
         Label7 = New Label()
         Label6 = New Label()
@@ -47,10 +52,9 @@ Partial Class FormGestionProductos
         Label4 = New Label()
         Label1 = New Label()
         TabPage3 = New TabPage()
+        Button3 = New Button()
         BtnDarAlta = New Button()
         DgvProductosDeBaja = New DataGridView()
-        Label9 = New Label()
-        txtBuscarProd = New TextBox()
         Tipo3.SuspendLayout()
         CType(DgvProductosSinStock, ComponentModel.ISupportInitialize).BeginInit()
         TabPage2.SuspendLayout()
@@ -65,25 +69,35 @@ Partial Class FormGestionProductos
         ' 
         ' Tipo3
         ' 
-        Tipo3.BackgroundImage = My.Resources.Resources.fondo_Activ
+        Tipo3.Controls.Add(Button2)
         Tipo3.Controls.Add(btnAgregarStock)
         Tipo3.Controls.Add(DgvProductosSinStock)
-        Tipo3.Location = New Point(4, 35)
+        Tipo3.Location = New Point(4, 41)
+        Tipo3.Margin = New Padding(3, 4, 3, 4)
         Tipo3.Name = "Tipo3"
-        Tipo3.Padding = New Padding(3)
-        Tipo3.Size = New Size(768, 388)
+        Tipo3.Padding = New Padding(3, 4, 3, 4)
+        Tipo3.Size = New Size(879, 524)
         Tipo3.TabIndex = 2
         Tipo3.Text = "Productos sin Stock"
         Tipo3.UseVisualStyleBackColor = True
         ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(724, 448)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(100, 43)
+        Button2.TabIndex = 30
+        Button2.Text = "Cerrar"
+        Button2.UseVisualStyleBackColor = True
+        ' 
         ' btnAgregarStock
         ' 
         btnAgregarStock.BackColor = Color.FromArgb(CByte(255), CByte(128), CByte(255))
-        btnAgregarStock.Image = My.Resources.Resources.agregar
         btnAgregarStock.ImageAlign = ContentAlignment.MiddleLeft
-        btnAgregarStock.Location = New Point(335, 266)
+        btnAgregarStock.Location = New Point(383, 355)
+        btnAgregarStock.Margin = New Padding(3, 4, 3, 4)
         btnAgregarStock.Name = "btnAgregarStock"
-        btnAgregarStock.Size = New Size(184, 39)
+        btnAgregarStock.Size = New Size(210, 52)
         btnAgregarStock.TabIndex = 1
         btnAgregarStock.Text = "Agragar Stock"
         btnAgregarStock.TextAlign = ContentAlignment.MiddleRight
@@ -92,30 +106,44 @@ Partial Class FormGestionProductos
         ' DgvProductosSinStock
         ' 
         DgvProductosSinStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DgvProductosSinStock.Location = New Point(96, 31)
+        DgvProductosSinStock.Location = New Point(110, 41)
+        DgvProductosSinStock.Margin = New Padding(3, 4, 3, 4)
         DgvProductosSinStock.Name = "DgvProductosSinStock"
-        DgvProductosSinStock.Size = New Size(574, 188)
+        DgvProductosSinStock.RowHeadersWidth = 51
+        DgvProductosSinStock.Size = New Size(656, 251)
         DgvProductosSinStock.TabIndex = 0
         ' 
         ' TabPage2
         ' 
-        TabPage2.BackgroundImage = My.Resources.Resources.fondo_Activ1
+        TabPage2.Controls.Add(Button1)
         TabPage2.Controls.Add(DgvProductosConStock)
-        TabPage2.Location = New Point(4, 35)
+        TabPage2.Location = New Point(4, 41)
+        TabPage2.Margin = New Padding(3, 4, 3, 4)
         TabPage2.Name = "TabPage2"
-        TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(768, 388)
+        TabPage2.Padding = New Padding(3, 4, 3, 4)
+        TabPage2.Size = New Size(879, 524)
         TabPage2.TabIndex = 1
         TabPage2.Text = "Productos con Stock"
         TabPage2.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(729, 454)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(100, 43)
+        Button1.TabIndex = 30
+        Button1.Text = "Cerrar"
+        Button1.UseVisualStyleBackColor = True
         ' 
         ' DgvProductosConStock
         ' 
         DgvProductosConStock.BackgroundColor = Color.RosyBrown
         DgvProductosConStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DgvProductosConStock.Location = New Point(130, 177)
+        DgvProductosConStock.Location = New Point(149, 236)
+        DgvProductosConStock.Margin = New Padding(3, 4, 3, 4)
         DgvProductosConStock.Name = "DgvProductosConStock"
-        DgvProductosConStock.Size = New Size(465, 150)
+        DgvProductosConStock.RowHeadersWidth = 51
+        DgvProductosConStock.Size = New Size(531, 200)
         DgvProductosConStock.TabIndex = 0
         ' 
         ' TabControlProductos
@@ -125,15 +153,17 @@ Partial Class FormGestionProductos
         TabControlProductos.Controls.Add(Tipo3)
         TabControlProductos.Controls.Add(TabPage3)
         TabControlProductos.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TabControlProductos.Location = New Point(12, 30)
+        TabControlProductos.Location = New Point(14, 40)
+        TabControlProductos.Margin = New Padding(3, 4, 3, 4)
         TabControlProductos.Name = "TabControlProductos"
         TabControlProductos.SelectedIndex = 0
-        TabControlProductos.Size = New Size(776, 427)
+        TabControlProductos.Size = New Size(887, 569)
         TabControlProductos.TabIndex = 0
         ' 
         ' TabPage1
         ' 
         TabPage1.BackgroundImage = My.Resources.Resources.AltaProd2
+        TabPage1.Controls.Add(BtnCerrar)
         TabPage1.Controls.Add(txtBuscarProd)
         TabPage1.Controls.Add(Label9)
         TabPage1.Controls.Add(Label8)
@@ -153,22 +183,51 @@ Partial Class FormGestionProductos
         TabPage1.Controls.Add(Label2)
         TabPage1.Controls.Add(Label4)
         TabPage1.Controls.Add(Label1)
-        TabPage1.Location = New Point(4, 35)
+        TabPage1.Location = New Point(4, 41)
+        TabPage1.Margin = New Padding(3, 4, 3, 4)
         TabPage1.Name = "TabPage1"
-        TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(768, 388)
+        TabPage1.Padding = New Padding(3, 4, 3, 4)
+        TabPage1.Size = New Size(879, 524)
         TabPage1.TabIndex = 0
         TabPage1.Text = "Agregar Productos"
         TabPage1.UseVisualStyleBackColor = True
+        ' 
+        ' BtnCerrar
+        ' 
+        BtnCerrar.Location = New Point(720, 474)
+        BtnCerrar.Name = "BtnCerrar"
+        BtnCerrar.Size = New Size(100, 43)
+        BtnCerrar.TabIndex = 29
+        BtnCerrar.Text = "Cerrar"
+        BtnCerrar.UseVisualStyleBackColor = True
+        ' 
+        ' txtBuscarProd
+        ' 
+        txtBuscarProd.Location = New Point(218, 213)
+        txtBuscarProd.Margin = New Padding(3, 4, 3, 4)
+        txtBuscarProd.Name = "txtBuscarProd"
+        txtBuscarProd.Size = New Size(114, 39)
+        txtBuscarProd.TabIndex = 28
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Label9.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Location = New Point(14, 217)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(201, 32)
+        Label9.TabIndex = 27
+        Label9.Text = "Buscar Productos:"
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
         Label8.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Label8.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(307, 24)
+        Label8.Location = New Point(351, 32)
         Label8.Name = "Label8"
-        Label8.Size = New Size(69, 26)
+        Label8.Size = New Size(84, 32)
         Label8.TabIndex = 26
         Label8.Text = "Precio:"
         ' 
@@ -177,9 +236,9 @@ Partial Class FormGestionProductos
         Label7.AutoSize = True
         Label7.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Label7.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(12, 115)
+        Label7.Location = New Point(14, 153)
         Label7.Name = "Label7"
-        Label7.Size = New Size(151, 26)
+        Label7.Size = New Size(190, 32)
         Label7.TabIndex = 25
         Label7.Text = "Stock Productos:"
         ' 
@@ -188,9 +247,9 @@ Partial Class FormGestionProductos
         Label6.AutoSize = True
         Label6.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Label6.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(12, 61)
+        Label6.Location = New Point(14, 81)
         Label6.Name = "Label6"
-        Label6.Size = New Size(120, 28)
+        Label6.Size = New Size(153, 36)
         Label6.TabIndex = 24
         Label6.Text = "Descripción"
         ' 
@@ -199,9 +258,9 @@ Partial Class FormGestionProductos
         Label5.AutoSize = True
         Label5.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Label5.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(12, 24)
+        Label5.Location = New Point(14, 32)
         Label5.Name = "Label5"
-        Label5.Size = New Size(159, 26)
+        Label5.Size = New Size(199, 32)
         Label5.TabIndex = 23
         Label5.Text = "Código Producto:"
         ' 
@@ -210,47 +269,54 @@ Partial Class FormGestionProductos
         dgvProductos.AllowUserToOrderColumns = True
         dgvProductos.Anchor = AnchorStyles.None
         dgvProductos.CausesValidation = False
+        dgvProductos.ColumnHeadersHeight = 29
         dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        dgvProductos.Location = New Point(43, 204)
+        dgvProductos.Location = New Point(49, 253)
+        dgvProductos.Margin = New Padding(3, 4, 3, 4)
         dgvProductos.Name = "dgvProductos"
-        dgvProductos.Size = New Size(690, 213)
+        dgvProductos.RowHeadersWidth = 51
+        dgvProductos.Size = New Size(789, 218)
         dgvProductos.TabIndex = 22
         ' 
         ' TxtPrecio
         ' 
-        TxtPrecio.Location = New Point(395, 14)
+        TxtPrecio.Location = New Point(451, 19)
+        TxtPrecio.Margin = New Padding(3, 4, 3, 4)
         TxtPrecio.Name = "TxtPrecio"
-        TxtPrecio.Size = New Size(100, 33)
+        TxtPrecio.Size = New Size(114, 39)
         TxtPrecio.TabIndex = 21
         ' 
         ' TxtStock
         ' 
-        TxtStock.Location = New Point(171, 108)
+        TxtStock.Location = New Point(210, 150)
+        TxtStock.Margin = New Padding(3, 4, 3, 4)
         TxtStock.Name = "TxtStock"
-        TxtStock.Size = New Size(100, 33)
+        TxtStock.Size = New Size(114, 39)
         TxtStock.TabIndex = 20
         ' 
         ' TxtDescripcion
         ' 
-        TxtDescripcion.Location = New Point(171, 60)
+        TxtDescripcion.Location = New Point(195, 80)
+        TxtDescripcion.Margin = New Padding(3, 4, 3, 4)
         TxtDescripcion.Name = "TxtDescripcion"
-        TxtDescripcion.Size = New Size(100, 33)
+        TxtDescripcion.Size = New Size(114, 39)
         TxtDescripcion.TabIndex = 19
         ' 
         ' TxtCodigo
         ' 
-        TxtCodigo.Location = New Point(191, 21)
+        TxtCodigo.Location = New Point(218, 28)
+        TxtCodigo.Margin = New Padding(3, 4, 3, 4)
         TxtCodigo.Name = "TxtCodigo"
-        TxtCodigo.Size = New Size(100, 33)
+        TxtCodigo.Size = New Size(114, 39)
         TxtCodigo.TabIndex = 18
         ' 
         ' BtnEliminar
         ' 
-        BtnEliminar.Image = My.Resources.Resources.quitar1
         BtnEliminar.ImageAlign = ContentAlignment.MiddleLeft
-        BtnEliminar.Location = New Point(570, 70)
+        BtnEliminar.Location = New Point(651, 93)
+        BtnEliminar.Margin = New Padding(3, 4, 3, 4)
         BtnEliminar.Name = "BtnEliminar"
-        BtnEliminar.Size = New Size(115, 40)
+        BtnEliminar.Size = New Size(131, 53)
         BtnEliminar.TabIndex = 17
         BtnEliminar.Text = "Eliminar"
         BtnEliminar.TextAlign = ContentAlignment.MiddleRight
@@ -260,9 +326,10 @@ Partial Class FormGestionProductos
         ' 
         BtnGuardar.Image = My.Resources.Resources.carpeta
         BtnGuardar.ImageAlign = ContentAlignment.MiddleLeft
-        BtnGuardar.Location = New Point(563, 10)
+        BtnGuardar.Location = New Point(643, 13)
+        BtnGuardar.Margin = New Padding(3, 4, 3, 4)
         BtnGuardar.Name = "BtnGuardar"
-        BtnGuardar.Size = New Size(122, 40)
+        BtnGuardar.Size = New Size(139, 53)
         BtnGuardar.TabIndex = 16
         BtnGuardar.Text = "Guardar Producto"
         BtnGuardar.TextAlign = ContentAlignment.MiddleRight
@@ -271,9 +338,10 @@ Partial Class FormGestionProductos
         ' pbImagenProducto
         ' 
         pbImagenProducto.BackColor = Color.Gray
-        pbImagenProducto.Location = New Point(420, 60)
+        pbImagenProducto.Location = New Point(480, 80)
+        pbImagenProducto.Margin = New Padding(3, 4, 3, 4)
         pbImagenProducto.Name = "pbImagenProducto"
-        pbImagenProducto.Size = New Size(127, 91)
+        pbImagenProducto.Size = New Size(145, 121)
         pbImagenProducto.TabIndex = 15
         pbImagenProducto.TabStop = False
         ' 
@@ -281,9 +349,10 @@ Partial Class FormGestionProductos
         ' 
         BtnBuscarImagen.Image = My.Resources.Resources.buscarImagen
         BtnBuscarImagen.ImageAlign = ContentAlignment.MiddleLeft
-        BtnBuscarImagen.Location = New Point(292, 70)
+        BtnBuscarImagen.Location = New Point(334, 93)
+        BtnBuscarImagen.Margin = New Padding(3, 4, 3, 4)
         BtnBuscarImagen.Name = "BtnBuscarImagen"
-        BtnBuscarImagen.Size = New Size(113, 40)
+        BtnBuscarImagen.Size = New Size(129, 53)
         BtnBuscarImagen.TabIndex = 14
         BtnBuscarImagen.Text = "Buscar Imagen"
         BtnBuscarImagen.TextAlign = ContentAlignment.MiddleRight
@@ -294,9 +363,9 @@ Partial Class FormGestionProductos
         Label3.AutoSize = True
         Label3.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Label3.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(316, 24)
+        Label3.Location = New Point(361, 32)
         Label3.Name = "Label3"
-        Label3.Size = New Size(0, 26)
+        Label3.Size = New Size(0, 32)
         Label3.TabIndex = 13
         ' 
         ' Label2
@@ -304,9 +373,9 @@ Partial Class FormGestionProductos
         Label2.AutoSize = True
         Label2.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Label2.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(6, 110)
+        Label2.Location = New Point(7, 147)
         Label2.Name = "Label2"
-        Label2.Size = New Size(0, 26)
+        Label2.Size = New Size(0, 32)
         Label2.TabIndex = 12
         ' 
         ' Label4
@@ -314,9 +383,9 @@ Partial Class FormGestionProductos
         Label4.AutoSize = True
         Label4.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Label4.Font = New Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(6, 60)
+        Label4.Location = New Point(7, 80)
         Label4.Name = "Label4"
-        Label4.Size = New Size(0, 28)
+        Label4.Size = New Size(0, 36)
         Label4.TabIndex = 11
         ' 
         ' Label1
@@ -324,31 +393,42 @@ Partial Class FormGestionProductos
         Label1.AutoSize = True
         Label1.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Label1.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(6, 17)
+        Label1.Location = New Point(7, 23)
         Label1.Name = "Label1"
-        Label1.Size = New Size(0, 26)
+        Label1.Size = New Size(0, 32)
         Label1.TabIndex = 8
         ' 
         ' TabPage3
         ' 
-        TabPage3.BackgroundImage = My.Resources.Resources.fondo_Activ
         TabPage3.BackgroundImageLayout = ImageLayout.Stretch
+        TabPage3.Controls.Add(Button3)
         TabPage3.Controls.Add(BtnDarAlta)
         TabPage3.Controls.Add(DgvProductosDeBaja)
-        TabPage3.Location = New Point(4, 35)
+        TabPage3.Location = New Point(4, 41)
+        TabPage3.Margin = New Padding(3, 4, 3, 4)
         TabPage3.Name = "TabPage3"
-        TabPage3.Padding = New Padding(3)
-        TabPage3.Size = New Size(768, 388)
+        TabPage3.Padding = New Padding(3, 4, 3, 4)
+        TabPage3.Size = New Size(879, 524)
         TabPage3.TabIndex = 3
         TabPage3.Text = "Productos Eliminados"
         TabPage3.UseVisualStyleBackColor = True
         ' 
+        ' Button3
+        ' 
+        Button3.Location = New Point(734, 463)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(100, 43)
+        Button3.TabIndex = 30
+        Button3.Text = "Cerrar"
+        Button3.UseVisualStyleBackColor = True
+        ' 
         ' BtnDarAlta
         ' 
         BtnDarAlta.BackColor = Color.LightCoral
-        BtnDarAlta.Location = New Point(310, 77)
+        BtnDarAlta.Location = New Point(354, 103)
+        BtnDarAlta.Margin = New Padding(3, 4, 3, 4)
         BtnDarAlta.Name = "BtnDarAlta"
-        BtnDarAlta.Size = New Size(160, 46)
+        BtnDarAlta.Size = New Size(183, 61)
         BtnDarAlta.TabIndex = 1
         BtnDarAlta.Text = "Alta"
         BtnDarAlta.UseVisualStyleBackColor = False
@@ -357,37 +437,23 @@ Partial Class FormGestionProductos
         ' 
         DgvProductosDeBaja.BackgroundColor = Color.RosyBrown
         DgvProductosDeBaja.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DgvProductosDeBaja.Location = New Point(142, 148)
+        DgvProductosDeBaja.Location = New Point(162, 197)
+        DgvProductosDeBaja.Margin = New Padding(3, 4, 3, 4)
         DgvProductosDeBaja.Name = "DgvProductosDeBaja"
-        DgvProductosDeBaja.Size = New Size(502, 184)
+        DgvProductosDeBaja.RowHeadersWidth = 51
+        DgvProductosDeBaja.Size = New Size(574, 245)
         DgvProductosDeBaja.TabIndex = 0
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Label9.Font = New Font("Segoe UI Emoji", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(12, 163)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(162, 26)
-        Label9.TabIndex = 27
-        Label9.Text = "Buscar Productos:"
-        ' 
-        ' txtBuscarProd
-        ' 
-        txtBuscarProd.Location = New Point(191, 160)
-        txtBuscarProd.Name = "txtBuscarProd"
-        txtBuscarProd.Size = New Size(100, 33)
-        txtBuscarProd.TabIndex = 28
         ' 
         ' FormGestionProductos
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Gainsboro
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(914, 638)
         Controls.Add(TabControlProductos)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "FormGestionProductos"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Gestion Productos"
         Tipo3.ResumeLayout(False)
         CType(DgvProductosSinStock, ComponentModel.ISupportInitialize).EndInit()
@@ -432,4 +498,8 @@ Partial Class FormGestionProductos
     Friend WithEvents btnAgregarStock As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents txtBuscarProd As TextBox
+    Friend WithEvents BtnCerrar As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

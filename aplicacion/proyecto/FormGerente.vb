@@ -33,10 +33,12 @@
     End Sub
 
     Private Sub RegistrarVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarVentasToolStripMenuItem.Click
+        Me.Hide()
         FormRegistarVentas.Show()
     End Sub
 
     Private Sub VerVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerVentasToolStripMenuItem.Click
+        Me.Close()
         FormMisVentasGerente.Show()
     End Sub
 
@@ -45,22 +47,33 @@
     End Sub
 
     Private Sub AltaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AltaToolStripMenuItem.Click
+        Me.Hide()
         FormClientes.Show()
     End Sub
 
     Private Sub ProveedoresToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem1.Click
+        Me.Hide()
         FormProveedores.Show()
     End Sub
 
     Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
-        FormRegistarVentas.Show()
+        Me.Hide()
+        FormReporteVentas.Show()
     End Sub
 
     Private Sub CategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CategoriaToolStripMenuItem.Click
+        Me.Hide()
         FormGestionProductos.Show()
     End Sub
 
     Private Sub VerTodosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerTodosToolStripMenuItem.Click
+        Me.Hide()
         FormStockVendedor.Show()
+    End Sub
+
+    Private Sub RegistroDeComprasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroDeComprasToolStripMenuItem.Click
+        Me.Hide()
+        FormRegistroCompra.Show()
+
     End Sub
 End Class

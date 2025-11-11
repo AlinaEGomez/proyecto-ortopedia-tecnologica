@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("proyecto"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fef18ba7930665f280900343b4b60fb385c6a6e1"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e31629eaba961be25492f28dc3ac8cda6970c59"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("proyecto"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("proyecto"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

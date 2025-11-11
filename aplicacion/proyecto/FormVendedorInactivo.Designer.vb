@@ -29,19 +29,23 @@ Partial Class FormVendedorInactivo
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(83, 119)
+        DataGridView1.Location = New Point(95, 159)
+        DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(608, 198)
+        DataGridView1.RowHeadersWidth = 51
+        DataGridView1.Size = New Size(695, 264)
         DataGridView1.TabIndex = 0
         ' 
-        ' Form13
+        ' FormVendedorInactivo
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ActiveCaption
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(914, 600)
         Controls.Add(DataGridView1)
-        Name = "Form13"
+        Margin = New Padding(3, 4, 3, 4)
+        Name = "FormVendedorInactivo"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Vendedor Inactivo"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

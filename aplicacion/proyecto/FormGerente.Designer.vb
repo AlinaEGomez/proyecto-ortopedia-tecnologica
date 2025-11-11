@@ -41,6 +41,7 @@ Partial Class FormGerente
         TSalir = New ToolStripButton()
         ToolStripLabel1 = New ToolStripLabel()
         LblBienvenido = New ToolStripLabel()
+        RegistroDeComprasToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip2.SuspendLayout()
         LBienvenido.SuspendLayout()
         SuspendLayout()
@@ -54,14 +55,16 @@ Partial Class FormGerente
         ' ToolStripMenuItem6
         ' 
         ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        ToolStripMenuItem6.Size = New Size(67, 22)
+        ToolStripMenuItem6.Size = New Size(83, 26)
         ' 
         ' MenuStrip2
         ' 
+        MenuStrip2.ImageScalingSize = New Size(20, 20)
         MenuStrip2.Items.AddRange(New ToolStripItem() {VentaToolStripMenuItem, ClientesToolStripMenuItem, ProveedoresToolStripMenuItem, ReportesToolStripMenuItem, ProductosToolStripMenuItem})
         MenuStrip2.Location = New Point(0, 0)
         MenuStrip2.Name = "MenuStrip2"
-        MenuStrip2.Size = New Size(800, 24)
+        MenuStrip2.Padding = New Padding(7, 3, 0, 3)
+        MenuStrip2.Size = New Size(914, 30)
         MenuStrip2.TabIndex = 0
         MenuStrip2.Text = "MenuStrip2"
         ' 
@@ -70,19 +73,19 @@ Partial Class FormGerente
         VentaToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {RegistrarVentasToolStripMenuItem, VerVentasToolStripMenuItem})
         VentaToolStripMenuItem.Image = My.Resources.Resources.analisis1
         VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
-        VentaToolStripMenuItem.Size = New Size(64, 20)
+        VentaToolStripMenuItem.Size = New Size(80, 24)
         VentaToolStripMenuItem.Text = "Venta"
         ' 
         ' RegistrarVentasToolStripMenuItem
         ' 
         RegistrarVentasToolStripMenuItem.Name = "RegistrarVentasToolStripMenuItem"
-        RegistrarVentasToolStripMenuItem.Size = New Size(157, 22)
+        RegistrarVentasToolStripMenuItem.Size = New Size(198, 26)
         RegistrarVentasToolStripMenuItem.Text = "Registrar Ventas"
         ' 
         ' VerVentasToolStripMenuItem
         ' 
         VerVentasToolStripMenuItem.Name = "VerVentasToolStripMenuItem"
-        VerVentasToolStripMenuItem.Size = New Size(157, 22)
+        VerVentasToolStripMenuItem.Size = New Size(198, 26)
         VerVentasToolStripMenuItem.Text = "Ver Ventas"
         ' 
         ' ClientesToolStripMenuItem
@@ -90,27 +93,27 @@ Partial Class FormGerente
         ClientesToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AltaToolStripMenuItem})
         ClientesToolStripMenuItem.Image = My.Resources.Resources.mercado
         ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        ClientesToolStripMenuItem.Size = New Size(77, 20)
+        ClientesToolStripMenuItem.Size = New Size(95, 24)
         ClientesToolStripMenuItem.Text = "Clientes"
         ' 
         ' AltaToolStripMenuItem
         ' 
         AltaToolStripMenuItem.Name = "AltaToolStripMenuItem"
-        AltaToolStripMenuItem.Size = New Size(95, 22)
+        AltaToolStripMenuItem.Size = New Size(119, 26)
         AltaToolStripMenuItem.Text = "Alta"
         ' 
         ' ProveedoresToolStripMenuItem
         ' 
-        ProveedoresToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ProveedoresToolStripMenuItem1})
+        ProveedoresToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ProveedoresToolStripMenuItem1, RegistroDeComprasToolStripMenuItem})
         ProveedoresToolStripMenuItem.Image = My.Resources.Resources.proveedor
         ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        ProveedoresToolStripMenuItem.Size = New Size(92, 20)
+        ProveedoresToolStripMenuItem.Size = New Size(113, 24)
         ProveedoresToolStripMenuItem.Text = "Suministro"
         ' 
         ' ProveedoresToolStripMenuItem1
         ' 
         ProveedoresToolStripMenuItem1.Name = "ProveedoresToolStripMenuItem1"
-        ProveedoresToolStripMenuItem1.Size = New Size(139, 22)
+        ProveedoresToolStripMenuItem1.Size = New Size(231, 26)
         ProveedoresToolStripMenuItem1.Text = "Proveedores"
         ' 
         ' ReportesToolStripMenuItem
@@ -118,78 +121,86 @@ Partial Class FormGerente
         ReportesToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {VentasToolStripMenuItem})
         ReportesToolStripMenuItem.Image = My.Resources.Resources.grafico_de_barras
         ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        ReportesToolStripMenuItem.Size = New Size(81, 20)
+        ReportesToolStripMenuItem.Size = New Size(102, 24)
         ReportesToolStripMenuItem.Text = "Reportes"
         ' 
         ' VentasToolStripMenuItem
         ' 
         VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        VentasToolStripMenuItem.Size = New Size(108, 22)
-        VentasToolStripMenuItem.Text = "ventas"
+        VentasToolStripMenuItem.Size = New Size(213, 26)
+        VentasToolStripMenuItem.Text = "Reporte de Ventas"
         ' 
         ' ProductosToolStripMenuItem
         ' 
         ProductosToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CategoriaToolStripMenuItem, VerTodosToolStripMenuItem})
-        ProductosToolStripMenuItem.Image = My.Resources.Resources.reporte_ventas1
         ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        ProductosToolStripMenuItem.Size = New Size(89, 20)
+        ProductosToolStripMenuItem.Size = New Size(89, 24)
         ProductosToolStripMenuItem.Text = "Productos"
         ' 
         ' CategoriaToolStripMenuItem
         ' 
         CategoriaToolStripMenuItem.Name = "CategoriaToolStripMenuItem"
-        CategoriaToolStripMenuItem.Size = New Size(180, 22)
+        CategoriaToolStripMenuItem.Size = New Size(158, 26)
         CategoriaToolStripMenuItem.Text = "Inventario"
         ' 
         ' VerTodosToolStripMenuItem
         ' 
         VerTodosToolStripMenuItem.Name = "VerTodosToolStripMenuItem"
-        VerTodosToolStripMenuItem.Size = New Size(180, 22)
+        VerTodosToolStripMenuItem.Size = New Size(158, 26)
         VerTodosToolStripMenuItem.Text = "Ver Todos"
         ' 
         ' LBienvenido
         ' 
-        LBienvenido.Font = New Font("Segoe UI Emoji", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LBienvenido.Font = New Font("Segoe UI Emoji", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LBienvenido.ImageScalingSize = New Size(20, 20)
         LBienvenido.Items.AddRange(New ToolStripItem() {TSalir, ToolStripLabel1, LblBienvenido})
-        LBienvenido.Location = New Point(0, 24)
+        LBienvenido.Location = New Point(0, 30)
         LBienvenido.Name = "LBienvenido"
-        LBienvenido.Size = New Size(800, 25)
+        LBienvenido.Size = New Size(914, 27)
         LBienvenido.TabIndex = 2
         ' 
         ' TSalir
         ' 
         TSalir.Alignment = ToolStripItemAlignment.Right
         TSalir.DisplayStyle = ToolStripItemDisplayStyle.Image
-        TSalir.Font = New Font("Segoe UI Emoji", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TSalir.Font = New Font("Segoe UI Emoji", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TSalir.ForeColor = Color.Red
         TSalir.Image = My.Resources.Resources.borrar
         TSalir.ImageTransparentColor = Color.Magenta
         TSalir.Name = "TSalir"
-        TSalir.Size = New Size(23, 22)
+        TSalir.Size = New Size(29, 24)
         ' 
         ' ToolStripLabel1
         ' 
         ToolStripLabel1.Name = "ToolStripLabel1"
-        ToolStripLabel1.Size = New Size(0, 22)
+        ToolStripLabel1.Size = New Size(0, 24)
         ' 
         ' LblBienvenido
         ' 
         LblBienvenido.ForeColor = Color.Red
         LblBienvenido.Name = "LblBienvenido"
-        LblBienvenido.Size = New Size(0, 22)
+        LblBienvenido.Size = New Size(0, 24)
+        ' 
+        ' RegistroDeComprasToolStripMenuItem
+        ' 
+        RegistroDeComprasToolStripMenuItem.Name = "RegistroDeComprasToolStripMenuItem"
+        RegistroDeComprasToolStripMenuItem.Size = New Size(231, 26)
+        RegistroDeComprasToolStripMenuItem.Text = "Registro de Compras"
         ' 
         ' FormGerente
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.inicio_sesion1
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(914, 600)
         Controls.Add(LBienvenido)
         Controls.Add(MenuStrip2)
         MainMenuStrip = MenuStrip2
+        Margin = New Padding(3, 4, 3, 4)
         MdiChildrenMinimizedAnchorBottom = False
         Name = "FormGerente"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Perfil  Gerente"
         MenuStrip2.ResumeLayout(False)
         MenuStrip2.PerformLayout()
@@ -224,4 +235,5 @@ Partial Class FormGerente
     Friend WithEvents ProveedoresToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents VentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VerTodosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistroDeComprasToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -31,20 +31,24 @@ Partial Class FormCrud
         ' 
         DgvClientes.BackgroundColor = SystemColors.ButtonFace
         DgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DgvClientes.Location = New Point(65, 107)
+        DgvClientes.Location = New Point(74, 143)
+        DgvClientes.Margin = New Padding(3, 4, 3, 4)
         DgvClientes.Name = "DgvClientes"
-        DgvClientes.Size = New Size(625, 222)
+        DgvClientes.RowHeadersWidth = 51
+        DgvClientes.Size = New Size(714, 296)
         DgvClientes.TabIndex = 0
         ' 
-        ' Form5
+        ' FormCrud
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.nueva
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(914, 600)
         Controls.Add(DgvClientes)
-        Name = "Form5"
+        Margin = New Padding(3, 4, 3, 4)
+        Name = "FormCrud"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "crud"
         CType(DgvClientes, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
